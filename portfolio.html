@@ -1,46 +1,135 @@
-หน้าสะสมผลงาน
 <!DOCTYPE html>
 <html lang="th">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>แฟ้มสะสมงานของฉัน</title>
+
+    <title>แฟ้มสะสมงานของฉัน | Portfolio</title>
+
     <style>
-        body { font-family: sans-serif; background-color: #f4f7f6; text-align: center; padding: 30px; }
-        .container { max-width: 800px; margin: 0 auto; }
-        .project-card { background: white; padding: 20px; margin: 20px 0; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); text-align: left; }
-        .btn { display: inline-block; background: #2c3e50; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; margin-top: 20px; }
-    </style.university-logo {
-    width: 150px;
-    height: 150px;
-    object-fit: contain;
-    display: block;
-    margin: 0 auto 20px;
-}>
-    
-    
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f6;
+            text-align: center;
+            padding: 30px;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .university-logo {
+            width: 150px;
+            height: 150px;
+            object-fit: contain;
+            display: block;
+            margin: 0 auto 20px;
+        }
+
+        h1 {
+            color: #2c3e50;
+        }
+
+        .project-card {
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 15px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            text-align: left;
+        }
+
+        .project-card h3 {
+            color: #c2185b;
+        }
+
+        .project-card p {
+            font-size: 17px;
+            line-height: 1.7;
+        }
+
+        .btn {
+            display: inline-block;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 8px;
+        }
+
+        .home-btn {
+            background: #2c3e50;
+        }
+
+        .future-btn {
+            background: #d63384;
+        }
+    </style>
 </head>
+
 <body>
 
     <div class="container">
+
+        <!-- ตรามหาวิทยาลัยบูรพา -->
+        <img src="logo.png"
+             alt="ตรามหาวิทยาลัยบูรพา"
+             class="university-logo">
+
         <h1>📁 แฟ้มสะสมงาน (Portfolio)</h1>
-        <p>นี่คือพื้นที่รวบรวมผลงานและกิจกรรมที่ภูมิใจค่ะ</p>
 
-        <!-- กล่องผลงานชิ้นที่ 1 -->
+        <p>
+            นี่คือพื้นที่รวบรวมผลงานและกิจกรรมที่ภูมิใจค่ะ
+        </p>
+
+        <!-- ผลงานชิ้นที่ 1 -->
         <div class="project-card">
+
             <h3>1. โครงงาน/ชิ้นงานวิทยาศาสตร์คำนวณ</h3>
-            <p>รายละเอียดชิ้นงาน: เขียนอธิบายสั้นๆ ว่าทำอะไร ได้เรียนรู้อะไรจากงานนี้บ้าง</p>
+
+            <p>
+                รายละเอียดชิ้นงาน:
+                สามารถใส่รายละเอียดเกี่ยวกับผลงาน
+                สิ่งที่ได้เรียนรู้ และประสบการณ์จากการทำงานชิ้นนี้
+            </p>
+
         </div>
 
-        <!-- กล่องผลงานชิ้นที่ 2 -->
+        <!-- ผลงานชิ้นที่ 2 -->
         <div class="project-card">
+
             <h3>2. กิจกรรม/เกียรติบัตรที่ได้รับ</h3>
-            <p>รายละเอียดชิ้นงาน: เข้าร่วมการประกวด หรือกิจกรรมของโรงเรียน...</p>
+
+            <p>
+                รายละเอียด:
+                สามารถใส่กิจกรรม การประกวด
+                หรือเกียรติบัตรที่เคยได้รับ
+            </p>
+
         </div>
 
-        <!-- ปุ่มกดกลับหน้าแรก -->
-        <a href="index.html" class="btn">🔙 กลับหน้าแรก</a>
-        <a href="future.html" class="btn">🌸 อนาคตของฉัน (My Future)</a>
+        <!-- ผลงานชิ้นที่ 3 -->
+        <div class="project-card">
+
+            <h3>3. ผลงานด้านภาษาจีน</h3>
+
+            <p>
+                สามารถใส่ผลงานหรือกิจกรรมที่เกี่ยวข้องกับ
+                ภาษาจีน Chinese Language and Culture
+            </p>
+
+        </div>
+
+        <a href="index.html" class="btn home-btn">
+            🔙 กลับหน้าแรก
+        </a>
+
+        <a href="future.html" class="btn future-btn">
+            🌸 อนาคตของฉัน (My Future)
+        </a>
+
     </div>
 
 </body>

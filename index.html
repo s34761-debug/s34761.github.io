@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ณัชชยากานต์</title>
+    <title>ณัชชยากานต์ | Portfolio</title>
+
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -11,7 +12,9 @@
             color: #333;
             text-align: center;
             padding: 50px;
+            margin: 0;
         }
+
         .card {
             background: white;
             padding: 30px;
@@ -20,29 +23,77 @@
             max-width: 500px;
             margin: 0 auto;
         }
-        h1 { color: #2c3e50; }
-        p { font-size: 18px; line-height: 1.6; }
-    </style.university-logo {
-    width: 150px;
-    height: 150px;
-    object-fit: contain;
-    display: block;
-    margin: 0 auto 20px;
-}>
-    
+
+        .university-logo {
+            width: 150px;
+            height: 150px;
+            object-fit: contain;
+            display: block;
+            margin: 0 auto 20px;
+        }
+
+        h1 {
+            color: #2c3e50;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .btn {
+            display: inline-block;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 8px;
+        }
+
+        .portfolio-btn {
+            background: #3498db;
+        }
+
+        .future-btn {
+            background: #d63384;
+        }
+    </style>
 </head>
+
 <body>
 
     <div class="card">
-        <img src="logo.png" alt="มหาวิทยาลัยบูรพา" class="university-logo">
-        <h1>ยินดีต้อนรับสู่โปรไฟล์ของฉัน น.ส.ณัชชยากานต์ สีดาสมา👋</h1>
-        <p>สวัสดีค่ะ! ฉันชื่อ <strong>ณัชชยากานต์ (Nutchayakan)</strong></p>
-        <p>ขณะนี้กำลังศึกษา/สนใจด้าน Chinese Language and Culture</p>
-        <p>นี่คือเว็บไซต์แรกของฉันที่โฮสต์บน GitHub Pages!</p>
-        <a href="portfolio.html" style="display:inline-block; background:#3498db; color:white; padding:10px 20px; text-decoration:none; border-radius:5px; margin-top:15px;">👉 ดูแฟ้มสะสมงานของฉัน</a>
-        <a href="future.html" style="display:inline-block; background:#d63384; color:white; padding:10px 20px; text-decoration:none; border-radius:5px; margin-top:15px;">
-    🌸 ดูอนาคตของฉัน (My Future)
+
+        <!-- ตรามหาวิทยาลัยบูรพา -->
+        <img src="logo.png" alt="ตรามหาวิทยาลัยบูรพา" class="university-logo">
+
+        <h1>
+            ยินดีต้อนรับสู่โปรไฟล์ของฉัน 👋
+        </h1>
+
+        <p>
+            สวัสดีค่ะ! ฉันชื่อ
+            <strong>ณัชชยากานต์ สีดาสมา</strong>
+        </p>
+
+        <p>
+            ขณะนี้กำลังศึกษา/สนใจด้าน
+            <strong>Chinese Language and Culture</strong>
+        </p>
+
+        <p>
+            นี่คือเว็บไซต์ Portfolio ของฉัน
+            ที่จัดทำขึ้นบน GitHub Pages
+        </p>
+
+        <a href="portfolio.html" class="btn portfolio-btn">
+            👉 ดูแฟ้มสะสมงานของฉัน
         </a>
+
+        <a href="future.html" class="btn future-btn">
+            🌸 ดูอนาคตของฉัน (My Future)
+        </a>
+
     </div>
 
 </body>

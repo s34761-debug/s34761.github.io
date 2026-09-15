@@ -1,5 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Itim&family=Kanit:wght@300;400;500;600&display=swap');
+/* ========================================
+   FONT
+======================================== */
 
+@import url('https://fonts.googleapis.com/css2?family=Itim&family=Kanit:wght@300;400;500;600;700&display=swap');
+
+
+/* ========================================
+   RESET
+======================================== */
 
 * {
     margin: 0;
@@ -8,60 +16,61 @@
 }
 
 
+html {
+    scroll-behavior: smooth;
+}
+
+
 body {
+
     font-family: 'Kanit', sans-serif;
 
     background:
-        radial-gradient(circle at 10% 20%, #e9fff7 0%, transparent 25%),
-        radial-gradient(circle at 90% 80%, #e2fff3 0%, transparent 25%),
+        radial-gradient(
+            circle at 20% 20%,
+            #e5faf3 0%,
+            transparent 30%
+        ),
+
+        radial-gradient(
+            circle at 80% 80%,
+            #d9f5ed 0%,
+            transparent 30%
+        ),
+
         #ffffff;
 
-    color: #35564c;
+    color: #52776d;
 
     min-height: 100vh;
+
+    overflow-x: hidden;
 }
 
 
-/* =========================
-   ของตกแต่ง
-========================= */
-
-.decoration {
-    text-align: center;
-
-    color: #73b9a5;
-
-    font-size: 25px;
-
-    letter-spacing: 4px;
-}
-
-
-.top {
-    padding-top: 18px;
-}
-
-
-/* =========================
+/* ========================================
    NAVBAR
-========================= */
+======================================== */
 
 .navbar {
 
-    width: 90%;
-    max-width: 1150px;
+    width: 100%;
 
-    margin: auto;
-
-    height: 75px;
+    padding: 20px 7%;
 
     display: flex;
 
-    align-items: center;
-
     justify-content: space-between;
 
-    border-bottom: 1px solid #d8f1e8;
+    align-items: center;
+
+    background: rgba(255,255,255,0.92);
+
+    border-bottom: 1px solid #d9eee7;
+
+    position: relative;
+
+    z-index: 20;
 }
 
 
@@ -69,62 +78,133 @@ body {
 
     font-family: 'Itim', cursive;
 
-    font-size: 28px;
+    font-size: 30px;
 
-    color: #5aa890;
+    color: #62a995;
+
+    white-space: nowrap;
 }
 
 
-.menu {
+.nav-menu {
 
     display: flex;
 
-    gap: 8px;
+    align-items: center;
 
-    flex-wrap: wrap;
+    gap: 28px;
 
-    justify-content: center;
+    list-style: none;
 }
 
 
-.menu a {
+.nav-menu a {
 
     text-decoration: none;
 
-    color: #55756b;
+    color: #638078;
 
-    padding: 9px 15px;
+    font-size: 16px;
+
+    padding: 10px 16px;
 
     border-radius: 30px;
-
-    font-size: 14px;
 
     transition: 0.3s;
 }
 
 
-.menu a:hover,
-.menu a.active {
+.nav-menu a:hover {
 
-    background: #dff7ed;
+    background: #e1f6ef;
 
-    color: #3d8c75;
+    color: #4f9c87;
 }
 
 
-/* =========================
+.nav-menu a.active {
+
+    background: #def5ed;
+
+    color: #559c87;
+
+    font-weight: 500;
+}
+
+
+/* ========================================
+   DECORATIONS
+======================================== */
+
+.decor {
+
+    position: absolute;
+
+    pointer-events: none;
+
+    z-index: 5;
+}
+
+
+.decor-top {
+
+    top: 110px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    font-size: 28px;
+
+    white-space: nowrap;
+}
+
+
+.decor-left {
+
+    left: 35px;
+
+    top: 55%;
+
+    font-size: 35px;
+}
+
+
+.decor-right {
+
+    right: 35px;
+
+    top: 40%;
+
+    font-size: 35px;
+}
+
+
+/* ========================================
    HERO
-========================= */
+======================================== */
 
 .hero {
 
-    width: 90%;
+    width: 100%;
+
+    min-height: calc(100vh - 85px);
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 110px 7% 80px;
+}
+
+
+.hero-container {
+
+    width: 100%;
 
     max-width: 1150px;
-
-    min-height: 600px;
-
-    margin: auto;
 
     display: flex;
 
@@ -132,163 +212,181 @@ body {
 
     justify-content: space-between;
 
-    gap: 70px;
+    gap: 80px;
 }
 
 
-/* =========================
+/* ========================================
    TEXT
-========================= */
+======================================== */
 
 .hero-text {
 
-    width: 55%;
+    flex: 1;
+
+    max-width: 600px;
 }
 
 
-.mini-text {
+.small-title {
+
+    color: #73ad9e;
 
     font-family: 'Itim', cursive;
 
-    color: #6bb49f;
-
-    font-size: 19px;
+    font-size: 21px;
 
     letter-spacing: 2px;
 
-    margin-bottom: 18px;
+    margin-bottom: 15px;
 }
 
 
-.hero h1 {
+.hero-text h1 {
 
-    font-size: clamp(42px, 5vw, 68px);
+    font-family: 'Itim', cursive;
 
-    line-height: 1.25;
+    font-size: clamp(50px, 6vw, 75px);
 
-    font-weight: 600;
+    line-height: 1.1;
 
-    color: #35564c;
+    color: #4d9381;
+
+    margin-bottom: 15px;
 }
 
 
-.hero h1 span {
+.hero-text h2 {
 
-    color: #65b39c;
+    color: #52776d;
 
-    position: relative;
+    font-size: clamp(27px, 3vw, 38px);
+
+    font-weight: 500;
+
+    line-height: 1.5;
+
+    margin-bottom: 15px;
 }
 
 
-.hero h1 span::after {
+.hero-text p {
 
-    content: "";
+    font-size: 19px;
 
-    position: absolute;
+    line-height: 1.9;
 
-    width: 100%;
+    color: #78958e;
 
-    height: 10px;
-
-    background: #dff7ed;
-
-    left: 0;
-
-    bottom: 3px;
-
-    z-index: -1;
-
-    border-radius: 10px;
+    margin-bottom: 30px;
 }
 
 
-.cute-line {
+.hero-text strong {
 
-    font-size: 28px;
-
-    color: #7abca9;
-
-    margin: 10px 0;
+    color: #5fa18f;
 }
 
 
-.intro {
-
-    font-size: 22px;
-
-    line-height: 1.8;
-
-    color: #52786d;
-
-    margin-top: 5px;
-}
-
-
-.intro strong {
-
-    color: #3f9b81;
-}
-
-
-.description {
-
-    color: #789189;
-
-    line-height: 2;
-
-    font-size: 16px;
-
-    margin-top: 5px;
-}
-
-
-/* =========================
+/* ========================================
    BUTTON
-========================= */
+======================================== */
 
-.button {
+.btn {
 
     display: inline-block;
 
-    margin-top: 25px;
+    text-decoration: none;
 
-    padding: 13px 28px;
-
-    background: #75bda8;
+    background: #86cbb9;
 
     color: white;
 
-    text-decoration: none;
+    padding: 13px 30px;
 
-    border-radius: 30px;
+    border-radius: 50px;
 
-    box-shadow: 0 8px 20px rgba(85, 160, 135, 0.2);
+    font-size: 17px;
+
+    box-shadow:
+        0 10px 25px
+        rgba(95,161,143,0.20);
 
     transition: 0.3s;
 }
 
 
-.button:hover {
+.btn:hover {
 
     transform: translateY(-4px);
 
-    background: #5ca991;
+    background: #67b19d;
 
-    box-shadow: 0 12px 25px rgba(85, 160, 135, 0.3);
+    box-shadow:
+        0 14px 30px
+        rgba(95,161,143,0.25);
 }
 
 
-/* =========================
-   รูปโปรไฟล์
-========================= */
+/* ========================================
+   WELCOME BOX
+======================================== */
+
+.welcome-box {
+
+    margin-top: 35px;
+
+    padding: 18px 25px;
+
+    display: inline-block;
+
+    background: rgba(255,255,255,0.75);
+
+    border: 1px solid #dcefe9;
+
+    border-radius: 25px;
+
+    box-shadow:
+        0 8px 25px
+        rgba(92,156,139,0.07);
+}
+
+
+.welcome-box p {
+
+    margin: 0;
+
+    font-family: 'Itim', cursive;
+
+    font-size: 27px;
+
+    color: #67a997;
+}
+
+
+.cute-text {
+
+    margin-top: 5px;
+
+    font-size: 22px;
+}
+
+
+/* ========================================
+   PHOTO AREA
+======================================== */
 
 .hero-photo {
 
-    width: 45%;
+    flex: 0 0 390px;
+
+    width: 390px;
+
+    height: 390px;
 
     display: flex;
 
-    flex-direction: column;
+    justify-content: center;
 
     align-items: center;
 
@@ -296,27 +394,33 @@ body {
 }
 
 
-/* หัวใจ */
+/* ========================================
+   HEART
+======================================== */
 
 .heart {
 
+    width: 270px;
+
+    height: 270px;
+
     position: relative;
-
-    width: 360px;
-
-    height: 330px;
 
     transform: rotate(-45deg);
 
     background: #ccefe2;
 
-    margin-top: 30px;
+    border-radius: 25px;
 
-    filter: drop-shadow(0 15px 25px rgba(65, 135, 110, 0.15));
+    box-shadow:
+        0 18px 40px
+        rgba(87,160,141,0.20);
 
-    overflow: hidden;
+    overflow: visible;
 }
 
+
+/* หัวใจส่วนบน */
 
 .heart::before,
 .heart::after {
@@ -325,9 +429,9 @@ body {
 
     position: absolute;
 
-    width: 360px;
+    width: 270px;
 
-    height: 330px;
+    height: 270px;
 
     background: #ccefe2;
 
@@ -337,7 +441,7 @@ body {
 
 .heart::before {
 
-    top: -180px;
+    top: -135px;
 
     left: 0;
 }
@@ -347,80 +451,71 @@ body {
 
     top: 0;
 
-    left: 180px;
+    left: 135px;
 }
 
 
-/* รูปในหัวใจ */
+/* ========================================
+   PROFILE IMAGE
+======================================== */
 
 .heart img {
 
     position: absolute;
 
-    z-index: 5;
+    top: 0;
 
-    width: 100%;
+    left: 0;
 
-    height: 100%;
+    width: 270px;
+
+    height: 270px;
 
     object-fit: cover;
 
-    transform: rotate(45deg) scale(1.05);
+    border-radius: 20px;
 
-    clip-path: polygon(
-        50% 100%,
-        0% 35%,
-        10% 15%,
-        30% 5%,
-        50% 20%,
-        70% 5%,
-        90% 15%,
-        100% 35%
-    );
+    z-index: 10;
 }
 
 
-/* =========================
-   ของตกแต่งรอบรูป
-========================= */
+/* ========================================
+   PHOTO DECORATION
+======================================== */
 
-.flower {
+.photo-decor {
 
     position: absolute;
 
-    z-index: 10;
+    z-index: 15;
 
-    font-size: 38px;
+    font-size: 34px;
 
     animation: floating 3s ease-in-out infinite;
 }
 
 
-.flower1 {
+.photo-decor.one {
 
-    top: 5px;
+    top: 20px;
+
+    right: 10px;
+}
+
+
+.photo-decor.two {
+
+    bottom: 20px;
 
     left: 10px;
 }
 
 
-.flower2 {
+.photo-decor.three {
 
-    top: 35px;
+    bottom: 0;
 
-    right: 10px;
-
-    animation-delay: 0.5s;
-}
-
-
-.flower3 {
-
-    bottom: 30px;
-
-    right: 0;
-
-    animation-delay: 1s;
+    right: 25px;
 }
 
 
@@ -431,240 +526,328 @@ body {
     }
 
     50% {
-        transform: translateY(-10px);
+        transform: translateY(-8px);
     }
 
     100% {
         transform: translateY(0);
     }
-
 }
 
 
-.photo-text {
-
-    margin-top: 35px;
-
-    font-family: 'Itim', cursive;
-
-    color: #75ad9d;
-
-    font-size: 22px;
-
-    letter-spacing: 2px;
-}
-
-
-/* =========================
-   WELCOME BOX
-========================= */
-
-.welcome-box {
-
-    width: 90%;
-
-    max-width: 950px;
-
-    margin: 20px auto 70px;
-
-    padding: 45px 25px;
-
-    background: #effbf6;
-
-    border: 1px solid #d5f0e5;
-
-    border-radius: 35px;
-
-    text-align: center;
-
-    box-shadow: 0 15px 45px rgba(72, 140, 116, 0.08);
-}
-
-
-.cute-decoration {
-
-    font-size: 25px;
-
-    margin-bottom: 12px;
-}
-
-
-.welcome-box h2 {
-
-    font-family: 'Itim', cursive;
-
-    font-size: 34px;
-
-    font-weight: 400;
-
-    color: #4b9b83;
-
-    margin-bottom: 10px;
-}
-
-
-.welcome-box p {
-
-    color: #789189;
-
-    line-height: 2;
-}
-
-
-.bottom-decoration {
-
-    font-size: 25px;
-
-    color: #75bda8;
-
-    margin-top: 15px;
-}
-
-
-/* =========================
+/* ========================================
    FOOTER
-========================= */
+======================================== */
 
 footer {
 
     text-align: center;
 
-    padding: 25px;
+    padding: 30px 20px;
 
-    color: #8ca59d;
+    border-top: 1px solid #e0f1eb;
 
-    font-size: 13px;
+    color: #8aaba3;
+
+    font-family: 'Itim', cursive;
+
+    font-size: 17px;
+
+    background: rgba(255,255,255,0.7);
 }
 
 
-/* =========================
-   มือถือ
-========================= */
+/* ========================================
+   MOBILE
+======================================== */
 
-@media (max-width: 850px) {
+@media (max-width: 768px) {
+
+
+    /* NAV */
 
     .navbar {
-
-        height: auto;
-
-        padding: 18px 0;
 
         flex-direction: column;
 
         gap: 15px;
+
+        padding: 18px 12px;
     }
 
+
+    .logo {
+
+        font-size: 27px;
+    }
+
+
+    .nav-menu {
+
+        width: 100%;
+
+        justify-content: center;
+
+        flex-wrap: wrap;
+
+        gap: 5px 3px;
+    }
+
+
+    .nav-menu a {
+
+        font-size: 13px;
+
+        padding: 8px 10px;
+    }
+
+
+    /* DECOR */
+
+    .decor-top {
+
+        top: 145px;
+
+        font-size: 21px;
+    }
+
+
+    .decor-left {
+
+        left: 8px;
+
+        top: 55%;
+
+        font-size: 24px;
+    }
+
+
+    .decor-right {
+
+        right: 8px;
+
+        top: 42%;
+
+        font-size: 24px;
+    }
+
+
+    /* HERO */
 
     .hero {
 
-        flex-direction: column;
+        padding: 100px 20px 60px;
 
-        text-align: center;
-
-        padding: 60px 0;
-
-        gap: 60px;
+        min-height: auto;
     }
 
 
-    .hero-text,
+    .hero-container {
+
+        flex-direction: column-reverse;
+
+        gap: 45px;
+
+        text-align: center;
+    }
+
+
+    /* PHOTO */
+
     .hero-photo {
 
         width: 100%;
-    }
 
+        height: 280px;
 
-    .hero-photo {
-
-        order: -1;
+        flex: none;
     }
 
 
     .heart {
 
-        width: 280px;
+        width: 190px;
 
-        height: 255px;
+        height: 190px;
     }
 
 
     .heart::before,
     .heart::after {
 
-        width: 280px;
+        width: 190px;
 
-        height: 255px;
+        height: 190px;
     }
 
 
     .heart::before {
 
-        top: -140px;
+        top: -95px;
     }
 
 
     .heart::after {
 
-        left: 140px;
+        left: 95px;
     }
 
 
-    .menu a {
+    .heart img {
 
-        font-size: 13px;
+        width: 190px;
 
-        padding: 7px 10px;
-    }
-
-}
-
-
-@media (max-width: 500px) {
-
-    .hero h1 {
-
-        font-size: 39px;
+        height: 190px;
     }
 
 
-    .hero h2 {
+    .photo-decor {
 
         font-size: 25px;
     }
 
 
+    .photo-decor.one {
+
+        top: 10px;
+
+        right: 20%;
+    }
+
+
+    .photo-decor.two {
+
+        bottom: 5px;
+
+        left: 20%;
+    }
+
+
+    .photo-decor.three {
+
+        bottom: -5px;
+
+        right: 20%;
+    }
+
+
+    /* TEXT */
+
+    .small-title {
+
+        font-size: 17px;
+    }
+
+
+    .hero-text h1 {
+
+        font-size: 48px;
+    }
+
+
+    .hero-text h2 {
+
+        font-size: 25px;
+    }
+
+
+    .hero-text p {
+
+        font-size: 16px;
+    }
+
+
+    .welcome-box {
+
+        margin-top: 25px;
+
+        width: 100%;
+    }
+
+
+    .welcome-box p {
+
+        font-size: 24px;
+    }
+
+
+    /* FOOTER */
+
+    footer {
+
+        font-size: 15px;
+    }
+
+}
+
+
+/* ========================================
+   SMALL MOBILE
+======================================== */
+
+@media (max-width: 400px) {
+
+
+    .nav-menu a {
+
+        font-size: 12px;
+
+        padding: 7px 8px;
+    }
+
+
+    .decor-top {
+
+        font-size: 18px;
+    }
+
+
     .heart {
 
-        width: 240px;
+        width: 170px;
 
-        height: 220px;
+        height: 170px;
     }
 
 
     .heart::before,
     .heart::after {
 
-        width: 240px;
+        width: 170px;
 
-        height: 220px;
+        height: 170px;
     }
 
 
     .heart::before {
 
-        top: -120px;
+        top: -85px;
     }
 
 
     .heart::after {
 
-        left: 120px;
+        left: 85px;
     }
 
 
-    .flower {
+    .heart img {
 
-        font-size: 30px;
+        width: 170px;
+
+        height: 170px;
+    }
+
+
+    .hero-text h1 {
+
+        font-size: 42px;
+    }
+
+
+    .hero-text h2 {
+
+        font-size: 22px;
     }
 
 }

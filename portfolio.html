@@ -1,124 +1,120 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>แฟ้มสะสมงานของฉัน | Portfolio</title>
+    <title>ผลงาน | ณัชชยากานต์</title>
 
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f4f7f6;
-            text-align: center;
-            padding: 30px;
-            margin: 0;
-        }
+    <link rel="stylesheet" href="style.css">
 
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .university-logo {
-            width: 150px;
-            height: 150px;
-            object-fit: contain;
-            display: block;
-            margin: 0 auto 20px;
-        }
-
-        h1 {
-            color: #2c3e50;
-        }
-
-        .project-card {
-            background: white;
-            padding: 20px;
-            margin: 20px 0;
-            border-radius: 15px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            text-align: left;
-        }
-
-        .project-card h3 {
-            color: #c2185b;
-        }
-
-        .project-card p {
-            font-size: 17px;
-            line-height: 1.7;
-        }
-
-        .btn {
-            display: inline-block;
-            color: white;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 5px;
-            margin: 8px;
-        }
-
-        .home-btn {
-            background: #2c3e50;
-        }
-
-        .future-btn {
-            background: #d63384;
-        }
-    </style>
 </head>
 
 <body>
 
-    <div class="container">
+<div class="page">
 
-        <!-- ตรามหาวิทยาลัยบูรพา -->
-        <img src="logo.png"
-             alt="ตรามหาวิทยาลัยบูรพา"
-             class="university-logo">
+    <div class="top">
 
-        <h1>📁 แฟ้มสะสมงาน (Portfolio)</h1>
+        <p class="small-title">PORTFOLIO</p>
+
+        <h1>ผลงานของฉัน</h1>
 
         <p>
-            นี่คือพื้นที่รวบรวมผลงานและกิจกรรมที่ภูมิใจค่ะ
+            ผลงาน กิจกรรม และเกียรติบัตร
         </p>
 
-        <!-- ผลงานชิ้นที่ 1 -->
-        <div class="project-card">
-
-            <h3>1. โครงงาน/ชิ้นงานวิทยาศาสตร์คำนวณ</h3>
-
-            <p>
-                รายละเอียดชิ้นงาน:
-                สามารถใส่รายละเอียดเกี่ยวกับผลงาน
-                สิ่งที่ได้เรียนรู้ และประสบการณ์จากการทำงานชิ้นนี้
-            </p>
-
-        </div>
-
-        <!-- ผลงานชิ้นที่ 2 -->
-        <div class="project-card">
-
-            <h3>2. กิจกรรม/เกียรติบัตรที่ได้รับ</h3>
-
-            <p>
-                รายละเอียด:
-                สามารถใส่กิจกรรม การประกวด
-                หรือเกียรติบัตรที่เคยได้รับ
-            </p>
-
-        </div>
-
-        <a href="index.html" class="btn home-btn">
-            🔙 กลับหน้าแรก
-        </a>
-
-        <a href="future.html" class="btn future-btn">
-            🌸 อนาคตของฉัน (My Future)
-        </a>
-
     </div>
+
+
+    <!-- PROFILE -->
+
+    <section class="card profile-section">
+
+        <img
+            src="images/profile.jpg"
+            class="large-profile"
+            alt="รูปของฉัน"
+        >
+
+        <h2>เกี่ยวกับฉัน</h2>
+
+        <p>
+            รวบรวมผลงานและประสบการณ์ที่ได้เรียนรู้
+            ตลอดช่วงการศึกษา
+        </p>
+
+    </section>
+
+
+    <!-- CERTIFICATES -->
+
+    <section class="card">
+
+        <p class="section-label">CERTIFICATES</p>
+
+        <h2>เกียรติบัตร</h2>
+
+        <div class="gallery">
+
+            <div class="work-card">
+                <img src="images/certificate1.jpg"
+                     alt="เกียรติบัตรที่ 1">
+                <h3>เกียรติบัตรที่ 1</h3>
+                <p>รายละเอียดกิจกรรม</p>
+            </div>
+
+            <div class="work-card">
+                <img src="images/certificate2.jpg"
+                     alt="เกียรติบัตรที่ 2">
+                <h3>เกียรติบัตรที่ 2</h3>
+                <p>รายละเอียดกิจกรรม</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- WORK -->
+
+    <section class="card">
+
+        <p class="section-label">MY WORK</p>
+
+        <h2>ผลงาน</h2>
+
+        <div class="gallery">
+
+            <div class="work-card">
+
+                <img src="images/work1.jpg"
+                     alt="ผลงานที่ 1">
+
+                <h3>ผลงานที่ 1</h3>
+
+                <p>
+                    รายละเอียดเกี่ยวกับผลงาน
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <a href="me.html" class="main-button">
+        ← กลับไปข้อมูลส่วนตัว
+    </a>
+
+</div>
+
+
+<footer>
+    <p>© 2026 ณัชชยากานต์ | Academic Portfolio</p>
+</footer>
 
 </body>
 </html>

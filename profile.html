@@ -1,18 +1,23 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
     <title>ข้อมูลส่วนตัว | NATCHAYAKAN</title>
+
 
     <style>
 
         /* =========================================
-           🌷 MAIN THEME
+           🌷 COLOR THEME
         ========================================= */
 
         :root {
+
             --mint-dark: #4f8f7b;
             --mint: #8fcfc0;
             --mint-soft: #cdeee5;
@@ -27,8 +32,11 @@
 
             --border: #d8eee7;
 
-            --shadow: 0 12px 35px rgba(70, 130, 112, 0.10);
-            --shadow-hover: 0 18px 40px rgba(70, 130, 112, 0.16);
+            --shadow:
+                0 12px 35px rgba(70,130,112,0.10);
+
+            --shadow-hover:
+                0 18px 40px rgba(70,130,112,0.17);
         }
 
 
@@ -42,11 +50,14 @@
             box-sizing: border-box;
         }
 
+
         html {
             scroll-behavior: smooth;
         }
 
+
         body {
+
             font-family:
                 "Segoe UI",
                 Tahoma,
@@ -55,16 +66,19 @@
                 sans-serif;
 
             background:
+
                 radial-gradient(
                     circle at 10% 15%,
-                    rgba(143, 207, 192, 0.22),
+                    rgba(143,207,192,0.25),
                     transparent 28%
                 ),
+
                 radial-gradient(
                     circle at 90% 35%,
-                    rgba(205, 238, 229, 0.35),
+                    rgba(205,238,229,0.4),
                     transparent 30%
                 ),
+
                 linear-gradient(
                     135deg,
                     #f4fcfa,
@@ -73,6 +87,7 @@
                 );
 
             color: var(--text-dark);
+
             min-height: 100vh;
 
             overflow-x: hidden;
@@ -80,30 +95,47 @@
 
 
         /* =========================================
-           🌿 DECORATIVE BACKGROUND
+           🌷 BACKGROUND DECORATION
         ========================================= */
 
         body::before {
+
             content: "🌷";
+
             position: fixed;
-            top: 120px;
-            left: -10px;
-            font-size: 70px;
+
+            top: 130px;
+            left: -15px;
+
+            font-size: 75px;
+
             opacity: 0.12;
+
             transform: rotate(-15deg);
+
             pointer-events: none;
+
             z-index: -1;
         }
 
+
         body::after {
+
             content: "🪽";
+
             position: fixed;
-            right: -5px;
-            bottom: 80px;
-            font-size: 75px;
+
+            right: -10px;
+            bottom: 90px;
+
+            font-size: 80px;
+
             opacity: 0.12;
+
             transform: rotate(12deg);
+
             pointer-events: none;
+
             z-index: -1;
         }
 
@@ -113,41 +145,58 @@
         ========================================= */
 
         header {
+
             position: sticky;
+
             top: 0;
+
             z-index: 1000;
 
-            background: rgba(255, 255, 255, 0.94);
+            background:
+                rgba(255,255,255,0.95);
 
-            border-bottom: 1px solid var(--border);
+            border-bottom:
+                1px solid var(--border);
 
-            backdrop-filter: blur(15px);
-            -webkit-backdrop-filter: blur(15px);
+            backdrop-filter:
+                blur(15px);
+
+            -webkit-backdrop-filter:
+                blur(15px);
 
             box-shadow:
-                0 5px 20px rgba(70, 130, 112, 0.06);
+                0 5px 20px rgba(70,130,112,0.07);
         }
 
+
         .header-inner {
+
             max-width: 1200px;
+
             margin: auto;
 
             padding: 18px 25px;
 
             display: flex;
+
             align-items: center;
+
             justify-content: space-between;
 
             gap: 25px;
         }
 
 
-        /* LOGO NAME */
+        /* =========================================
+           🧸 BRAND
+        ========================================= */
 
         .brand {
+
             color: var(--mint-dark);
 
             font-size: 23px;
+
             font-weight: 900;
 
             letter-spacing: 2px;
@@ -155,8 +204,11 @@
             white-space: nowrap;
         }
 
+
         .brand::before {
+
             content: "♡ ";
+
             color: var(--mint);
         }
 
@@ -166,7 +218,9 @@
         ========================================= */
 
         nav {
+
             display: flex;
+
             align-items: center;
 
             gap: 8px;
@@ -176,16 +230,20 @@
             scrollbar-width: none;
         }
 
+
         nav::-webkit-scrollbar {
             display: none;
         }
 
+
         nav a {
+
             text-decoration: none;
 
             color: var(--text);
 
             font-size: 16px;
+
             font-weight: 700;
 
             padding: 13px 18px;
@@ -194,20 +252,35 @@
 
             white-space: nowrap;
 
-            transition: all 0.3s ease;
+            transition:
+                all 0.3s ease;
         }
+
 
         nav a:hover {
-            background: var(--mint-light);
-            color: var(--mint-dark);
+
+            background:
+                var(--mint-light);
+
+            color:
+                var(--mint-dark);
+
+            transform:
+                translateY(-2px);
         }
 
+
         nav a.active {
-            background: var(--mint-soft);
-            color: var(--mint-dark);
+
+            background:
+                var(--mint-soft);
+
+            color:
+                var(--mint-dark);
 
             box-shadow:
-                0 6px 18px rgba(79, 143, 123, 0.10);
+                0 6px 18px
+                rgba(79,143,123,0.12);
         }
 
 
@@ -216,77 +289,118 @@
         ========================================= */
 
         main {
-            width: min(1050px, 92%);
 
-            margin: auto;
+            width:
+                min(1050px, 92%);
 
-            padding: 70px 0 100px;
+            margin:
+                auto;
+
+            padding:
+                70px 0 100px;
         }
 
 
         /* =========================================
-           PAGE TITLE
+           PAGE HEADING
         ========================================= */
 
         .page-heading {
+
             text-align: center;
 
             margin-bottom: 55px;
         }
 
+
         .page-label {
+
             display: inline-block;
 
-            color: var(--mint-dark);
+            color:
+                var(--mint-dark);
 
-            background: var(--mint-light);
+            background:
+                var(--mint-light);
 
-            border: 1px solid var(--mint-soft);
+            border:
+                1px solid var(--mint-soft);
 
-            padding: 10px 28px;
+            padding:
+                10px 28px;
 
-            border-radius: 50px;
+            border-radius:
+                50px;
 
-            font-size: 15px;
-            font-weight: 900;
+            font-size:
+                15px;
 
-            letter-spacing: 2px;
+            font-weight:
+                900;
 
-            margin-bottom: 22px;
+            letter-spacing:
+                2px;
+
+            margin-bottom:
+                22px;
         }
+
 
         .page-title {
-            font-size: clamp(40px, 7vw, 65px);
 
-            font-weight: 900;
+            font-size:
+                clamp(40px,7vw,65px);
 
-            color: var(--text-dark);
+            font-weight:
+                900;
 
-            line-height: 1.15;
+            color:
+                var(--text-dark);
 
-            margin-bottom: 18px;
+            line-height:
+                1.15;
+
+            margin-bottom:
+                18px;
         }
+
 
         .page-title::before {
-            content: "♡ ";
-            color: var(--mint);
+
+            content:
+                "♡ ";
+
+            color:
+                var(--mint);
         }
+
 
         .page-title::after {
-            content: " ♡";
-            color: var(--mint);
+
+            content:
+                " ♡";
+
+            color:
+                var(--mint);
         }
 
+
         .page-description {
-            color: var(--text-light);
 
-            font-size: 18px;
+            color:
+                var(--text-light);
 
-            line-height: 1.8;
+            font-size:
+                18px;
 
-            max-width: 650px;
+            line-height:
+                1.8;
 
-            margin: auto;
+            max-width:
+                650px;
+
+            margin:
+                auto;
         }
 
 
@@ -295,131 +409,209 @@
         ========================================= */
 
         .section-card {
-            background: rgba(255, 255, 255, 0.95);
 
-            border: 1.5px solid var(--border);
+            background:
+                rgba(255,255,255,0.96);
 
-            border-radius: 40px;
+            border:
+                1.5px solid var(--border);
 
-            padding: 45px;
+            border-radius:
+                40px;
 
-            margin-bottom: 35px;
+            padding:
+                45px;
 
-            box-shadow: var(--shadow);
+            margin-bottom:
+                35px;
 
-            transition: 0.35s ease;
+            box-shadow:
+                var(--shadow);
+
+            transition:
+                0.35s ease;
         }
+
 
         .section-card:hover {
-            box-shadow: var(--shadow-hover);
-        }
 
+            box-shadow:
+                var(--shadow-hover);
 
-        /* SECTION TITLE */
-
-        .section-title {
-            display: flex;
-            align-items: center;
-
-            gap: 15px;
-
-            color: var(--text-dark);
-
-            font-size: 30px;
-
-            font-weight: 900;
-
-            margin-bottom: 32px;
-        }
-
-        .section-icon {
-            width: 58px;
-            height: 58px;
-
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            background: var(--mint-light);
-
-            border-radius: 20px;
-
-            font-size: 28px;
+            transform:
+                translateY(-2px);
         }
 
 
         /* =========================================
-           🎓 TARGET UNIVERSITY
+           SECTION TITLE
+        ========================================= */
+
+        .section-title {
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            gap:
+                15px;
+
+            color:
+                var(--text-dark);
+
+            font-size:
+                30px;
+
+            font-weight:
+                900;
+
+            margin-bottom:
+                32px;
+        }
+
+
+        .section-icon {
+
+            width:
+                58px;
+
+            height:
+                58px;
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            background:
+                var(--mint-light);
+
+            border-radius:
+                20px;
+
+            font-size:
+                28px;
+
+            flex-shrink:
+                0;
+        }
+
+
+        /* =========================================
+           🎓 UNIVERSITY
         ========================================= */
 
         .university-card {
-            text-align: center;
+
+            text-align:
+                center;
 
             background:
+
                 linear-gradient(
                     145deg,
                     #ffffff,
-                    #f3fbf8
+                    #f1faf7
                 );
 
-            border: 1.5px solid var(--border);
+            border:
+                1.5px solid var(--border);
 
-            border-radius: 35px;
+            border-radius:
+                35px;
 
-            padding: 50px 25px;
+            padding:
+                50px 25px;
 
-            position: relative;
+            position:
+                relative;
 
-            overflow: hidden;
+            overflow:
+                hidden;
         }
+
 
         .university-card::before {
-            content: "༘*.ﾟ🌷";
-            position: absolute;
 
-            top: 15px;
-            left: 25px;
+            content:
+                "༘*.ﾟ🌷";
 
-            font-size: 30px;
+            position:
+                absolute;
 
-            opacity: 0.45;
+            top:
+                15px;
+
+            left:
+                25px;
+
+            font-size:
+                30px;
+
+            opacity:
+                0.45;
         }
+
 
         .university-card::after {
-            content: "🎀🪽";
-            position: absolute;
 
-            right: 25px;
-            bottom: 20px;
+            content:
+                "🎀🪽";
 
-            font-size: 30px;
+            position:
+                absolute;
 
-            opacity: 0.45;
+            right:
+                25px;
+
+            bottom:
+                20px;
+
+            font-size:
+                30px;
+
+            opacity:
+                0.45;
         }
 
 
-        /* TARGET LABEL */
-
         .university-label {
-            display: inline-block;
 
-            background: var(--mint-light);
+            display:
+                inline-block;
 
-            color: var(--mint-dark);
+            background:
+                var(--mint-light);
 
-            border: 1px solid var(--mint-soft);
+            color:
+                var(--mint-dark);
 
-            padding: 12px 28px;
+            border:
+                1px solid var(--mint-soft);
 
-            border-radius: 50px;
+            padding:
+                12px 28px;
 
-            font-size: 18px;
+            border-radius:
+                50px;
 
-            font-weight: 900;
+            font-size:
+                18px;
 
-            letter-spacing: 1px;
+            font-weight:
+                900;
 
-            margin-bottom: 35px;
+            letter-spacing:
+                1px;
+
+            margin-bottom:
+                35px;
         }
 
 
@@ -428,185 +620,258 @@
         ========================================= */
 
         .university-logo {
-            width: 190px;
-            height: 190px;
 
-            margin: 0 auto 28px;
+            width:
+                190px;
 
-            padding: 12px;
+            height:
+                190px;
 
-            background: white;
+            margin:
+                0 auto 28px;
 
-            border: 4px solid var(--mint-soft);
+            padding:
+                12px;
 
-            border-radius: 50%;
+            background:
+                white;
 
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            border:
+                4px solid var(--mint-soft);
 
-            overflow: hidden;
+            border-radius:
+                50%;
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            overflow:
+                hidden;
 
             box-shadow:
-                0 10px 30px rgba(79, 143, 123, 0.12);
+
+                0 10px 30px
+                rgba(79,143,123,0.12);
         }
+
 
         .university-logo img {
-            width: 100%;
-            height: 100%;
 
-            object-fit: contain;
+            width:
+                100%;
 
-            display: block;
+            height:
+                100%;
+
+            object-fit:
+                contain;
+
+            display:
+                block;
         }
 
-
-        /* UNIVERSITY NAME */
 
         .university-name {
-            font-size: 30px;
 
-            font-weight: 900;
+            font-size:
+                30px;
 
-            color: var(--text-dark);
+            font-weight:
+                900;
 
-            margin-bottom: 8px;
+            color:
+                var(--text-dark);
+
+            margin-bottom:
+                8px;
         }
+
 
         .university-sub {
-            color: var(--mint-dark);
 
-            font-size: 19px;
+            color:
+                var(--mint-dark);
 
-            font-weight: 700;
+            font-size:
+                19px;
 
-            margin-bottom: 25px;
+            font-weight:
+                700;
+
+            margin-bottom:
+                25px;
         }
 
-
-        /* UNIVERSITY BUTTON */
 
         .university-button {
-            display: inline-block;
 
-            text-decoration: none;
+            display:
+                inline-block;
 
-            color: var(--mint-dark);
+            color:
+                var(--mint-dark);
 
-            background: var(--mint-light);
+            background:
+                var(--mint-light);
 
-            border: 1.5px dashed var(--mint);
+            border:
+                1.5px dashed var(--mint);
 
-            padding: 13px 25px;
+            padding:
+                13px 25px;
 
-            border-radius: 50px;
+            border-radius:
+                50px;
 
-            font-size: 16px;
+            font-size:
+                16px;
 
-            font-weight: 800;
-
-            transition: 0.3s ease;
-        }
-
-        .university-button:hover {
-            background: var(--mint-soft);
-
-            transform: translateY(-3px);
+            font-weight:
+                800;
         }
 
 
         /* =========================================
-           👤 PERSONAL INFORMATION
+           👤 PERSONAL INFO
         ========================================= */
 
         .info-list {
-            display: flex;
 
-            flex-direction: column;
+            display:
+                flex;
 
-            gap: 20px;
+            flex-direction:
+                column;
+
+            gap:
+                20px;
         }
+
 
         .info-item {
-            display: flex;
 
-            align-items: center;
+            display:
+                flex;
 
-            gap: 25px;
+            align-items:
+                center;
 
-            background: white;
+            gap:
+                25px;
 
-            border: 1.5px solid var(--border);
+            background:
+                white;
 
-            border-radius: 30px;
+            border:
+                1.5px solid var(--border);
 
-            padding: 25px 30px;
+            border-radius:
+                30px;
 
-            min-height: 110px;
+            padding:
+                25px 30px;
+
+            min-height:
+                110px;
 
             box-shadow:
-                0 7px 22px rgba(70, 130, 112, 0.06);
 
-            transition: all 0.3s ease;
+                0 7px 22px
+                rgba(70,130,112,0.06);
+
+            transition:
+                all 0.3s ease;
         }
+
 
         .info-item:hover {
-            transform: translateY(-4px);
 
-            background: var(--mint-pale);
+            transform:
+                translateY(-4px);
 
-            border-color: var(--mint-soft);
+            background:
+                var(--mint-pale);
+
+            border-color:
+                var(--mint-soft);
 
             box-shadow:
-                0 12px 30px rgba(70, 130, 112, 0.12);
+
+                0 12px 30px
+                rgba(70,130,112,0.12);
         }
 
-
-        /* ICON */
 
         .info-icon {
-            width: 75px;
-            height: 75px;
 
-            min-width: 75px;
+            width:
+                75px;
 
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            height:
+                75px;
 
-            background: var(--mint-light);
+            min-width:
+                75px;
 
-            border-radius: 22px;
+            display:
+                flex;
 
-            font-size: 32px;
+            align-items:
+                center;
 
-            box-shadow:
-                inset 0 0 0 1px rgba(143, 207, 192, 0.15);
+            justify-content:
+                center;
+
+            background:
+                var(--mint-light);
+
+            border-radius:
+                22px;
+
+            font-size:
+                32px;
         }
 
-
-        /* TEXT */
 
         .info-content {
-            flex: 1;
+
+            flex:
+                1;
         }
+
 
         .info-label {
-            color: var(--text-light);
 
-            font-size: 17px;
+            color:
+                var(--text-light);
 
-            margin-bottom: 6px;
+            font-size:
+                17px;
+
+            margin-bottom:
+                6px;
         }
 
+
         .info-value {
-            color: var(--text-dark);
 
-            font-size: 23px;
+            color:
+                var(--text-dark);
 
-            font-weight: 900;
+            font-size:
+                23px;
 
-            line-height: 1.5;
+            font-weight:
+                900;
+
+            line-height:
+                1.5;
         }
 
 
@@ -615,162 +880,180 @@
         ========================================= */
 
         .education-main {
+
             background:
+
                 linear-gradient(
                     145deg,
                     #f3fbf8,
                     #ffffff
                 );
 
-            border: 1.5px solid var(--border);
+            border:
+                1.5px solid var(--border);
 
-            border-radius: 32px;
+            border-radius:
+                32px;
 
-            padding: 32px;
+            padding:
+                32px;
 
-            margin-bottom: 20px;
+            margin-bottom:
+                20px;
         }
+
 
         .education-top {
-            display: flex;
 
-            align-items: center;
+            display:
+                flex;
 
-            gap: 22px;
+            align-items:
+                center;
 
-            margin-bottom: 25px;
+            gap:
+                22px;
+
+            margin-bottom:
+                25px;
         }
+
 
         .education-icon {
-            width: 75px;
-            height: 75px;
 
-            min-width: 75px;
+            width:
+                75px;
 
-            display: flex;
+            height:
+                75px;
 
-            align-items: center;
-            justify-content: center;
+            min-width:
+                75px;
 
-            background: var(--mint);
+            display:
+                flex;
 
-            color: white;
+            align-items:
+                center;
 
-            border-radius: 23px;
+            justify-content:
+                center;
 
-            font-size: 35px;
+            background:
+                var(--mint);
+
+            color:
+                white;
+
+            border-radius:
+                23px;
+
+            font-size:
+                35px;
 
             box-shadow:
-                0 8px 20px rgba(79, 143, 123, 0.18);
+
+                0 8px 20px
+                rgba(79,143,123,0.18);
         }
+
 
         .education-label {
-            color: var(--text-light);
 
-            font-size: 17px;
+            color:
+                var(--text-light);
 
-            margin-bottom: 5px;
+            font-size:
+                17px;
+
+            margin-bottom:
+                5px;
         }
+
 
         .education-school {
-            color: var(--text-dark);
 
-            font-size: 25px;
+            color:
+                var(--text-dark);
 
-            font-weight: 900;
+            font-size:
+                25px;
 
-            line-height: 1.4;
+            font-weight:
+                900;
+
+            line-height:
+                1.4;
         }
 
-
-        /* GRADE PILL */
 
         .grade-pill {
-            display: inline-block;
 
-            color: var(--mint-dark);
+            display:
+                inline-block;
 
-            background: white;
+            color:
+                var(--mint-dark);
 
-            border: 1.5px solid var(--mint-soft);
+            background:
+                white;
 
-            padding: 12px 22px;
+            border:
+                1.5px solid var(--mint-soft);
 
-            border-radius: 50px;
+            padding:
+                12px 22px;
 
-            font-size: 17px;
+            border-radius:
+                50px;
 
-            font-weight: 800;
+            font-size:
+                17px;
+
+            font-weight:
+                800;
         }
 
-
-        /* STUDY PLAN */
 
         .study-plan {
-            background: white;
 
-            border: 1.5px solid var(--border);
+            background:
+                white;
 
-            border-radius: 30px;
+            border:
+                1.5px solid var(--border);
 
-            padding: 28px 30px;
+            border-radius:
+                30px;
 
-            margin-bottom: 20px;
+            padding:
+                28px 30px;
         }
+
 
         .study-label {
-            color: var(--text-light);
 
-            font-size: 17px;
+            color:
+                var(--text-light);
 
-            margin-bottom: 10px;
+            font-size:
+                17px;
+
+            margin-bottom:
+                10px;
         }
+
 
         .study-value {
-            color: var(--text-dark);
 
-            font-size: 24px;
+            color:
+                var(--text-dark);
 
-            font-weight: 900;
+            font-size:
+                24px;
 
-            line-height: 1.5;
-        }
-
-
-        /* GPAX */
-
-        .gpax-box {
-            background:
-                linear-gradient(
-                    135deg,
-                    var(--mint),
-                    #73bbaa
-                );
-
-            color: white;
-
-            border-radius: 30px;
-
-            padding: 28px 32px;
-
-            box-shadow:
-                0 12px 28px rgba(79, 143, 123, 0.18);
-        }
-
-        .gpax-label {
-            font-size: 17px;
-
-            opacity: 0.95;
-
-            margin-bottom: 5px;
-        }
-
-        .gpax-number {
-            font-size: 48px;
-
-            font-weight: 900;
-
-            line-height: 1;
+            font-weight:
+                900;
         }
 
 
@@ -779,77 +1062,196 @@
         ========================================= */
 
         .contact-list {
-            display: flex;
 
-            flex-direction: column;
+            display:
+                flex;
 
-            gap: 20px;
+            flex-direction:
+                column;
+
+            gap:
+                20px;
         }
+
 
         .contact-item {
-            display: flex;
 
-            align-items: center;
+            display:
+                flex;
 
-            gap: 25px;
+            align-items:
+                center;
 
-            background: white;
+            gap:
+                25px;
 
-            border: 1.5px solid var(--border);
+            background:
+                white;
 
-            border-radius: 30px;
+            border:
+                1.5px solid var(--border);
 
-            padding: 25px 30px;
+            border-radius:
+                30px;
 
-            transition: 0.3s ease;
+            padding:
+                25px 30px;
+
+            transition:
+                0.3s ease;
         }
+
 
         .contact-item:hover {
-            transform: translateY(-4px);
 
-            background: var(--mint-pale);
+            transform:
+                translateY(-4px);
+
+            background:
+                var(--mint-pale);
 
             box-shadow:
-                0 12px 30px rgba(70, 130, 112, 0.10);
+
+                0 12px 30px
+                rgba(70,130,112,0.10);
         }
+
 
         .contact-icon {
-            width: 75px;
-            height: 75px;
 
-            min-width: 75px;
+            width:
+                75px;
 
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            height:
+                75px;
 
-            background: var(--mint-light);
+            min-width:
+                75px;
 
-            border-radius: 22px;
+            display:
+                flex;
 
-            font-size: 32px;
+            align-items:
+                center;
 
-            color: var(--mint-dark);
+            justify-content:
+                center;
+
+            background:
+                var(--mint-light);
+
+            border-radius:
+                22px;
+
+            font-size:
+                32px;
+
+            color:
+                var(--mint-dark);
         }
+
 
         .contact-label {
-            color: var(--text-light);
 
-            font-size: 17px;
+            color:
+                var(--text-light);
 
-            margin-bottom: 5px;
+            font-size:
+                17px;
+
+            margin-bottom:
+                5px;
         }
 
+
         .contact-value {
-            color: var(--text-dark);
 
-            font-size: 22px;
+            color:
+                var(--text-dark);
 
-            font-weight: 900;
+            font-size:
+                22px;
 
-            line-height: 1.5;
+            font-weight:
+                900;
 
-            word-break: break-word;
+            line-height:
+                1.5;
+
+            word-break:
+                break-word;
+        }
+
+
+        /* =========================================
+           🏠 BACK HOME BUTTON
+        ========================================= */
+
+        .back-home {
+
+            text-align:
+                center;
+
+            margin-top:
+                45px;
+
+            margin-bottom:
+                15px;
+        }
+
+
+        .back-home a {
+
+            display:
+                inline-block;
+
+            text-decoration:
+                none;
+
+            color:
+                var(--mint-dark);
+
+            background:
+                white;
+
+            border:
+                2px solid var(--mint-soft);
+
+            padding:
+                15px 32px;
+
+            border-radius:
+                50px;
+
+            font-size:
+                17px;
+
+            font-weight:
+                900;
+
+            box-shadow:
+                0 8px 22px
+                rgba(70,130,112,0.09);
+
+            transition:
+                all 0.3s ease;
+        }
+
+
+        .back-home a:hover {
+
+            background:
+                var(--mint-light);
+
+            border-color:
+                var(--mint);
+
+            transform:
+                translateY(-4px);
+
+            box-shadow:
+                0 12px 28px
+                rgba(70,130,112,0.15);
         }
 
 
@@ -858,28 +1260,40 @@
         ========================================= */
 
         .decoration {
-            text-align: center;
 
-            font-size: 24px;
+            text-align:
+                center;
 
-            letter-spacing: 5px;
+            font-size:
+                24px;
 
-            margin: 55px 0 15px;
+            letter-spacing:
+                5px;
 
-            opacity: 0.85;
+            margin:
+                55px 0 15px;
+
+            opacity:
+                0.85;
         }
 
 
         .cute-message {
-            text-align: center;
 
-            color: var(--mint-dark);
+            text-align:
+                center;
 
-            font-size: 18px;
+            color:
+                var(--mint-dark);
 
-            font-weight: 700;
+            font-size:
+                18px;
 
-            line-height: 2;
+            font-weight:
+                700;
+
+            line-height:
+                2;
         }
 
 
@@ -888,25 +1302,37 @@
         ========================================= */
 
         footer {
-            text-align: center;
 
-            padding: 35px 20px;
+            text-align:
+                center;
 
-            background: rgba(255, 255, 255, 0.85);
+            padding:
+                35px 20px;
 
-            border-top: 1px solid var(--border);
+            background:
+                rgba(255,255,255,0.9);
 
-            color: var(--text-light);
+            border-top:
+                1px solid var(--border);
 
-            font-size: 16px;
+            color:
+                var(--text-light);
 
-            line-height: 2;
+            font-size:
+                16px;
+
+            line-height:
+                2;
         }
 
-        footer strong {
-            color: var(--mint-dark);
 
-            letter-spacing: 2px;
+        footer strong {
+
+            color:
+                var(--mint-dark);
+
+            letter-spacing:
+                2px;
         }
 
 
@@ -914,251 +1340,402 @@
            📱 MOBILE
         ========================================= */
 
-        @media (max-width: 700px) {
+        @media (max-width:700px) {
+
 
             .header-inner {
-                padding: 14px 15px;
 
-                flex-direction: column;
+                padding:
+                    14px 15px;
 
-                align-items: stretch;
+                flex-direction:
+                    column;
 
-                gap: 12px;
+                align-items:
+                    stretch;
+
+                gap:
+                    12px;
             }
+
 
             .brand {
-                text-align: center;
 
-                font-size: 20px;
+                text-align:
+                    center;
+
+                font-size:
+                    20px;
             }
+
 
             nav {
-                width: 100%;
 
-                justify-content: flex-start;
+                width:
+                    100%;
 
-                padding-bottom: 3px;
+                justify-content:
+                    flex-start;
             }
 
-            nav a {
-                font-size: 14px;
 
-                padding: 11px 14px;
+            nav a {
+
+                font-size:
+                    14px;
+
+                padding:
+                    11px 14px;
             }
 
 
             main {
-                width: 92%;
 
-                padding: 45px 0 70px;
+                width:
+                    92%;
+
+                padding:
+                    45px 0 70px;
             }
 
 
             .page-heading {
-                margin-bottom: 35px;
+
+                margin-bottom:
+                    35px;
             }
+
 
             .page-label {
-                font-size: 12px;
 
-                padding: 9px 20px;
+                font-size:
+                    12px;
 
-                letter-spacing: 1.5px;
+                padding:
+                    9px 20px;
+
+                letter-spacing:
+                    1.5px;
             }
+
 
             .page-title {
-                font-size: 42px;
+
+                font-size:
+                    42px;
             }
 
-            .page-description {
-                font-size: 16px;
 
-                padding: 0 10px;
+            .page-description {
+
+                font-size:
+                    16px;
+
+                padding:
+                    0 10px;
             }
 
 
             .section-card {
-                padding: 25px 18px;
 
-                border-radius: 30px;
+                padding:
+                    25px 18px;
 
-                margin-bottom: 25px;
+                border-radius:
+                    30px;
+
+                margin-bottom:
+                    25px;
             }
+
 
             .section-title {
-                font-size: 25px;
 
-                gap: 12px;
+                font-size:
+                    25px;
 
-                margin-bottom: 25px;
+                gap:
+                    12px;
+
+                margin-bottom:
+                    25px;
             }
 
+
             .section-icon {
-                width: 50px;
-                height: 50px;
 
-                min-width: 50px;
+                width:
+                    50px;
 
-                border-radius: 17px;
+                height:
+                    50px;
 
-                font-size: 24px;
+                min-width:
+                    50px;
+
+                border-radius:
+                    17px;
+
+                font-size:
+                    24px;
             }
 
 
             /* UNIVERSITY */
 
             .university-card {
-                padding: 40px 18px;
 
-                border-radius: 28px;
+                padding:
+                    40px 18px;
+
+                border-radius:
+                    28px;
             }
+
 
             .university-label {
-                font-size: 14px;
 
-                padding: 10px 20px;
+                font-size:
+                    14px;
+
+                padding:
+                    10px 20px;
             }
+
 
             .university-logo {
-                width: 150px;
-                height: 150px;
 
-                border-width: 3px;
+                width:
+                    150px;
+
+                height:
+                    150px;
+
+                border-width:
+                    3px;
             }
+
 
             .university-name {
-                font-size: 24px;
+
+                font-size:
+                    24px;
             }
+
 
             .university-sub {
-                font-size: 16px;
+
+                font-size:
+                    16px;
             }
 
 
-            /* INFO */
+            /* PERSONAL */
 
             .info-item {
-                gap: 16px;
 
-                padding: 20px;
+                gap:
+                    16px;
 
-                border-radius: 25px;
+                padding:
+                    20px;
 
-                min-height: 95px;
+                border-radius:
+                    25px;
+
+                min-height:
+                    95px;
             }
+
 
             .info-icon {
-                width: 62px;
-                height: 62px;
 
-                min-width: 62px;
+                width:
+                    62px;
 
-                border-radius: 18px;
+                height:
+                    62px;
 
-                font-size: 27px;
+                min-width:
+                    62px;
+
+                border-radius:
+                    18px;
+
+                font-size:
+                    27px;
             }
+
 
             .info-label {
-                font-size: 15px;
+
+                font-size:
+                    15px;
             }
 
+
             .info-value {
-                font-size: 19px;
+
+                font-size:
+                    19px;
             }
 
 
             /* EDUCATION */
 
             .education-main {
-                padding: 23px;
 
-                border-radius: 27px;
+                padding:
+                    23px;
+
+                border-radius:
+                    27px;
             }
+
 
             .education-top {
-                gap: 16px;
+
+                gap:
+                    16px;
+
+                align-items:
+                    flex-start;
             }
+
 
             .education-icon {
-                width: 62px;
-                height: 62px;
 
-                min-width: 62px;
+                width:
+                    62px;
 
-                border-radius: 18px;
+                height:
+                    62px;
 
-                font-size: 28px;
+                min-width:
+                    62px;
+
+                border-radius:
+                    18px;
+
+                font-size:
+                    28px;
             }
+
 
             .education-school {
-                font-size: 20px;
+
+                font-size:
+                    20px;
             }
+
 
             .grade-pill {
-                font-size: 14px;
 
-                padding: 10px 16px;
+                font-size:
+                    14px;
+
+                padding:
+                    10px 16px;
             }
+
 
             .study-plan {
-                padding: 23px;
 
-                border-radius: 25px;
+                padding:
+                    23px;
+
+                border-radius:
+                    25px;
             }
+
 
             .study-value {
-                font-size: 20px;
-            }
 
-            .gpax-box {
-                padding: 25px;
-
-                border-radius: 27px;
-            }
-
-            .gpax-number {
-                font-size: 42px;
+                font-size:
+                    20px;
             }
 
 
             /* CONTACT */
 
             .contact-item {
-                gap: 16px;
 
-                padding: 20px;
+                gap:
+                    16px;
 
-                border-radius: 25px;
+                padding:
+                    20px;
+
+                border-radius:
+                    25px;
             }
+
 
             .contact-icon {
-                width: 62px;
-                height: 62px;
 
-                min-width: 62px;
+                width:
+                    62px;
 
-                border-radius: 18px;
+                height:
+                    62px;
 
-                font-size: 27px;
+                min-width:
+                    62px;
+
+                border-radius:
+                    18px;
+
+                font-size:
+                    27px;
             }
+
 
             .contact-label {
-                font-size: 15px;
+
+                font-size:
+                    15px;
             }
 
+
             .contact-value {
-                font-size: 18px;
+
+                font-size:
+                    18px;
+            }
+
+
+            /* BACK HOME */
+
+            .back-home {
+
+                margin-top:
+                    30px;
+            }
+
+
+            .back-home a {
+
+                font-size:
+                    15px;
+
+                padding:
+                    13px 25px;
             }
 
 
             .decoration {
-                font-size: 17px;
 
-                letter-spacing: 2px;
+                font-size:
+                    17px;
+
+                letter-spacing:
+                    2px;
             }
+
         }
 
     </style>
+
 </head>
 
 
@@ -1167,11 +1744,12 @@
 
     <!-- =========================================
          🎀 HEADER
-    ========================================== -->
+    ========================================= -->
 
     <header>
 
         <div class="header-inner">
+
 
             <div class="brand">
                 NATCHAYAKAN
@@ -1180,24 +1758,47 @@
 
             <nav>
 
+                <!-- 🏠 HOME -->
+
                 <a href="index.html">
                     🏠 หน้าแรก
                 </a>
 
-                <a href="profile.html" class="active">
+
+                <!-- 👤 PROFILE -->
+
+                <a href="profile.html"
+                   class="active">
+
                     👤 ข้อมูลส่วนตัว
+
                 </a>
+
+
+                <!-- 📚 EDUCATION -->
 
                 <a href="education.html">
+
                     📚 การศึกษา
+
                 </a>
+
+
+                <!-- ✨ ACTIVITIES -->
 
                 <a href="activities.html">
+
                     ✨ กิจกรรม
+
                 </a>
 
+
+                <!-- 🏆 CERTIFICATES -->
+
                 <a href="certificates.html">
+
                     🏆 เกียรติบัตร
+
                 </a>
 
             </nav>
@@ -1209,26 +1810,36 @@
 
 
     <!-- =========================================
-         🌷 MAIN CONTENT
-    ========================================== -->
+         🌷 MAIN
+    ========================================= -->
 
     <main>
 
 
-        <!-- PAGE HEADING -->
+        <!-- PAGE TITLE -->
 
         <div class="page-heading">
 
+
             <div class="page-label">
+
                 PERSONAL INFORMATION
+
             </div>
 
+
             <h1 class="page-title">
+
                 ข้อมูลส่วนตัว
+
             </h1>
 
+
             <p class="page-description">
-                ประวัติส่วนตัว รายละเอียดการศึกษา และช่องทางการติดต่อ
+
+                ประวัติส่วนตัว รายละเอียดการศึกษา
+                และช่องทางการติดต่อ
+
             </p>
 
         </div>
@@ -1236,27 +1847,39 @@
 
 
         <!-- =====================================
-             🎓 TARGET UNIVERSITY
+             🎓 UNIVERSITY
         ====================================== -->
 
         <section class="section-card">
 
+
             <h2 class="section-title">
-                <span class="section-icon">🎓</span>
+
+                <span class="section-icon">
+                    🎓
+                </span>
+
                 มหาวิทยาลัยที่อยากเข้า
+
             </h2>
 
 
             <div class="university-card">
 
+
                 <div class="university-label">
+
                     🎓 TARGET UNIVERSITY
+
                 </div>
 
 
                 <!--
-                    📌 ใส่ไฟล์ burapha-logo.png
-                    ไว้ในโฟลเดอร์เดียวกับ profile.html
+                    📌 ไฟล์รูปต้องชื่อ
+                    burapha-logo.png
+
+                    และอยู่โฟลเดอร์เดียวกับ
+                    profile.html
                 -->
 
                 <div class="university-logo">
@@ -1270,16 +1893,23 @@
 
 
                 <div class="university-name">
+
                     มหาวิทยาลัยบูรพา
+
                 </div>
 
+
                 <div class="university-sub">
+
                     Burapha University
+
                 </div>
 
 
                 <div class="university-button">
+
                     ♡ มหาวิทยาลัยในฝันของฉัน ♡
+
                 </div>
 
             </div>
@@ -1294,16 +1924,20 @@
 
         <section class="section-card">
 
+
             <h2 class="section-title">
-                <span class="section-icon">👤</span>
+
+                <span class="section-icon">
+                    👤
+                </span>
+
                 ข้อมูลส่วนตัว
+
             </h2>
 
 
             <div class="info-list">
 
-
-                <!-- NAME -->
 
                 <div class="info-item">
 
@@ -1327,8 +1961,6 @@
 
 
 
-                <!-- NICKNAME -->
-
                 <div class="info-item">
 
                     <div class="info-icon">
@@ -1350,8 +1982,6 @@
                 </div>
 
 
-
-                <!-- BIRTHDAY -->
 
                 <div class="info-item">
 
@@ -1375,8 +2005,6 @@
 
 
 
-                <!-- AGE -->
-
                 <div class="info-item">
 
                     <div class="info-icon">
@@ -1399,8 +2027,6 @@
 
 
 
-                <!-- NATIONALITY -->
-
                 <div class="info-item">
 
                     <div class="info-icon">
@@ -1422,8 +2048,6 @@
                 </div>
 
 
-
-                <!-- RELIGION -->
 
                 <div class="info-item">
 
@@ -1458,21 +2082,28 @@
 
         <section class="section-card">
 
+
             <h2 class="section-title">
-                <span class="section-icon">🎓</span>
+
+                <span class="section-icon">
+                    🎓
+                </span>
+
                 ประวัติการศึกษา
+
             </h2>
 
 
-            <!-- SCHOOL -->
-
             <div class="education-main">
 
+
                 <div class="education-top">
+
 
                     <div class="education-icon">
                         🏫
                     </div>
+
 
                     <div>
 
@@ -1480,9 +2111,12 @@
                             สถานศึกษาปัจจุบัน
                         </div>
 
+
                         <div class="education-school">
+
                             โรงเรียนบ้านบึง<br>
                             "อุตสาหกรรมนุเคราะห์"
+
                         </div>
 
                     </div>
@@ -1491,27 +2125,31 @@
 
 
                 <div class="grade-pill">
+
                     🎓 ศึกษาอยู่ชั้นมัธยมศึกษาปีที่ 6 (ม.6)
+
                 </div>
 
             </div>
 
-
-
-            <!-- STUDY PLAN -->
 
             <div class="study-plan">
 
+
                 <div class="study-label">
+
                     📚 แผนการเรียน
+
                 </div>
 
+
                 <div class="study-value">
+
                     ภาษาจีน 🇨🇳
+
                 </div>
 
             </div>
-
 
         </section>
 
@@ -1523,9 +2161,15 @@
 
         <section class="section-card">
 
+
             <h2 class="section-title">
-                <span class="section-icon">📱</span>
+
+                <span class="section-icon">
+                    📱
+                </span>
+
                 ช่องทางการติดต่อ
+
             </h2>
 
 
@@ -1610,15 +2254,36 @@
 
 
         <!-- =====================================
+             🏠 BACK TO HOME
+        ====================================== -->
+
+        <div class="back-home">
+
+            <a href="index.html">
+
+                🏠 ♡ กลับหน้าแรก ♡
+
+            </a>
+
+        </div>
+
+
+
+        <!-- =====================================
              🌷 DECORATION
         ====================================== -->
 
         <div class="decoration">
+
             ༘*.ﾟ🧸🎀𓍢ִ໋🌷͙֒ᰔᩚִִֶֶָ. ..𓂃 ࣪ ִֶָ🪽་༘࿐
+
         </div>
 
+
         <div class="cute-message">
+
             ♡ thank you for visiting my portfolio ♡
+
         </div>
 
 
@@ -1628,11 +2293,12 @@
 
     <!-- =========================================
          FOOTER
-    ========================================== -->
+    ========================================= -->
 
     <footer>
 
         ♡ Made with love & mint green ♡
+
         <br>
 
         <strong>

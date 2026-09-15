@@ -384,15 +384,449 @@ body {
     text-align: center;
 }
 
-.large-profile {
-    width: 220px;
-    height: 220px;
+@import url('https://fonts.googleapis.com/css2?family=Itim&family=Kanit:wght@300;400;500;600&display=swap');
 
-    object-fit: cover;
+
+/* =========================
+   BASIC
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Kanit', sans-serif;
+    background: #f8fffc;
+    color: #355c51;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+    width: 100%;
+    height: 75px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 8%;
+
+    background: rgba(255,255,255,0.92);
+
+    border-bottom: 1px solid #dcefe8;
+
+    position: sticky;
+    top: 0;
+
+    z-index: 100;
+
+    backdrop-filter: blur(10px);
+}
+
+.logo {
+    color: #65a995;
+
+    font-size: 17px;
+
+    letter-spacing: 2px;
+
+    font-weight: 600;
+}
+
+.menu {
+    display: flex;
+
+    gap: 30px;
+}
+
+.menu a {
+    text-decoration: none;
+
+    color: #52786d;
+
+    font-size: 14px;
+
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    color: #83c6b1;
+}
+
+
+/* =========================
+   HOME
+========================= */
+
+.home {
+    min-height: calc(100vh - 75px);
+
+    position: relative;
+
+    overflow: hidden;
+
+    padding: 50px 7% 30px;
+
+    background:
+        radial-gradient(
+            circle at 10% 20%,
+            #e3f8ef 0%,
+            transparent 25%
+        ),
+        radial-gradient(
+            circle at 90% 80%,
+            #e5f8f1 0%,
+            transparent 25%
+        ),
+        #fbfffd;
+}
+
+
+/* =========================
+   WELCOME
+========================= */
+
+.welcome {
+    max-width: 1150px;
+
+    min-height: 650px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 1fr 430px;
+
+    align-items: center;
+
+    gap: 80px;
+}
+
+
+/* =========================
+   TEXT
+========================= */
+
+.welcome-text {
+    position: relative;
+
+    z-index: 2;
+}
+
+.mini-title {
+    color: #83bbaa;
+
+    font-size: 13px;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 20px;
+}
+
+.welcome h1 {
+    font-size: clamp(42px, 6vw, 70px);
+
+    line-height: 1.15;
+
+    font-weight: 500;
+
+    color: #315b50;
+
+    margin-bottom: 25px;
+}
+
+.welcome h1 span {
+    color: #79bba8;
+
+    font-weight: 400;
+}
+
+.description {
+    color: #718b84;
+
+    font-size: 17px;
+
+    line-height: 2;
+
+    margin-bottom: 12px;
+}
+
+.description strong {
+    color: #4e927e;
+
+    font-weight: 500;
+}
+
+.cute-text {
+    color: #8bb9ac;
+
+    font-size: 16px;
+
+    margin-bottom: 28px;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+.start-button {
+    display: inline-block;
+
+    text-decoration: none;
+
+    background: #9bd4c2;
+
+    color: white;
+
+    padding: 13px 28px;
+
+    border-radius: 40px;
+
+    box-shadow: 0 10px 25px rgba(107,180,155,0.25);
+
+    transition: 0.3s;
+}
+
+.start-button:hover {
+    background: #78bda8;
+
+    transform: translateY(-4px);
+
+    box-shadow: 0 15px 30px rgba(107,180,155,0.3);
+}
+
+
+/* =========================
+   HEART PHOTO
+========================= */
+
+.photo-area {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    position: relative;
+}
+
+
+/*
+    หัวใจทำด้วย CSS
+*/
+
+.heart-photo {
+
+    width: 330px;
+
+    height: 330px;
+
+    position: relative;
+
+    transform: rotate(-45deg);
+
+    margin-top: 20px;
+
+    filter:
+        drop-shadow(
+            0 20px 30px
+            rgba(78,145,124,0.20)
+        );
+}
+
+
+/* หัวใจด้านล่าง */
+
+.heart-photo::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 330px;
+
+    height: 330px;
+
+    background: #a7dbc9;
+
+    border-radius: 0 0 30px 0;
+
+    z-index: -1;
+}
+
+
+/* วงกลมซ้าย */
+
+.heart-photo::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 330px;
+
+    height: 330px;
+
+    background: #a7dbc9;
 
     border-radius: 50%;
 
-    margin-bottom: 25px;
+    top: -165px;
+
+    left: 0;
+
+    z-index: -1;
+}
+
+
+/* รูปภาพ */
+
+.heart-photo img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    border-radius: 50% 50% 0 50%;
+
+    transform: rotate(45deg) scale(0.72);
+
+    position: relative;
+
+    top: 47px;
+
+    left: 47px;
+
+}
+
+
+/* =========================
+   PHOTO DECORATION
+========================= */
+
+.photo-decoration {
+
+    position: absolute;
+
+    bottom: -10px;
+
+    right: 15px;
+
+    font-size: 35px;
+
+    color: #80bda9;
+
+    transform: rotate(10deg);
+}
+
+
+/* =========================
+   DECORATIONS
+========================= */
+
+.decor {
+
+    position: absolute;
+
+    z-index: 1;
+
+    user-select: none;
+
+    pointer-events: none;
+
+}
+
+.decor1 {
+
+    top: 12%;
+
+    left: 3%;
+
+    font-size: 35px;
+
+    transform: rotate(-10deg);
+
+}
+
+.decor2 {
+
+    top: 15%;
+
+    right: 5%;
+
+    font-size: 28px;
+
+    transform: rotate(10deg);
+
+}
+
+.decor3 {
+
+    bottom: 15%;
+
+    left: 5%;
+
+    font-size: 30px;
+
+}
+
+.decor4 {
+
+    bottom: 8%;
+
+    right: 7%;
+
+    font-size: 30px;
+
+}
+
+
+/* =========================
+   BOTTOM
+========================= */
+
+.welcome-bottom {
+
+    max-width: 700px;
+
+    margin: 10px auto 0;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    justify-content: center;
+
+    color: #9abbb1;
+
+    font-size: 13px;
+
+}
+
+.line {
+
+    height: 1px;
+
+    width: 80px;
+
+    background: #c9e6dc;
+
 }
 
 
@@ -401,13 +835,19 @@ body {
 ========================= */
 
 footer {
+
     text-align: center;
 
-    padding: 40px 20px;
+    padding: 25px;
 
-    color: #999;
+    background: white;
 
-    font-size: 13px;
+    color: #9ab8af;
+
+    font-size: 12px;
+
+    border-top: 1px solid #e1f0eb;
+
 }
 
 
@@ -415,32 +855,90 @@ footer {
    MOBILE
 ========================= */
 
-@media (max-width: 700px) {
+@media (max-width: 800px) {
 
-    .page {
-        padding: 40px 15px;
+    .navbar {
+
+        padding: 0 20px;
+
     }
 
-    .top h1 {
-        font-size: 38px;
+    .menu {
+
+        gap: 13px;
+
     }
 
-    .card {
-        padding: 25px;
+    .menu a {
+
+        font-size: 11px;
+
     }
 
-    .info,
-    .skill-grid,
-    .gallery {
+    .welcome {
+
         grid-template-columns: 1fr;
+
+        text-align: center;
+
+        gap: 30px;
+
     }
 
-    .hero h1 {
-        font-size: 42px;
+    .welcome h1 {
+
+        font-size: 43px;
+
     }
 
-    .intro {
-        font-size: 15px;
+    .photo-area {
+
+        order: -1;
+
+    }
+
+    .heart-photo {
+
+        width: 240px;
+
+        height: 240px;
+
+    }
+
+    .heart-photo::before,
+
+    .heart-photo::after {
+
+        width: 240px;
+
+        height: 240px;
+
+    }
+
+    .heart-photo::after {
+
+        top: -120px;
+
+    }
+
+    .heart-photo img {
+
+        top: 34px;
+
+        left: 34px;
+
+    }
+
+    .decor {
+
+        opacity: 0.7;
+
+    }
+
+    .welcome-bottom {
+
+        margin-top: 20px;
+
     }
 
 }

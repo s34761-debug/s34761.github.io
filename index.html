@@ -554,95 +554,1018 @@
 </head>
 
 
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Portfolio 🎀</title>
+
+
+    <!-- Google Fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Itim&family=Prompt:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <style>
+
+        /* =========================================
+           RESET
+        ========================================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+        body {
+
+            font-family: "Prompt", sans-serif;
+
+            background: #fffdfd;
+
+            color: #557568;
+
+            overflow-x: hidden;
+        }
+
+
+
+        /* =========================================
+           HOME
+        ========================================= */
+
+        .home {
+
+            min-height: 100vh;
+
+            display: flex;
+
+            flex-direction: column;
+
+            justify-content: center;
+
+            align-items: center;
+
+            position: relative;
+
+            overflow: hidden;
+
+            padding: 80px 20px 50px;
+
+
+            background:
+
+                radial-gradient(
+                    circle at 10% 20%,
+                    rgba(220, 246, 233, 0.8),
+                    transparent 25%
+                ),
+
+                radial-gradient(
+                    circle at 90% 80%,
+                    rgba(255, 226, 237, 0.6),
+                    transparent 25%
+                ),
+
+                linear-gradient(
+                    135deg,
+                    #ffffff 0%,
+                    #f8fffb 50%,
+                    #e9f8ef 100%
+                );
+        }
+
+
+
+        /* =========================================
+           TOP DECORATION
+        ========================================= */
+
+        .decor-top {
+
+            position: absolute;
+
+            top: 28px;
+
+            left: 0;
+
+            right: 0;
+
+            text-align: center;
+
+            font-size: 22px;
+
+            letter-spacing: 3px;
+
+            opacity: 0.9;
+
+            animation: floating 3s ease-in-out infinite;
+
+            z-index: 5;
+        }
+
+
+
+        /* =========================================
+           BACKGROUND DECORATION
+        ========================================= */
+
+        .bg-decoration {
+
+            position: absolute;
+
+            pointer-events: none;
+
+            user-select: none;
+
+            opacity: 0.65;
+
+            z-index: 1;
+
+            animation: floating 4s ease-in-out infinite;
+        }
+
+
+        .bg-1 {
+
+            top: 18%;
+
+            left: 6%;
+
+            font-size: 32px;
+        }
+
+
+        .bg-2 {
+
+            top: 70%;
+
+            right: 7%;
+
+            font-size: 30px;
+
+            animation-delay: 1s;
+        }
+
+
+        .bg-3 {
+
+            top: 13%;
+
+            right: 12%;
+
+            font-size: 24px;
+
+            animation-delay: 0.5s;
+        }
+
+
+        .bg-4 {
+
+            bottom: 12%;
+
+            left: 13%;
+
+            font-size: 25px;
+
+            animation-delay: 1.5s;
+        }
+
+
+        .bg-5 {
+
+            bottom: 20%;
+
+            right: 18%;
+
+            font-size: 20px;
+
+            animation-delay: 2s;
+        }
+
+
+
+        /* =========================================
+           MAIN CARD
+        ========================================= */
+
+        .home-container {
+
+            width: 90%;
+
+            max-width: 1050px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            gap: 80px;
+
+            padding: 60px;
+
+
+            background: rgba(
+                255,
+                255,
+                255,
+                0.84
+            );
+
+
+            border: 2px solid #e2f4e9;
+
+            border-radius: 40px;
+
+
+            box-shadow:
+
+                0 20px 50px
+                rgba(
+                    105,
+                    169,
+                    137,
+                    0.12
+                );
+
+
+            backdrop-filter: blur(12px);
+
+            position: relative;
+
+            z-index: 2;
+        }
+
+
+
+        /* =========================================
+           PROFILE AREA
+        ========================================= */
+
+        .profile-area {
+
+            position: relative;
+
+            flex-shrink: 0;
+
+            width: 300px;
+
+            height: 300px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+        }
+
+
+
+        /* =========================================
+           HEART PROFILE
+        ========================================= */
+
+        .profile-heart {
+
+            width: 280px;
+
+            height: 280px;
+
+            position: relative;
+
+            overflow: hidden;
+
+
+            background:
+
+                linear-gradient(
+                    135deg,
+                    #c8f0da,
+                    #f8dce8
+                );
+
+
+            filter:
+
+                drop-shadow(
+                    0 15px 25px
+                    rgba(
+                        105,
+                        169,
+                        137,
+                        0.20
+                    )
+                );
+
+
+            animation:
+
+                floating
+                4s
+                ease-in-out
+                infinite;
+
+
+            /*
+               รูปหัวใจ
+            */
+
+            clip-path: polygon(
+
+                50% 95%,
+
+                8% 55%,
+
+                5% 35%,
+
+                10% 18%,
+
+                25% 8%,
+
+                40% 12%,
+
+                50% 25%,
+
+                60% 12%,
+
+                75% 8%,
+
+                90% 18%,
+
+                95% 35%,
+
+                92% 55%
+
+            );
+        }
+
+
+
+        .profile-heart img {
+
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: cover;
+
+            display: block;
+        }
+
+
+
+        /* =========================================
+           PROFILE DECORATION
+        ========================================= */
+
+        .profile-decor {
+
+            position: absolute;
+
+            z-index: 5;
+
+            font-size: 32px;
+
+            pointer-events: none;
+
+            animation:
+
+                floating
+                3s
+                ease-in-out
+                infinite;
+        }
+
+
+        .decor-heart {
+
+            top: 0;
+
+            right: 5px;
+
+            animation-delay: 0.5s;
+        }
+
+
+        .decor-bear {
+
+            bottom: 10px;
+
+            left: 0;
+
+            animation-delay: 1s;
+        }
+
+
+        .decor-flower {
+
+            top: 55px;
+
+            left: -5px;
+
+            font-size: 25px;
+
+            animation-delay: 1.5s;
+        }
+
+
+
+        /* =========================================
+           TEXT AREA
+        ========================================= */
+
+        .home-text {
+
+            text-align: left;
+
+            max-width: 520px;
+        }
+
+
+
+        /* =========================================
+           SMALL TITLE
+        ========================================= */
+
+        .small-title {
+
+            color: #86bda0;
+
+            font-size: 16px;
+
+            font-weight: 600;
+
+            letter-spacing: 1px;
+
+            margin-bottom: 15px;
+        }
+
+
+
+        /* =========================================
+           MAIN TITLE
+        ========================================= */
+
+        .home-text h1 {
+
+            color: #557568;
+
+            font-size: 43px;
+
+            line-height: 1.4;
+
+            font-weight: 600;
+
+            margin-bottom: 18px;
+        }
+
+
+        .home-text h1 span {
+
+            color: #7fc19e;
+
+            position: relative;
+        }
+
+
+        .home-text h1 span::after {
+
+            content: "♡";
+
+            position: absolute;
+
+            font-size: 20px;
+
+            color: #e6a9bc;
+
+            top: -5px;
+
+            right: -27px;
+        }
+
+
+
+        /* =========================================
+           INTRO TEXT
+        ========================================= */
+
+        .intro {
+
+            color: #82958d;
+
+            font-size: 19px;
+
+            line-height: 1.8;
+
+            margin-bottom: 28px;
+        }
+
+
+
+        /* =========================================
+           BUTTON
+        ========================================= */
+
+        .about-btn {
+
+            display: inline-block;
+
+            padding: 13px 28px;
+
+            border-radius: 30px;
+
+            background: #9bd6b7;
+
+            color: white;
+
+            text-decoration: none;
+
+            font-size: 16px;
+
+            font-weight: 500;
+
+
+            box-shadow:
+
+                0 8px 18px
+                rgba(
+                    103,
+                    179,
+                    137,
+                    0.22
+                );
+
+
+            transition: all 0.3s ease;
+        }
+
+
+        .about-btn:hover {
+
+            background: #83c9a4;
+
+            transform: translateY(-4px);
+
+            box-shadow:
+
+                0 12px 25px
+                rgba(
+                    103,
+                    179,
+                    137,
+                    0.28
+                );
+        }
+
+
+
+        /* =========================================
+           BOTTOM DECORATION
+        ========================================= */
+
+        .cute-decoration {
+
+            margin-top: 35px;
+
+            font-size: 24px;
+
+            letter-spacing: 5px;
+
+            text-align: center;
+
+            color: #a8cdb8;
+
+            position: relative;
+
+            z-index: 3;
+
+
+            animation:
+
+                floating
+                3.5s
+                ease-in-out
+                infinite;
+        }
+
+
+
+        /* =========================================
+           FLOATING ANIMATION
+        ========================================= */
+
+        @keyframes floating {
+
+            0% {
+
+                transform:
+                    translateY(0);
+            }
+
+            50% {
+
+                transform:
+                    translateY(-8px);
+            }
+
+            100% {
+
+                transform:
+                    translateY(0);
+            }
+        }
+
+
+
+        /* =========================================
+           TABLET
+        ========================================= */
+
+        @media (max-width: 900px) {
+
+            .home-container {
+
+                gap: 45px;
+
+                padding: 45px;
+            }
+
+
+            .profile-area {
+
+                width: 250px;
+
+                height: 250px;
+            }
+
+
+            .profile-heart {
+
+                width: 240px;
+
+                height: 240px;
+            }
+
+
+            .home-text h1 {
+
+                font-size: 36px;
+            }
+        }
+
+
+
+        /* =========================================
+           MOBILE
+        ========================================= */
+
+        @media (max-width: 700px) {
+
+            .home {
+
+                padding:
+
+                    90px
+                    15px
+                    40px;
+            }
+
+
+            .decor-top {
+
+                top: 22px;
+
+                font-size: 15px;
+
+                letter-spacing: 0;
+
+                padding: 0 8px;
+            }
+
+
+            .home-container {
+
+                width: 94%;
+
+                flex-direction: column;
+
+                gap: 25px;
+
+                padding: 40px 22px;
+
+                border-radius: 30px;
+
+                text-align: center;
+            }
+
+
+            .profile-area {
+
+                width: 225px;
+
+                height: 225px;
+            }
+
+
+            .profile-heart {
+
+                width: 210px;
+
+                height: 210px;
+            }
+
+
+            .profile-decor {
+
+                font-size: 26px;
+            }
+
+
+            .decor-heart {
+
+                top: 0;
+
+                right: 0;
+            }
+
+
+            .decor-bear {
+
+                bottom: 0;
+
+                left: -5px;
+            }
+
+
+            .decor-flower {
+
+                top: 40px;
+
+                left: 0;
+
+                font-size: 21px;
+            }
+
+
+            .home-text {
+
+                text-align: center;
+            }
+
+
+            .small-title {
+
+                font-size: 13px;
+
+                letter-spacing: 0;
+
+                margin-bottom: 12px;
+            }
+
+
+            .home-text h1 {
+
+                font-size: 29px;
+
+                line-height: 1.5;
+            }
+
+
+            .home-text h1 span::after {
+
+                display: none;
+            }
+
+
+            .intro {
+
+                font-size: 16px;
+
+                line-height: 1.8;
+            }
+
+
+            .about-btn {
+
+                font-size: 15px;
+
+                padding: 12px 25px;
+            }
+
+
+            .cute-decoration {
+
+                font-size: 17px;
+
+                letter-spacing: 1px;
+
+                padding: 0 10px;
+            }
+
+
+            .bg-decoration {
+
+                font-size: 20px;
+            }
+        }
+
+
+
+        /* =========================================
+           MOBILE SMALL
+        ========================================= */
+
+        @media (max-width: 400px) {
+
+            .profile-area {
+
+                width: 195px;
+
+                height: 195px;
+            }
+
+
+            .profile-heart {
+
+                width: 180px;
+
+                height: 180px;
+            }
+
+
+            .home-text h1 {
+
+                font-size: 25px;
+            }
+
+
+            .cute-decoration {
+
+                font-size: 14px;
+            }
+        }
+
+    </style>
+
+</head>
+
+
 <body>
 
 
-    <!-- =================================
-         หน้าแรก
-    ================================= -->
+    <!-- =========================================
+         HOME PAGE
+    ========================================= -->
 
     <section id="home" class="home">
 
 
-        <!-- ตกแต่งด้านบน -->
+        <!-- TOP DECORATION -->
 
         <div class="decor-top">
+
             ༘*.ﾟ🧸🎀𓍢ִ໋🌷͙֒ᰔᩚִִֶֶָ. ..𓂃 ࣪ ִֶָ🪽་༘࿐
+
         </div>
 
 
-        <!-- ตกแต่งพื้นหลัง -->
+
+        <!-- BACKGROUND DECORATION -->
 
         <div class="bg-decoration bg-1">
+
             ᰔᩚ
+
         </div>
+
 
         <div class="bg-decoration bg-2">
+
             🎀
+
         </div>
+
 
         <div class="bg-decoration bg-3">
+
             🌷
+
         </div>
+
 
         <div class="bg-decoration bg-4">
+
             🪽
+
         </div>
 
 
-        <!-- =================================
-             กล่องหลัก
-        ================================= -->
+        <div class="bg-decoration bg-5">
+
+            ♡
+
+        </div>
+
+
+
+        <!-- =========================================
+             MAIN CONTENT
+        ========================================= -->
 
         <div class="home-container">
 
 
-            <!-- รูปโปรไฟล์ -->
+            <!-- PROFILE -->
 
             <div class="profile-area">
 
-                <div class="profile-frame">
+
+                <!-- รูปหัวใจ -->
+
+                <div class="profile-heart">
 
                     <img
-                        src="profile.jpg"
+                        src="https://raw.githubusercontent.com/s34761-debug/images/main/IMG_20260617_162035_718.webp"
                         alt="รูปโปรไฟล์ของฉัน"
                     >
 
                 </div>
 
 
-                <!-- ของตกแต่งรูป -->
+
+                <!-- ตกแต่งรอบรูป -->
 
                 <div class="profile-decor decor-heart">
+
                     🎀
+
                 </div>
 
+
                 <div class="profile-decor decor-bear">
+
                     🧸
+
                 </div>
+
+
+                <div class="profile-decor decor-flower">
+
+                    🌷
+
+                </div>
+
 
             </div>
 
 
-            <!-- =================================
-                 ข้อความ
-            ================================= -->
+
+            <!-- TEXT -->
 
             <div class="home-text">
 
 
                 <p class="small-title">
+
                     𓍢ִ໋🌷͙֒ WELCOME TO MY PORTFOLIO ᰔᩚ
+
                 </p>
+
 
 
                 <h1>
 
-                    ยินดีต้อนรับสู่<br>
+                    ยินดีต้อนรับสู่
+
+                    <br>
+
 
                     <span>
+
                         เว็บไซต์ Portfolio
+
                     </span>
+
 
                     <br>
 
@@ -651,9 +1574,12 @@
                 </h1>
 
 
+
                 <p class="intro">
 
-                    เรามาทำความรู้จักกัน<br>
+                    เรามาทำความรู้จักกัน
+
+                    <br>
 
                     ให้มากขึ้นกันเถอะ
 
@@ -662,31 +1588,40 @@
                 </p>
 
 
-                <!-- ปุ่มไปหน้า About -->
+
+                <!-- BUTTON -->
 
                 <a
                     href="about.html"
                     class="about-btn"
                 >
 
-                    𓂃 ࣪ ִֶָ🪽 ทำความรู้จักฉัน
+                    𓂃 ࣪ ִֶָ🪽
+                    ทำความรู้จักฉัน
 
                 </a>
 
 
             </div>
 
+
         </div>
 
 
-        <!-- =================================
-             ตกแต่งด้านล่าง
-        ================================= -->
+
+        <!-- =========================================
+             BOTTOM DECORATION
+        ========================================= -->
 
         <div class="cute-decoration">
 
-            ༘*.ﾟ🎀 𓍢ִ໋🌷͙֒ ᰔᩚ 🧸 ᰔᩚ
-            𓂃 ࣪ ִֶָ🪽 𓆩♡𓆪
+            ༘*.ﾟ🎀
+            𓍢ִ໋🌷͙֒
+            ᰔᩚ
+            🧸
+            ᰔᩚ
+            𓂃 ࣪ ִֶָ🪽
+            𓆩♡𓆪
 
         </div>
 
@@ -695,4 +1630,5 @@
 
 
 </body>
+
 </html>

@@ -1,1055 +1,132 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>My Portfolio 🎀</title>
-
-    <!-- ฟอนต์ -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Itim&family=Prompt:wght@300;400;500;600;700&display=swap"
-          rel="stylesheet">
-
-
-    <style>
-
-        /* ========================================
-           RESET
-        ======================================== */
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            width: 100%;
-            min-height: 100vh;
-
-            font-family: "Prompt", sans-serif;
-
-            color: #58766a;
-
-            background: #f7fffb;
-
-            overflow-x: hidden;
-        }
-
-
-        /* ========================================
-           HOME
-        ======================================== */
-
-        .home {
-
-            width: 100%;
-            min-height: 100vh;
-
-            position: relative;
-
-            display: flex;
-            flex-direction: column;
-
-            align-items: center;
-            justify-content: center;
-
-            padding: 70px 20px 40px;
-
-            overflow: hidden;
-
-            background:
-
-                radial-gradient(
-                    circle at 5% 20%,
-                    rgba(203, 241, 220, 0.7),
-                    transparent 25%
-                ),
-
-                radial-gradient(
-                    circle at 95% 80%,
-                    rgba(255, 220, 232, 0.6),
-                    transparent 25%
-                ),
-
-                linear-gradient(
-                    135deg,
-                    #ffffff 0%,
-                    #f7fffb 55%,
-                    #e8f8ef 100%
-                );
-        }
-
-
-        /* ========================================
-           TOP TEXT DECOR
-        ======================================== */
-
-        .top-decoration {
-
-            width: 100%;
-
-            text-align: center;
-
-            margin-bottom: 25px;
-
-            font-size: 22px;
-
-            line-height: 1.6;
-
-            position: relative;
-
-            z-index: 5;
-
-            animation: float 3s ease-in-out infinite;
-        }
-
-
-        /* ========================================
-           MAIN CARD
-        ======================================== */
-
-        .main-card {
-
-            width: min(100%, 1050px);
-
-            display: flex;
-
-            align-items: center;
-
-            justify-content: center;
-
-            gap: 70px;
-
-            padding: 55px 65px;
-
-            background: rgba(255,255,255,0.88);
-
-            border: 2px solid #e1f3e9;
-
-            border-radius: 40px;
-
-            box-shadow:
-                0 20px 60px rgba(87, 153, 120, 0.13);
-
-            position: relative;
-
-            z-index: 5;
-        }
-
-
-        /* ========================================
-           PROFILE
-        ======================================== */
-
-        .profile-section {
-
-            width: 360px;
-            min-width: 360px;
-
-            height: 380px;
-
-            position: relative;
-
-            display: flex;
-
-            align-items: center;
-
-            justify-content: center;
-        }
-
-
-        /* ========================================
-           HEART SVG
-        ======================================== */
-
-        .heart-photo {
-
-            width: 310px;
-
-            height: 310px;
-
-            overflow: visible;
-
-            filter:
-                drop-shadow(
-                    0 15px 20px
-                    rgba(94, 174, 133, 0.22)
-                );
-
-            animation:
-                heartFloat 4s ease-in-out infinite;
-        }
-
-
-        .heart-photo image {
-
-            width: 100%;
-            height: 100%;
-
-            preserveAspectRatio: xMidYMid slice;
-        }
-
-
-        /* ========================================
-           PROFILE DECORATION
-        ======================================== */
-
-        .profile-decoration {
-
-            position: absolute;
-
-            font-size: 38px;
-
-            z-index: 10;
-
-            user-select: none;
-        }
-
-
-        .bow {
-
-            top: 25px;
-
-            right: 15px;
-
-            animation:
-                float 2.8s ease-in-out infinite;
-        }
-
-
-        .bear {
-
-            bottom: 30px;
-
-            left: 5px;
-
-            animation:
-                float 3.2s ease-in-out infinite;
-        }
-
-
-        .flower {
-
-            top: 75px;
-
-            left: 5px;
-
-            font-size: 28px;
-
-            animation:
-                float 3.5s ease-in-out infinite;
-        }
-
-
-        /* ========================================
-           TEXT SECTION
-        ======================================== */
-
-        .text-section {
-
-            flex: 1;
-
-            max-width: 550px;
-
-            text-align: left;
-        }
-
-
-        .welcome {
-
-            color: #83b99c;
-
-            font-size: 17px;
-
-            font-weight: 500;
-
-            margin-bottom: 18px;
-
-            letter-spacing: 0.5px;
-        }
-
-
-        .title {
-
-            color: #527064;
-
-            font-size: 48px;
-
-            font-weight: 600;
-
-            line-height: 1.35;
-
-            margin-bottom: 22px;
-        }
-
-
-        .title .mint {
-
-            color: #7fc29f;
-        }
-
-
-        .description {
-
-            color: #82968e;
-
-            font-size: 20px;
-
-            font-weight: 300;
-
-            line-height: 1.8;
-
-            margin-bottom: 30px;
-        }
-
-
-        /* ========================================
-           BUTTON
-        ======================================== */
-
-        .about-button {
-
-            display: inline-flex;
-
-            align-items: center;
-
-            justify-content: center;
-
-            gap: 7px;
-
-            min-height: 52px;
-
-            padding: 12px 28px;
-
-            border-radius: 30px;
-
-            background: #98d5b5;
-
-            color: white;
-
-            text-decoration: none;
-
-            font-size: 17px;
-
-            font-weight: 500;
-
-            box-shadow:
-                0 9px 20px
-                rgba(96, 177, 132, 0.22);
-
-            transition:
-                0.3s ease;
-        }
-
-
-        .about-button:hover {
-
-            background: #7fc8a0;
-
-            transform: translateY(-4px);
-
-            box-shadow:
-                0 13px 25px
-                rgba(96, 177, 132, 0.28);
-        }
-
-
-        /* ========================================
-           BOTTOM DECOR
-        ======================================== */
-
-        .bottom-decoration {
-
-            margin-top: 28px;
-
-            text-align: center;
-
-            font-size: 23px;
-
-            line-height: 1.8;
-
-            position: relative;
-
-            z-index: 5;
-
-            animation:
-                float 3.5s ease-in-out infinite;
-        }
-
-
-        /* ========================================
-           BACKGROUND DECORATIONS
-        ======================================== */
-
-        .background-item {
-
-            position: absolute;
-
-            z-index: 1;
-
-            opacity: 0.6;
-
-            pointer-events: none;
-
-            user-select: none;
-        }
-
-
-        .item-1 {
-
-            top: 18%;
-
-            left: 5%;
-
-            font-size: 30px;
-        }
-
-
-        .item-2 {
-
-            top: 30%;
-
-            right: 5%;
-
-            font-size: 30px;
-        }
-
-
-        .item-3 {
-
-            bottom: 18%;
-
-            left: 8%;
-
-            font-size: 25px;
-        }
-
-
-        .item-4 {
-
-            bottom: 12%;
-
-            right: 8%;
-
-            font-size: 30px;
-        }
-
-
-        /* ========================================
-           ANIMATION
-        ======================================== */
-
-        @keyframes float {
-
-            0% {
-                transform: translateY(0);
-            }
-
-            50% {
-                transform: translateY(-8px);
-            }
-
-            100% {
-                transform: translateY(0);
-            }
-        }
-
-
-        @keyframes heartFloat {
-
-            0% {
-                transform: translateY(0);
-            }
-
-            50% {
-                transform: translateY(-8px);
-            }
-
-            100% {
-                transform: translateY(0);
-            }
-        }
-
-
-        /* ========================================
-           TABLET
-        ======================================== */
-
-        @media (max-width: 900px) {
-
-            .main-card {
-
-                gap: 40px;
-
-                padding: 45px;
-            }
-
-
-            .profile-section {
-
-                width: 300px;
-
-                min-width: 300px;
-
-                height: 330px;
-            }
-
-
-            .heart-photo {
-
-                width: 260px;
-
-                height: 260px;
-            }
-
-
-            .title {
-
-                font-size: 39px;
-            }
-
-
-            .description {
-
-                font-size: 18px;
-            }
-        }
-
-
-        /* ========================================
-           MOBILE
-        ======================================== */
-
-        @media (max-width: 700px) {
-
-            .home {
-
-                min-height: 100vh;
-
-                padding:
-                    65px 15px 35px;
-            }
-
-
-            .top-decoration {
-
-                font-size: 16px;
-
-                margin-bottom: 15px;
-
-                padding: 0 5px;
-            }
-
-
-            .main-card {
-
-                width: 100%;
-
-                flex-direction: column;
-
-                gap: 10px;
-
-                padding: 30px 18px 35px;
-
-                border-radius: 30px;
-
-                text-align: center;
-            }
-
-
-            /* รูป */
-
-            .profile-section {
-
-                width: 280px;
-
-                min-width: 280px;
-
-                height: 290px;
-            }
-
-
-            .heart-photo {
-
-                width: 235px;
-
-                height: 235px;
-            }
-
-
-            .profile-decoration {
-
-                font-size: 30px;
-            }
-
-
-            .bow {
-
-                top: 20px;
-
-                right: 12px;
-            }
-
-
-            .bear {
-
-                bottom: 15px;
-
-                left: 12px;
-            }
-
-
-            .flower {
-
-                top: 65px;
-
-                left: 10px;
-
-                font-size: 23px;
-            }
-
-
-            /* ข้อความ */
-
-            .text-section {
-
-                width: 100%;
-
-                max-width: 100%;
-
-                text-align: center;
-            }
-
-
-            .welcome {
-
-                font-size: 14px;
-
-                line-height: 1.7;
-
-                margin-bottom: 12px;
-            }
-
-
-            .title {
-
-                font-size: 31px;
-
-                line-height: 1.45;
-
-                margin-bottom: 15px;
-            }
-
-
-            .description {
-
-                font-size: 16px;
-
-                line-height: 1.8;
-
-                margin-bottom: 23px;
-            }
-
-
-            /* ปุ่ม */
-
-            .about-button {
-
-                min-height: 50px;
-
-                padding: 11px 23px;
-
-                font-size: 15px;
-            }
-
-
-            .bottom-decoration {
-
-                margin-top: 20px;
-
-                font-size: 17px;
-
-                padding: 0 5px;
-            }
-
-
-            /* ซ่อนของตกแต่งด้านข้างบนมือถือ */
-
-            .item-1 {
-
-                left: 2%;
-
-                top: 30%;
-
-                font-size: 20px;
-            }
-
-
-            .item-2 {
-
-                right: 2%;
-
-                top: 40%;
-
-                font-size: 20px;
-            }
-
-
-            .item-3 {
-
-                left: 4%;
-
-                bottom: 10%;
-
-                font-size: 18px;
-            }
-
-
-            .item-4 {
-
-                right: 4%;
-
-                bottom: 8%;
-
-                font-size: 20px;
-            }
-        }
-
-
-        /* ========================================
-           SMALL MOBILE
-        ======================================== */
-
-        @media (max-width: 380px) {
-
-            .home {
-
-                padding-left: 10px;
-
-                padding-right: 10px;
-            }
-
-
-            .top-decoration {
-
-                font-size: 14px;
-            }
-
-
-            .main-card {
-
-                padding:
-                    25px 15px 30px;
-            }
-
-
-            .profile-section {
-
-                width: 250px;
-
-                min-width: 250px;
-
-                height: 270px;
-            }
-
-
-            .heart-photo {
-
-                width: 215px;
-
-                height: 215px;
-            }
-
-
-            .title {
-
-                font-size: 27px;
-            }
-
-
-            .description {
-
-                font-size: 15px;
-            }
-
-
-            .bottom-decoration {
-
-                font-size: 14px;
-            }
-        }
-
-    </style>
-
-</head>
-
-
-<body>
-
-
-    <!-- ========================================
-         หน้าแรก
-    ======================================== -->
-
-    <section class="home">
-
-
-        <!-- =====================================
-             ของตกแต่งด้านบน
-        ===================================== -->
-
-        <div class="top-decoration">
-
-            ༘*.ﾟ🧸🎀𓍢ִ໋🌷͙֒ᰔᩚִִֶֶָ. ..𓂃 ࣪ ִֶָ🪽་༘࿐
-
-        </div>
-
-
-
-        <!-- =====================================
-             ของตกแต่งพื้นหลัง
-        ===================================== -->
-
-        <div class="background-item item-1">
-            ᰔᩚ
-        </div>
-
-        <div class="background-item item-2">
-            🎀
-        </div>
-
-        <div class="background-item item-3">
-            🌷
-        </div>
-
-        <div class="background-item item-4">
-            🪽
-        </div>
-
-
-
-        <!-- =====================================
-             MAIN CARD
-        ===================================== -->
-
-        <div class="main-card">
-
-
-            <!-- =================================
-                 รูปโปรไฟล์
-            ================================= -->
-
-            <div class="profile-section">
-
-
-                <!-- หัวใจ SVG -->
-
-                <svg
-                    class="heart-photo"
-                    viewBox="0 0 300 280"
-                    xmlns="http://www.w3.org/2000/svg"
-                >
-
-                    <defs>
-
-                        <clipPath id="heartClip">
-
-                            <path
-                                d="
-                                M150 265
-                                C135 250 25 180 25 90
-                                C25 40 65 15 105 15
-                                C130 15 145 28 150 48
-                                C155 28 170 15 195 15
-                                C235 15 275 40 275 90
-                                C275 180 165 250 150 265
-                                Z
-                                "
-                            />
-
-                        </clipPath>
-
-                    </defs>
-
-
-                    <!-- กรอบหัวใจ -->
-
-                    <path
-                        d="
-                        M150 265
-                        C135 250 25 180 25 90
-                        C25 40 65 15 105 15
-                        C130 15 145 28 150 48
-                        C155 28 170 15 195 15
-                        C235 15 275 40 275 90
-                        C275 180 165 250 150 265
-                        Z
-                        "
-                        fill="#9bd8b8"
-                    />
-
-
-                    <!-- รูปโปรไฟล์ -->
-
-                    <image
-
-                        href="https://raw.githubusercontent.com/s34761-debug/images/main/IMG_20260617_162035_718.jpg"
-
-                        x="28"
-                        y="18"
-
-                        width="244"
-                        height="244"
-
-                        preserveAspectRatio="xMidYMid slice"
-
-                        clip-path="url(#heartClip)"
-                    />
-
-
-                    <!-- ขอบหัวใจ -->
-
-                    <path
-                        d="
-                        M150 265
-                        C135 250 25 180 25 90
-                        C25 40 65 15 105 15
-                        C130 15 145 28 150 48
-                        C155 28 170 15 195 15
-                        C235 15 275 40 275 90
-                        C275 180 165 250 150 265
-                        Z
-                        "
-                        fill="none"
-                        stroke="#ffffff"
-                        stroke-width="7"
-                    />
-
-                </svg>
-
-<!DOCTYPE html>
-<html lang="th">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>ณัชชยากานต์ | Portfolio</title>
+    <title>Portfolio | ณัชชยากานต์</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- Navigation -->
+    <!-- ของตกแต่งด้านบน -->
+    <div class="decoration top">
+        ༘*.ﾟ🧸🎀𓍢ִ໋🌷͙֒ᰔᩚ
+    </div>
+
+
+    <!-- เมนู -->
     <nav class="navbar">
 
         <div class="logo">
-            NATCHAYAKAN 🎀
+            ♡ Portfolio
         </div>
 
         <div class="menu">
-            <a href="index.html">หน้าแรก</a>
-            <a href="profile.html">โปรไฟล์</a>
-            <a href="portfolio.html">ผลงาน</a>
+            <a href="index.html" class="active">หน้าแรก</a>
+            <a href="profile.html">ประวัติส่วนตัว</a>
+            <a href="#">การศึกษา</a>
+            <a href="#">กิจกรรม</a>
+            <a href="#">เกียรติบัตร</a>
         </div>
 
     </nav>
 
 
-    <!-- Welcome -->
-    <main class="home">
+    <!-- หน้าแรก -->
+    <main class="hero">
 
-        <!-- Decorations -->
-        <div class="decor decor1">༘*.ﾟ🧸</div>
-        <div class="decor decor2">🎀𓍢ִ໋🌷͙֒</div>
-        <div class="decor decor3">ᰔᩚִִֶֶָ. ..𓂃</div>
-        <div class="decor decor4">࣪ ִֶָ🪽་༘࿐</div>
+        <!-- ฝั่งข้อความ -->
+        <section class="hero-text">
 
-
-        <section class="welcome">
-
-            <div class="welcome-text">
-
-                <p class="mini-title">
-                    ✿ WELCOME TO MY PORTFOLIO ✿
-                </p>
-
-                <h1>
-                    ยินดีต้อนรับสู่<br>
-                    <span>เว็บไซต์ Portfolio</span><br>
-                    ของฉัน ♡
-                </h1>
-
-                <p class="description">
-                    สวัสดีค่ะ! ฉันชื่อ
-                    <strong>ณัชชยากานต์ สีดาสมา</strong> 🌷
-                    <br>
-                    นักเรียนชั้นมัธยมศึกษาปีที่ 6
-                    <br>
-                    โรงเรียนบ้านบึง “อุตสาหกรรมนุเคราะห์”
-                </p>
-
-                <p class="cute-text">
-                    เรามาทำความรู้จักกันให้มากขึ้นกันเถอะ
-                    ༘*.ﾟ🧸🎀
-                </p>
-
-                <a href="profile.html" class="start-button">
-                    ทำความรู้จักฉันเพิ่มเติม ♡
-                </a>
-
+            <div class="mini-text">
+                WELCOME TO MY PORTFOLIO ♡
             </div>
 
+            <h1>
+                ยินดีต้อนรับสู่<br>
+                เว็บไซต์ <span>Portfolio</span><br>
+                ของฉัน
+            </h1>
 
-            <!-- Heart Profile -->
-            <div class="photo-area">
-
-                <div class="heart-photo">
-
-                    <img
-                        src="https://raw.githubusercontent.com/s34761-debug/images/main/IMG_20260617_162035_718.jpg"
-                        alt="รูปโปรไฟล์ ณัชชยากานต์"
-                    >
-
-                </div>
-
-                <div class="photo-decoration">
-                    𓍢ִ໋🌷͙֒ ᰔᩚ
-                </div>
-
+            <div class="cute-line">
+                𓂃 ࣪ ִֶָ🪽་༘࿐
             </div>
+
+            <p class="intro">
+                สวัสดีค่ะ ♡<br>
+                ฉันชื่อ <strong>ณัชชยากานต์</strong>
+            </p>
+
+            <p class="description">
+                เรามาทำความรู้จักกันให้มากขึ้นกันเถอะ
+                <br>
+                เว็บไซต์นี้รวบรวมเรื่องราว ตัวตน
+                ความสนใจ ผลงาน และความฝันของฉัน
+            </p>
+
+            <a href="profile.html" class="button">
+                ทำความรู้จักฉัน ♡
+            </a>
 
         </section>
 
 
-        <!-- Bottom introduction -->
+        <!-- ฝั่งรูป -->
+        <section class="hero-photo">
 
-        <section class="welcome-bottom">
+            <!-- ตกแต่ง -->
+            <div class="flower flower1">🌷</div>
+            <div class="flower flower2">🎀</div>
+            <div class="flower flower3">🪽</div>
 
-            <div class="line"></div>
+            <!-- หัวใจ -->
+            <div class="heart">
 
-            <p>
-                ༘*.ﾟ🪽 Portfolio ของ ณัชชยากานต์ 🎀 ༘*.ﾟ
-            </p>
+                <img
+                    src="https://s34761-debug.github.io/images/IMG_20260617_162035_718.jpg"
+                    alt="รูปโปรไฟล์ ณัชชยากานต์"
+                >
 
-            <div class="line"></div>
+            </div>
+
+            <div class="photo-text">
+                nice to meet you ♡
+            </div>
 
         </section>
 
     </main>
 
 
+    <!-- ส่วนข้อความด้านล่าง -->
+    <section class="welcome-box">
+
+        <div class="cute-decoration">
+            ༘*.ﾟ🧸🎀𓍢ִ໋🌷͙֒ᰔᩚ
+        </div>
+
+        <h2>
+            Let's get to know me!
+        </h2>
+
+        <p>
+            ขอบคุณที่เข้ามาเยี่ยมชม Portfolio ของฉันนะคะ
+            <br>
+            หวังว่าเราจะได้รู้จักกันมากขึ้น ♡
+        </p>
+
+        <div class="bottom-decoration">
+            𓂃 ࣪ ִֶָ🪽་༘࿐
+        </div>
+
+    </section>
+
+
     <footer>
-        Made with ♡ by Natchayakan Seedasama
+        Made with ♡ by Natchayakan
     </footer>
 
 </body>

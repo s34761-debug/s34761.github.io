@@ -1,1 +1,982 @@
+<!DOCTYPE html>
+<html lang="th">
 
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>NATCHAYAKAN | Portfolio</title>
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Itim&family=Kanit:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
+
+<style>
+
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+
+    font-family: 'Kanit', sans-serif;
+
+    background:
+        radial-gradient(
+            circle at 10% 50%,
+            #e8faf5,
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 90% 50%,
+            #effcf9,
+            transparent 35%
+        ),
+        #ffffff;
+
+    color: #42685f;
+
+    min-height: 100vh;
+
+    overflow-x: hidden;
+}
+
+
+/* =========================================
+   TOP DECORATION
+========================================= */
+
+.top-decoration {
+
+    text-align: center;
+
+    padding-top: 38px;
+
+    height: 105px;
+
+    font-size: 29px;
+
+    letter-spacing: 5px;
+
+    color: #72aa9c;
+}
+
+
+/* =========================================
+   LOGO
+========================================= */
+
+.logo {
+
+    text-align: center;
+
+    font-family: 'Itim', cursive;
+
+    font-size: 45px;
+
+    color: #67aa99;
+
+    margin-top: 20px;
+
+    margin-bottom: 30px;
+}
+
+
+/* =========================================
+   NAVIGATION
+========================================= */
+
+.navbar {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    max-width: 650px;
+
+    margin: auto;
+
+    padding: 0 20px;
+}
+
+
+.navbar a {
+
+    text-decoration: none;
+
+    color: #59766f;
+
+    font-size: 18px;
+
+    padding: 12px 18px;
+
+    border-radius: 40px;
+
+    transition: 0.3s;
+}
+
+
+.navbar a:hover {
+
+    background: #def6ee;
+
+    color: #4d9985;
+}
+
+
+.navbar a.active {
+
+    background: #def6ee;
+
+    color: #519a87;
+}
+
+
+/* =========================================
+   LINE
+========================================= */
+
+.line {
+
+    width: 90%;
+
+    max-width: 650px;
+
+    height: 1px;
+
+    background: #dceee9;
+
+    margin: 35px auto 0;
+}
+
+
+/* =========================================
+   MAIN
+========================================= */
+
+.main {
+
+    width: 100%;
+
+    min-height: 100vh;
+
+    position: relative;
+
+    text-align: center;
+
+    padding-top: 65px;
+}
+
+
+/* =========================================
+   DECORATIONS
+========================================= */
+
+.flower-left {
+
+    position: absolute;
+
+    left: 8%;
+
+    top: 120px;
+
+    font-size: 42px;
+}
+
+
+.bow-right {
+
+    position: absolute;
+
+    right: 8%;
+
+    top: 175px;
+
+    font-size: 42px;
+}
+
+
+.wing-right {
+
+    position: absolute;
+
+    right: 8%;
+
+    top: 540px;
+
+    font-size: 42px;
+}
+
+
+/* =========================================
+   HEART PHOTO
+========================================= */
+
+.photo-wrapper {
+
+    width: 430px;
+
+    height: 430px;
+
+    margin: 0 auto;
+
+    position: relative;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+
+/*
+   ตัวหัวใจ
+*/
+
+.heart {
+
+    width: 330px;
+
+    height: 330px;
+
+    position: relative;
+
+    transform: rotate(-45deg);
+
+    overflow: hidden;
+
+    background: #c9eddf;
+
+    box-shadow:
+        0 20px 45px
+        rgba(75,155,133,0.14);
+}
+
+
+/*
+   ทำส่วนโค้งของหัวใจ
+*/
+
+.heart::before,
+.heart::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 330px;
+
+    height: 330px;
+
+    background: #c9eddf;
+
+    border-radius: 50%;
+}
+
+
+.heart::before {
+
+    top: -165px;
+
+    left: 0;
+}
+
+
+.heart::after {
+
+    top: 0;
+
+    left: 165px;
+}
+
+
+/*
+   รูปโปรไฟล์
+*/
+
+.heart img {
+
+    position: absolute;
+
+    z-index: 10;
+
+    top: 0;
+
+    left: 0;
+
+    width: 330px;
+
+    height: 330px;
+
+    object-fit: cover;
+
+    transform: rotate(45deg) scale(1.03);
+
+    transform-origin: center;
+
+    border-radius: 0;
+}
+
+
+/* =========================================
+   CUTE DECORATION AROUND HEART
+========================================= */
+
+.heart-decoration {
+
+    position: absolute;
+
+    z-index: 20;
+
+    font-size: 36px;
+}
+
+
+.heart-flower {
+
+    left: -5px;
+
+    top: 110px;
+}
+
+
+.heart-bow {
+
+    right: -5px;
+
+    top: 175px;
+}
+
+
+.heart-wing {
+
+    right: 15px;
+
+    bottom: 15px;
+}
+
+
+/* =========================================
+   NICE TO MEET YOU
+========================================= */
+
+.nice {
+
+    margin-top: 0;
+
+    font-family: 'Itim', cursive;
+
+    font-size: 30px;
+
+    letter-spacing: 3px;
+
+    color: #70a69a;
+}
+
+
+.nice-decoration {
+
+    margin-top: 10px;
+
+    font-size: 25px;
+}
+
+
+/* =========================================
+   WELCOME SECTION
+========================================= */
+
+.welcome {
+
+    margin-top: 95px;
+
+    padding-bottom: 100px;
+}
+
+
+.welcome-small {
+
+    font-family: 'Itim', cursive;
+
+    font-size: 28px;
+
+    letter-spacing: 2px;
+
+    color: #6eaa9c;
+
+    margin-bottom: 25px;
+}
+
+
+.welcome h1 {
+
+    font-size: 55px;
+
+    font-weight: 700;
+
+    color: #385c54;
+
+    line-height: 1.3;
+}
+
+
+.welcome h1 span {
+
+    color: #65ad99;
+}
+
+
+.welcome p {
+
+    margin-top: 18px;
+
+    font-size: 20px;
+
+    color: #6c8981;
+}
+
+
+/* =========================================
+   BUTTON
+========================================= */
+
+.button {
+
+    display: inline-block;
+
+    margin-top: 25px;
+
+    padding: 12px 28px;
+
+    border-radius: 50px;
+
+    background: #86cbb9;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 17px;
+
+    transition: 0.3s;
+}
+
+
+.button:hover {
+
+    background: #65b09b;
+
+    transform: translateY(-3px);
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+
+    text-align: center;
+
+    padding: 30px;
+
+    border-top: 1px solid #deeee9;
+
+    color: #87aaa1;
+
+    font-family: 'Itim', cursive;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+
+    .top-decoration {
+
+        padding-top: 25px;
+
+        height: 90px;
+
+        font-size: 22px;
+
+        letter-spacing: 1px;
+    }
+
+
+    .logo {
+
+        font-size: 39px;
+
+        margin-top: 20px;
+
+        margin-bottom: 25px;
+    }
+
+
+    .navbar {
+
+        max-width: 400px;
+
+        gap: 3px;
+
+        padding: 0 10px;
+    }
+
+
+    .navbar a {
+
+        font-size: 15px;
+
+        padding: 9px 12px;
+    }
+
+
+    .line {
+
+        margin-top: 28px;
+
+        width: 90%;
+    }
+
+
+    .main {
+
+        padding-top: 55px;
+    }
+
+
+    .photo-wrapper {
+
+        width: 330px;
+
+        height: 330px;
+    }
+
+
+    .heart {
+
+        width: 245px;
+
+        height: 245px;
+    }
+
+
+    .heart::before,
+    .heart::after {
+
+        width: 245px;
+
+        height: 245px;
+    }
+
+
+    .heart::before {
+
+        top: -122.5px;
+    }
+
+
+    .heart::after {
+
+        left: 122.5px;
+    }
+
+
+    .heart img {
+
+        width: 245px;
+
+        height: 245px;
+    }
+
+
+    .flower-left {
+
+        left: 7px;
+
+        top: 80px;
+
+        font-size: 28px;
+    }
+
+
+    .bow-right {
+
+        right: 8px;
+
+        top: 130px;
+
+        font-size: 30px;
+    }
+
+
+    .wing-right {
+
+        right: 15px;
+
+        top: 410px;
+
+        font-size: 30px;
+    }
+
+
+    .heart-decoration {
+
+        font-size: 27px;
+    }
+
+
+    .nice {
+
+        font-size: 26px;
+    }
+
+
+    .nice-decoration {
+
+        font-size: 21px;
+    }
+
+
+    .welcome {
+
+        margin-top: 80px;
+
+        padding: 0 20px 80px;
+    }
+
+
+    .welcome-small {
+
+        font-size: 23px;
+    }
+
+
+    .welcome h1 {
+
+        font-size: 40px;
+    }
+
+
+    .welcome p {
+
+        font-size: 17px;
+    }
+
+}
+
+
+/* =========================================
+   SMALL PHONE
+========================================= */
+
+@media (max-width: 400px) {
+
+
+    .top-decoration {
+
+        font-size: 18px;
+    }
+
+
+    .logo {
+
+        font-size: 35px;
+    }
+
+
+    .navbar a {
+
+        font-size: 13px;
+
+        padding: 8px 9px;
+    }
+
+
+    .photo-wrapper {
+
+        width: 300px;
+
+        height: 300px;
+    }
+
+
+    .heart {
+
+        width: 220px;
+
+        height: 220px;
+    }
+
+
+    .heart::before,
+    .heart::after {
+
+        width: 220px;
+
+        height: 220px;
+    }
+
+
+    .heart::before {
+
+        top: -110px;
+    }
+
+
+    .heart::after {
+
+        left: 110px;
+    }
+
+
+    .heart img {
+
+        width: 220px;
+
+        height: 220px;
+    }
+
+
+    .nice {
+
+        font-size: 23px;
+    }
+
+
+    .welcome h1 {
+
+        font-size: 35px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================
+     TOP DECORATION
+===================================== -->
+
+<div class="top-decoration">
+
+    ༘*.ﾟ🧸🎀𓍢ִ໋🌷͙֒ᰔᩚִִֶֶָ. ..𓂃 ࣪ ִֶָ🪽་༘࿐
+
+</div>
+
+
+<!-- =====================================
+     LOGO
+===================================== -->
+
+<div class="logo">
+
+    ♡ Portfolio
+
+</div>
+
+
+<!-- =====================================
+     NAVIGATION
+===================================== -->
+
+<nav class="navbar">
+
+    <a href="index.html"
+       class="active">
+        หน้าแรก
+    </a>
+
+    <a href="profile.html">
+        ประวัติส่วนตัว
+    </a>
+
+    <a href="education.html">
+        การศึกษา
+    </a>
+
+    <a href="activities.html">
+        กิจกรรม
+    </a>
+
+    <a href="certificates.html">
+        เกียรติบัตร
+    </a>
+
+</nav>
+
+
+<div class="line"></div>
+
+
+<!-- =====================================
+     MAIN
+===================================== -->
+
+<main class="main">
+
+
+    <!-- Decorations -->
+
+    <div class="flower-left">
+        🌷
+    </div>
+
+
+    <div class="bow-right">
+        🎀
+    </div>
+
+
+    <div class="wing-right">
+        🪽
+    </div>
+
+
+
+    <!-- =================================
+         PROFILE HEART
+    ================================== -->
+
+    <div class="photo-wrapper">
+
+
+        <div class="heart">
+
+            <img
+                src="https://raw.githubusercontent.com/s34761-debug/images/main/IMG_20260617_162035_718.jpg"
+                alt="รูปโปรไฟล์ของณัชชยากานต์"
+            >
+
+        </div>
+
+
+    </div>
+
+
+    <!-- =================================
+         NICE TO MEET YOU
+    ================================== -->
+
+    <div class="nice">
+
+        nice to meet you ♡
+
+    </div>
+
+
+    <div class="nice-decoration">
+
+        ༘*.ﾟ🧸🎀🌷ᰔᩚ🪽
+
+    </div>
+
+
+
+    <!-- =================================
+         WELCOME
+    ================================== -->
+
+    <section class="welcome">
+
+
+        <div class="welcome-small">
+
+            WELCOME TO MY PORTFOLIO ♡
+
+        </div>
+
+
+        <h1>
+
+            ยินดีต้อนรับสู่
+
+            <br>
+
+            <span>เว็บไซต์ Portfolio ของฉัน</span>
+
+        </h1>
+
+
+        <p>
+
+            ฉันชื่อ <strong>ณัชชยากานต์</strong> 🌷
+
+        </p>
+
+
+        <p>
+
+            เรามาทำความรู้จักกันให้มากขึ้นกันเถอะ
+
+        </p>
+
+
+        <a href="profile.html"
+           class="button">
+
+            ทำความรู้จักฉัน ♡
+
+        </a>
+
+
+    </section>
+
+
+</main>
+
+
+<!-- =====================================
+     FOOTER
+===================================== -->
+
+<footer>
+
+    ༘*.ﾟ🧸🎀𓍢ִ໋🌷͙֒ᰔᩚ🪽་༘࿐
+
+    <br>
+
+    Made with ♡ by Natchayakan
+
+</footer>
+
+
+</body>
+
+</html>

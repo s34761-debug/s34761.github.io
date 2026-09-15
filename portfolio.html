@@ -1,120 +1,491 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>ผลงาน | ณัชชยากานต์</title>
+    <title>ประวัติส่วนตัว ♡ Portfolio</title>
 
-    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
 
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Segoe UI", Tahoma, sans-serif;
+            background: #ffffff;
+            color: #536b63;
+        }
+
+        /* ===== TOP ===== */
+
+        .top-decoration {
+            text-align: center;
+            font-size: 25px;
+            padding-top: 25px;
+            letter-spacing: 5px;
+        }
+
+        .logo {
+            text-align: center;
+            color: #8acdb8;
+            font-size: 30px;
+            font-weight: bold;
+            margin-top: 8px;
+        }
+
+        /* ===== MENU ===== */
+
+        nav {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 20px auto;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #6f9186;
+            background: #effaf5;
+            padding: 10px 18px;
+            border-radius: 30px;
+            font-size: 15px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            background: #c9eddf;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        nav a.active {
+            background: #b8e5d5;
+            color: white;
+        }
+
+        hr {
+            width: 85%;
+            border: none;
+            border-top: 2px solid #d9f1e8;
+            margin: 25px auto;
+        }
+
+        /* ===== PAGE ===== */
+
+        .page {
+            max-width: 950px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .title {
+            text-align: center;
+            color: #78bda8;
+            font-size: 34px;
+            margin-bottom: 5px;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #9bb7ae;
+            margin-bottom: 35px;
+        }
+
+        /* ===== PROFILE ===== */
+
+        .profile-box {
+            background: #f4fcf8;
+            border-radius: 35px;
+            padding: 35px;
+            display: flex;
+            align-items: center;
+            gap: 45px;
+            box-shadow: 0 8px 25px rgba(130, 190, 170, 0.12);
+        }
+
+        /* รูปหัวใจ */
+
+        .heart {
+            width: 280px;
+            height: 280px;
+            position: relative;
+            flex-shrink: 0;
+        }
+
+        .heart img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+
+            clip-path: polygon(
+                50% 95%,
+                8% 55%,
+                4% 40%,
+                7% 27%,
+                16% 17%,
+                28% 13%,
+                39% 16%,
+                50% 29%,
+                61% 16%,
+                72% 13%,
+                84% 17%,
+                93% 27%,
+                96% 40%,
+                92% 55%
+            );
+        }
+
+        /* ===== INFORMATION ===== */
+
+        .info {
+            flex: 1;
+        }
+
+        .info h2 {
+            color: #70b59f;
+            font-size: 28px;
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+
+        .info-item {
+            background: white;
+            border-radius: 18px;
+            padding: 13px 18px;
+            margin-bottom: 12px;
+            border: 1px solid #def2e9;
+        }
+
+        .info-item b {
+            color: #6fae9b;
+        }
+
+        /* ===== ABOUT ===== */
+
+        .about {
+            margin-top: 30px;
+            background: white;
+            border: 2px solid #e1f4ec;
+            border-radius: 30px;
+            padding: 30px;
+        }
+
+        .about h2 {
+            color: #78bda8;
+            margin-top: 0;
+        }
+
+        .about p {
+            line-height: 1.8;
+            font-size: 17px;
+        }
+
+        /* ===== PERSONALITY ===== */
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+            margin-top: 25px;
+        }
+
+        .card {
+            background: #f4fcf8;
+            border-radius: 25px;
+            padding: 25px;
+            text-align: center;
+        }
+
+        .card .emoji {
+            font-size: 35px;
+        }
+
+        .card h3 {
+            color: #73b39e;
+        }
+
+        .card p {
+            color: #718880;
+            line-height: 1.6;
+        }
+
+        /* ===== DECORATION ===== */
+
+        .decoration {
+            text-align: center;
+            font-size: 30px;
+            margin: 35px 0;
+        }
+
+        /* ===== FOOTER ===== */
+
+        footer {
+            text-align: center;
+            color: #9ab5ac;
+            padding: 35px 10px;
+            font-size: 14px;
+        }
+
+        /* ===== MOBILE ===== */
+
+        @media (max-width: 700px) {
+
+            .profile-box {
+                flex-direction: column;
+                text-align: center;
+                padding: 25px 18px;
+            }
+
+            .heart {
+                width: 240px;
+                height: 240px;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            .title {
+                font-size: 28px;
+            }
+
+            nav a {
+                padding: 8px 12px;
+                font-size: 13px;
+            }
+        }
+    </style>
 </head>
+
 
 <body>
 
-<div class="page">
+    <!-- ตกแต่งด้านบน -->
+    <div class="top-decoration">
+        ༘*.ﾟ🧸🎀𓍢ִ໋🌷͙֒ᰔᩚִִֶֶָ. ..𓂃 ࣪ ִֶָ🪽་༘࿐
+    </div>
 
-    <div class="top">
-
-        <p class="small-title">PORTFOLIO</p>
-
-        <h1>ผลงานของฉัน</h1>
-
-        <p>
-            ผลงาน กิจกรรม และเกียรติบัตร
-        </p>
-
+    <!-- โลโก้เว็บไซต์ -->
+    <div class="logo">
+        ♡ Portfolio
     </div>
 
 
-    <!-- PROFILE -->
+    <!-- เมนู -->
+    <nav>
 
-    <section class="card profile-section">
+        <a href="index.html">
+            หน้าแรก
+        </a>
 
-        <img
-            src="images/profile.jpg"
-            class="large-profile"
-            alt="รูปของฉัน"
-        >
+        <a href="profile.html" class="active">
+            ประวัติส่วนตัว
+        </a>
 
-        <h2>เกี่ยวกับฉัน</h2>
+        <a href="education.html">
+            การศึกษา
+        </a>
 
-        <p>
-            รวบรวมผลงานและประสบการณ์ที่ได้เรียนรู้
-            ตลอดช่วงการศึกษา
+        <a href="activities.html">
+            กิจกรรม
+        </a>
+
+        <a href="certificates.html">
+            เกียรติบัตร
+        </a>
+
+    </nav>
+
+    <hr>
+
+
+    <!-- เนื้อหาหลัก -->
+
+    <main class="page">
+
+        <h1 class="title">
+            ♡ ประวัติส่วนตัว ♡
+        </h1>
+
+        <p class="subtitle">
+            About Me · Nice to meet you ♡
         </p>
 
-    </section>
 
+        <!-- PROFILE -->
 
-    <!-- CERTIFICATES -->
+        <section class="profile-box">
 
-    <section class="card">
+            <!-- รูปโปรไฟล์ -->
+            <div class="heart">
 
-        <p class="section-label">CERTIFICATES</p>
+                <img
+                    src="https://raw.githubusercontent.com/s34761-debug/images/main/IMG_20260617_162035_718.jpg"
+                    alt="รูปโปรไฟล์"
+                >
 
-        <h2>เกียรติบัตร</h2>
-
-        <div class="gallery">
-
-            <div class="work-card">
-                <img src="images/certificate1.jpg"
-                     alt="เกียรติบัตรที่ 1">
-                <h3>เกียรติบัตรที่ 1</h3>
-                <p>รายละเอียดกิจกรรม</p>
             </div>
 
-            <div class="work-card">
-                <img src="images/certificate2.jpg"
-                     alt="เกียรติบัตรที่ 2">
-                <h3>เกียรติบัตรที่ 2</h3>
-                <p>รายละเอียดกิจกรรม</p>
+
+            <!-- ข้อมูลส่วนตัว -->
+
+            <div class="info">
+
+                <h2>
+                    Hello! I'm NATCHAYAKAN ♡
+                </h2>
+
+                <div class="info-item">
+                    <b>ชื่อ :</b>
+                    ณัชชยากานต์
+                </div>
+
+                <div class="info-item">
+                    <b>ชื่อภาษาอังกฤษ :</b>
+                    Natchayakan
+                </div>
+
+                <div class="info-item">
+                    <b>ระดับการศึกษา :</b>
+                    มัธยมศึกษาปีที่ 6
+                </div>
+
+                <div class="info-item">
+                    <b>โรงเรียนบ้านบึง"อุตสาหกรรมนุเคราะห์" :</b>
+                    ........................................
+                </div>
+
+                <div class="info-item">
+                    <b>สายการเรียน :</b> ภาษาจีน
+                    ........................................
+                </div>
+
+                <div class="info-item">
+                    <b>ความสนใจ :</b>
+                    ธุรกิจ · การเรียนรู้ · การพัฒนาตัวเอง
+                </div>
+
             </div>
 
+        </section>
+
+
+        <!-- ABOUT ME -->
+
+        <section class="about">
+
+            <h2>
+                🌷 About Me
+            </h2>
+
+            <p>
+                สวัสดีค่ะ ฉันชื่อ <b>ณัชชยากานต์</b>
+                เป็นนักเรียนชั้นมัธยมศึกษาปีที่ 6
+                ฉันเป็นคนที่ตั้งใจเรียน มีความรับผิดชอบ
+                และชอบเรียนรู้สิ่งใหม่ ๆ
+            </p>
+
+            <p>
+                ฉันสนใจการพัฒนาตัวเอง การทำงานร่วมกับผู้อื่น
+                รวมถึงการเรียนรู้เกี่ยวกับธุรกิจและการสร้างอนาคตของตัวเอง
+                ฉันเชื่อว่าการเรียนรู้และประสบการณ์ต่าง ๆ
+                จะช่วยให้ฉันเติบโตและไปถึงเป้าหมายที่ตั้งไว้ได้ ♡
+            </p>
+
+        </section>
+
+
+        <!-- PERSONALITY -->
+
+        <div class="decoration">
+            🌷　🎀　🪽
         </div>
 
-    </section>
+
+        <section>
+
+            <h2 class="title" style="font-size: 28px;">
+                ✿ My Personality ✿
+            </h2>
 
 
-    <!-- WORK -->
+            <div class="cards">
 
-    <section class="card">
+                <div class="card">
 
-        <p class="section-label">MY WORK</p>
+                    <div class="emoji">
+                        📚
+                    </div>
 
-        <h2>ผลงาน</h2>
+                    <h3>
+                        ตั้งใจเรียน
+                    </h3>
 
-        <div class="gallery">
+                    <p>
+                        มีความตั้งใจและพยายาม
+                        ทำงานที่ได้รับมอบหมายให้ดีที่สุด
+                    </p>
 
-            <div class="work-card">
+                </div>
 
-                <img src="images/work1.jpg"
-                     alt="ผลงานที่ 1">
 
-                <h3>ผลงานที่ 1</h3>
+                <div class="card">
 
-                <p>
-                    รายละเอียดเกี่ยวกับผลงาน
-                </p>
+                    <div class="emoji">
+                        🧸
+                    </div>
+
+                    <h3>
+                        รับผิดชอบ
+                    </h3>
+
+                    <p>
+                        ให้ความสำคัญกับหน้าที่
+                        และพยายามทำงานให้เสร็จตรงเวลา
+                    </p>
+
+                </div>
+
+
+                <div class="card">
+
+                    <div class="emoji">
+                        🌷
+                    </div>
+
+                    <h3>
+                        ชอบเรียนรู้
+                    </h3>
+
+                    <p>
+                        สนใจสิ่งใหม่ ๆ
+                        และพร้อมพัฒนาตัวเองอยู่เสมอ
+                    </p>
+
+                </div>
 
             </div>
 
+        </section>
+
+
+        <div class="decoration">
+            𓂃 ࣪ ִֶָ🪽 ࣪ ִֶָ☁️ ࣪ ִֶָ🌷 ࣪ ִֶָ🎀
         </div>
 
-    </section>
+    </main>
 
 
-    <a href="me.html" class="main-button">
-        ← กลับไปข้อมูลส่วนตัว
-    </a>
-
-</div>
-
-
-<footer>
-    <p>© 2026 ณัชชยากานต์ | Academic Portfolio</p>
-</footer>
+    <footer>
+        ♡ Thank you for visiting my Portfolio ♡
+        <br>
+        NATCHAYAKAN
+    </footer>
 
 </body>
 </html>

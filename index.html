@@ -1,133 +1,184 @@
 <!DOCTYPE html>
 <html lang="th">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Portfolio | ณัชชยากานต์</title>
+    <title>Natchayakan | Portfolio</title>
 
     <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Itim&family=Kanit:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
 
-    <!-- ของตกแต่งด้านบน -->
-    <div class="decoration top">
-        ༘*.ﾟ🧸🎀𓍢ִ໋🌷͙֒ᰔᩚ
-    </div>
+    <!-- ================= NAVBAR ================= -->
 
-
-    <!-- เมนู -->
     <nav class="navbar">
 
         <div class="logo">
             ♡ Portfolio
         </div>
 
-        <div class="menu">
-            <a href="index.html" class="active">หน้าแรก</a>
-            <a href="profile.html">ประวัติส่วนตัว</a>
-            <a href="#">การศึกษา</a>
-            <a href="#">กิจกรรม</a>
-            <a href="#">เกียรติบัตร</a>
-        </div>
+        <ul class="nav-menu">
+
+            <li>
+                <a href="index.html" class="active">
+                    หน้าแรก
+                </a>
+            </li>
+
+            <li>
+                <a href="profile.html">
+                    ประวัติส่วนตัว
+                </a>
+            </li>
+
+            <li>
+                <a href="education.html">
+                    การศึกษา
+                </a>
+            </li>
+
+            <li>
+                <a href="activities.html">
+                    กิจกรรม
+                </a>
+            </li>
+
+            <li>
+                <a href="certificates.html">
+                    เกียรติบัตร
+                </a>
+            </li>
+
+        </ul>
 
     </nav>
 
 
-    <!-- หน้าแรก -->
+    <!-- ================= DECORATIONS ================= -->
+
+    <div class="decor decor-top">
+        ༘*.ﾟ 🧸 🎀 𓍢ִ໋🌷͙֒ ᰔᩚ 🪽 ༘࿐
+    </div>
+
+    <div class="decor decor-left">
+        🌷
+    </div>
+
+    <div class="decor decor-right">
+        🎀
+    </div>
+
+
+    <!-- ================= HOME ================= -->
+
     <main class="hero">
 
-        <!-- ฝั่งข้อความ -->
-        <section class="hero-text">
-
-            <div class="mini-text">
-                WELCOME TO MY PORTFOLIO ♡
-            </div>
-
-            <h1>
-                ยินดีต้อนรับสู่<br>
-                เว็บไซต์ <span>Portfolio</span><br>
-                ของฉัน
-            </h1>
-
-            <div class="cute-line">
-                𓂃 ࣪ ִֶָ🪽་༘࿐
-            </div>
-
-            <p class="intro">
-                สวัสดีค่ะ ♡<br>
-                ฉันชื่อ <strong>ณัชชยากานต์</strong>
-            </p>
-
-            <p class="description">
-                เรามาทำความรู้จักกันให้มากขึ้นกันเถอะ
-                <br>
-                เว็บไซต์นี้รวบรวมเรื่องราว ตัวตน
-                ความสนใจ ผลงาน และความฝันของฉัน
-            </p>
-
-            <a href="profile.html" class="button">
-                ทำความรู้จักฉัน ♡
-            </a>
-
-        </section>
+        <div class="hero-container">
 
 
-        <!-- ฝั่งรูป -->
-        <section class="hero-photo">
+            <!-- ================= TEXT ================= -->
 
-            <!-- ตกแต่ง -->
-            <div class="flower flower1">🌷</div>
-            <div class="flower flower2">🎀</div>
-            <div class="flower flower3">🪽</div>
+            <section class="hero-text">
 
-            <!-- หัวใจ -->
-            <div class="heart">
+                <div class="small-title">
+                    WELCOME TO MY PORTFOLIO ♡
+                </div>
 
-                <img
-                    src="https://s34761-debug.github.io/images/IMG_20260617_162035_718.jpg"
-                    alt="รูปโปรไฟล์ ณัชชยากานต์"
-                >
+                <h1>
+                    สวัสดีค่ะ ♡
+                </h1>
 
-            </div>
+                <h2>
+                    ยินดีต้อนรับสู่เว็บไซต์<br>
+                    Portfolio ของฉัน
+                </h2>
 
-            <div class="photo-text">
-                nice to meet you ♡
-            </div>
+                <p>
+                    ฉันชื่อ <strong>ณัชชยากานต์</strong> 🌷
+                    <br>
+                    เรามาทำความรู้จักกันให้มากขึ้นกันเถอะ
+                </p>
 
-        </section>
+                <a href="profile.html" class="btn">
+                    ทำความรู้จักฉัน ♡
+                </a>
+
+
+                <!-- Welcome box -->
+
+                <div class="welcome-box">
+
+                    <p>
+                        nice to meet you ♡
+                    </p>
+
+                    <div class="cute-text">
+                        ༘*.ﾟ🧸🎀🌷ᰔᩚ🪽
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ================= PROFILE PHOTO ================= -->
+
+            <section class="hero-photo">
+
+                <div class="heart">
+
+                    <img
+                        src="https://raw.githubusercontent.com/s34761-debug/images/main/IMG_20260617_162035_718.jpg"
+                        alt="รูปโปรไฟล์ของณัชชยากานต์"
+                    >
+
+                </div>
+
+
+                <!-- Decorations around photo -->
+
+                <span class="photo-decor one">
+                    🎀
+                </span>
+
+                <span class="photo-decor two">
+                    🌷
+                </span>
+
+                <span class="photo-decor three">
+                    🪽
+                </span>
+
+            </section>
+
+        </div>
 
     </main>
 
 
-    <!-- ส่วนข้อความด้านล่าง -->
-    <section class="welcome-box">
-
-        <div class="cute-decoration">
-            ༘*.ﾟ🧸🎀𓍢ִ໋🌷͙֒ᰔᩚ
-        </div>
-
-        <h2>
-            Let's get to know me!
-        </h2>
-
-        <p>
-            ขอบคุณที่เข้ามาเยี่ยมชม Portfolio ของฉันนะคะ
-            <br>
-            หวังว่าเราจะได้รู้จักกันมากขึ้น ♡
-        </p>
-
-        <div class="bottom-decoration">
-            𓂃 ࣪ ִֶָ🪽་༘࿐
-        </div>
-
-    </section>
-
+    <!-- ================= FOOTER ================= -->
 
     <footer>
-        Made with ♡ by Natchayakan
+
+        <p>
+            ༘*.ﾟ🧸🎀𓍢ִ໋🌷͙֒ᰔᩚ🪽 ༘࿐
+        </p>
+
+        <p>
+            Made with ♡ by Natchayakan
+        </p>
+
     </footer>
 
 </body>
+
 </html>

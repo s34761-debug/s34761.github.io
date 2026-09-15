@@ -1,512 +1,1129 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>ประวัติส่วนตัว ♡ Portfolio</title>
+<title>ข้อมูลส่วนตัว | NATCHAYAKAN ♡</title>
 
-    <style>
-        * {
-            box-sizing: border-box;
-        }
+<style>
 
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: "Segoe UI", Tahoma, sans-serif;
-            background: #ffffff;
-            color: #536b63;
-        }
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
-        /* ===== ด้านบน ===== */
+body {
+    font-family: "Segoe UI", Tahoma, sans-serif;
+    background: #f3fcf8;
+    color: #354c45;
+    line-height: 1.7;
+}
 
-        .top-decoration {
-            text-align: center;
-            font-size: 25px;
-            padding-top: 25px;
-            letter-spacing: 4px;
-        }
 
-        .logo {
-            text-align: center;
-            color: #82c7b0;
-            font-size: 30px;
-            font-weight: bold;
-            margin-top: 8px;
-        }
+/* =========================
+   HEADER
+========================= */
 
-        /* ===== เมนู ===== */
+header {
+    background: rgba(255,255,255,0.97);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #d7eee5;
+    box-shadow: 0 4px 18px rgba(91,160,137,0.10);
+}
 
-        nav {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin: 20px auto;
-        }
+.header-inner {
+    max-width: 1200px;
+    min-height: 95px;
+    margin: auto;
 
-        nav a {
-            text-decoration: none;
-            color: #6f9186;
-            background: #effaf5;
-            padding: 10px 18px;
-            border-radius: 30px;
-            font-size: 15px;
-            transition: 0.3s;
-        }
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
-        nav a:hover {
-            background: #c9eddf;
-            color: white;
-            transform: translateY(-2px);
-        }
+    padding: 15px 25px;
+}
 
-        nav a.active {
-            background: #b8e5d5;
-            color: white;
-        }
 
-        hr {
-            width: 85%;
-            border: none;
-            border-top: 2px solid #d9f1e8;
-            margin: 25px auto;
-        }
+/* ชื่อเว็บไซต์ */
 
-        /* ===== เนื้อหา ===== */
+.brand {
+    color: #69b29a;
+    font-size: 27px;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
 
-        .page {
-            max-width: 950px;
-            margin: auto;
-            padding: 20px;
-        }
 
-        .title {
-            text-align: center;
-            color: #78bda8;
-            font-size: 35px;
-            margin-bottom: 5px;
-        }
+/* =========================
+   MENU
+========================= */
 
-        .subtitle {
-            text-align: center;
-            color: #9bb7ae;
-            margin-bottom: 35px;
-        }
+nav {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
 
-        /* ===== กล่องโปรไฟล์ ===== */
+nav a {
+    text-decoration: none;
+    color: #526e64;
 
-        .profile-box {
-            background: #f4fcf8;
-            border-radius: 35px;
-            padding: 35px;
-            display: flex;
-            align-items: center;
-            gap: 45px;
-            box-shadow: 0 8px 25px rgba(130, 190, 170, 0.12);
-        }
+    padding: 13px 17px;
 
-        /* ===== รูปหัวใจ ===== */
+    border-radius: 25px;
 
-        .heart {
-            width: 280px;
-            height: 280px;
-            position: relative;
-            flex-shrink: 0;
-        }
+    font-size: 16px;
+    font-weight: 600;
 
-        .heart img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
+    transition: 0.25s;
+}
 
-            clip-path: polygon(
-                50% 95%,
-                8% 55%,
-                4% 40%,
-                7% 27%,
-                16% 17%,
-                28% 13%,
-                39% 16%,
-                50% 29%,
-                61% 16%,
-                72% 13%,
-                84% 17%,
-                93% 27%,
-                96% 40%,
-                92% 55%
-            );
-        }
+nav a:hover {
+    background: #e4f7ef;
+    color: #65ad94;
+}
 
-        /* ===== ข้อมูลส่วนตัว ===== */
+nav a.active {
+    background: #ddf4eb;
+    color: #63ac93;
+}
 
-        .info {
-            flex: 1;
-        }
 
-        .info h2 {
-            color: #70b59f;
-            font-size: 27px;
-            margin-top: 0;
-            margin-bottom: 20px;
-        }
+/* =========================
+   MAIN
+========================= */
 
-        .info-item {
-            background: white;
-            border-radius: 18px;
-            padding: 13px 18px;
-            margin-bottom: 12px;
-            border: 1px solid #def2e9;
-        }
+main {
+    max-width: 1050px;
+    margin: auto;
+    padding: 55px 20px 80px;
+}
 
-        .info-item b {
-            color: #6fae9b;
-        }
 
-        /* ===== About Me ===== */
+/* =========================
+   PAGE TITLE
+========================= */
 
-        .about {
-            margin-top: 30px;
-            background: white;
-            border: 2px solid #e1f4ec;
-            border-radius: 30px;
-            padding: 30px;
-        }
+.page-label {
+    display: table;
+    margin: 0 auto 18px;
 
-        .about h2 {
-            color: #78bda8;
-            margin-top: 0;
-        }
+    padding: 5px 28px;
 
-        .about p {
-            line-height: 1.8;
-            font-size: 17px;
-        }
+    border: 2px solid #b9e2d4;
+    border-radius: 30px;
 
-        /* ===== จุดเด่น ===== */
+    color: #6caf98;
 
-        .section-title {
-            text-align: center;
-            color: #78bda8;
-            font-size: 28px;
-            margin-top: 40px;
-        }
+    font-size: 18px;
+    font-weight: 800;
 
-        .cards {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 18px;
-            margin-top: 25px;
-        }
+    letter-spacing: 1px;
+}
 
-        .card {
-            background: #f4fcf8;
-            border-radius: 25px;
-            padding: 25px;
-            text-align: center;
-        }
+.page-title {
+    text-align: center;
 
-        .card .emoji {
-            font-size: 35px;
-        }
+    font-size: 48px;
+    font-weight: 900;
 
-        .card h3 {
-            color: #73b39e;
-        }
+    color: #35453f;
 
-        .card p {
-            color: #718880;
-            line-height: 1.6;
-        }
+    margin-bottom: 8px;
+}
 
-        /* ===== ตกแต่ง ===== */
+.page-description {
+    text-align: center;
 
-        .decoration {
-            text-align: center;
-            font-size: 30px;
-            margin: 35px 0;
-        }
+    color: #789087;
 
-        /* ===== Footer ===== */
+    font-size: 20px;
 
-        footer {
-            text-align: center;
-            color: #9ab5ac;
-            padding: 35px 10px;
-            font-size: 14px;
-        }
+    margin-bottom: 50px;
+}
 
-        /* ===== มือถือ ===== */
 
-        @media (max-width: 700px) {
+/* =========================
+   CARD
+========================= */
 
-            .profile-box {
-                flex-direction: column;
-                text-align: center;
-                padding: 25px 18px;
-            }
+.section-card {
+    background: #ffffff;
 
-            .heart {
-                width: 240px;
-                height: 240px;
-            }
+    border: 1px solid #d9eee6;
 
-            .cards {
-                grid-template-columns: 1fr;
-            }
+    border-radius: 35px;
 
-            .title {
-                font-size: 28px;
-            }
+    padding: 40px;
 
-            nav a {
-                padding: 8px 12px;
-                font-size: 13px;
-            }
-        }
-    </style>
+    margin-bottom: 30px;
+
+    box-shadow:
+        0 10px 35px rgba(92,160,138,0.08);
+}
+
+
+/* =========================
+   SECTION TITLE
+========================= */
+
+.section-title {
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+
+    font-size: 32px;
+    font-weight: 900;
+
+    margin-bottom: 30px;
+
+    color: #354740;
+}
+
+.section-icon {
+    width: 55px;
+    height: 55px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #d4f1e6;
+
+    color: #5ca58c;
+
+    border-radius: 16px;
+
+    font-size: 28px;
+}
+
+
+/* =========================
+   TARGET UNIVERSITY
+========================= */
+
+.university-card {
+    background: #f3fcf8;
+
+    border: 2px solid #d2ede3;
+
+    border-radius: 30px;
+
+    padding: 35px;
+
+    text-align: center;
+}
+
+.university-label {
+    display: inline-block;
+
+    background: #e1f6ee;
+
+    color: #65ad94;
+
+    padding: 8px 25px;
+
+    border-radius: 30px;
+
+    font-size: 18px;
+
+    font-weight: 800;
+
+    margin-bottom: 25px;
+}
+
+.university-icon {
+    width: 120px;
+    height: 120px;
+
+    margin: 0 auto 20px;
+
+    border-radius: 50%;
+
+    background: #ffffff;
+
+    border: 3px solid #c4e7da;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 55px;
+
+    box-shadow:
+        0 5px 20px rgba(92,160,138,0.10);
+}
+
+.university-name {
+    font-size: 30px;
+
+    font-weight: 900;
+
+    color: #354740;
+
+    margin-bottom: 8px;
+}
+
+.university-sub {
+    color: #65ad94;
+
+    font-size: 20px;
+
+    font-weight: 800;
+}
+
+
+/* =========================
+   INFORMATION
+========================= */
+
+.info-list {
+    display: flex;
+    flex-direction: column;
+
+    gap: 18px;
+}
+
+.info-box {
+    background: #ffffff;
+
+    border: 1px solid #dcefe8;
+
+    border-radius: 25px;
+
+    padding: 25px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 25px;
+
+    transition: 0.25s;
+}
+
+.info-box:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 7px 20px rgba(92,160,138,0.10);
+}
+
+.info-icon {
+    width: 65px;
+    height: 65px;
+
+    flex-shrink: 0;
+
+    border-radius: 18px;
+
+    background: #e2f7ef;
+
+    color: #5fa990;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 30px;
+}
+
+.info-content {
+    flex: 1;
+}
+
+.info-label {
+    color: #7b8e87;
+    font-size: 18px;
+}
+
+.info-value {
+    color: #293a35;
+
+    font-size: 23px;
+
+    font-weight: 850;
+}
+
+
+/* =========================
+   EDUCATION
+========================= */
+
+.education-box {
+    background: #f5fcf9;
+
+    border: 1px solid #d8eee6;
+
+    border-radius: 28px;
+
+    padding: 30px;
+}
+
+.education-title {
+    color: #6eae98;
+
+    font-size: 18px;
+
+    margin-bottom: 8px;
+}
+
+.education-school {
+    font-size: 28px;
+
+    font-weight: 900;
+
+    color: #34453f;
+
+    margin-bottom: 15px;
+}
+
+.study-badge {
+    display: inline-block;
+
+    background: #e3f7ef;
+
+    color: #60a98f;
+
+    border: 1px solid #c5e7db;
+
+    border-radius: 30px;
+
+    padding: 10px 22px;
+
+    font-size: 18px;
+
+    font-weight: 800;
+}
+
+.study-plan {
+    margin-top: 20px;
+
+    background: #ffffff;
+
+    border: 1px solid #dcefe8;
+
+    border-radius: 25px;
+
+    padding: 25px;
+}
+
+.study-plan-label {
+    color: #7a8d86;
+
+    font-size: 18px;
+}
+
+.study-plan-name {
+    font-size: 27px;
+
+    font-weight: 900;
+
+    color: #34453f;
+
+    margin-top: 5px;
+}
+
+
+/* =========================
+   INTEREST
+========================= */
+
+.interest-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+.interest-card {
+    text-align: center;
+
+    background: #f5fcf9;
+
+    border: 1px solid #dcefe8;
+
+    border-radius: 25px;
+
+    padding: 28px 18px;
+}
+
+.interest-emoji {
+    font-size: 40px;
+
+    margin-bottom: 10px;
+}
+
+.interest-card h3 {
+    color: #69ad96;
+
+    font-size: 20px;
+}
+
+.interest-card p {
+    color: #778b83;
+
+    margin-top: 5px;
+}
+
+
+/* =========================
+   DECORATION
+========================= */
+
+.decoration {
+    text-align: center;
+
+    font-size: 28px;
+
+    margin: 35px 0;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    text-align: center;
+
+    padding: 35px 15px;
+
+    color: #8ba39b;
+
+    background: #ffffff;
+
+    border-top: 1px solid #dcefe8;
+}
+
+footer strong {
+    color: #69b29a;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 800px) {
+
+    .header-inner {
+        flex-direction: column;
+
+        gap: 12px;
+
+        padding: 15px;
+    }
+
+    nav {
+        width: 100%;
+
+        justify-content: flex-start;
+
+        overflow-x: auto;
+
+        padding-bottom: 5px;
+    }
+
+    nav a {
+        font-size: 14px;
+
+        padding: 9px 12px;
+
+        white-space: nowrap;
+    }
+
+    main {
+        padding: 35px 15px 60px;
+    }
+
+    .page-title {
+        font-size: 38px;
+    }
+
+    .page-description {
+        font-size: 17px;
+    }
+
+    .section-card {
+        padding: 25px 18px;
+
+        border-radius: 28px;
+    }
+
+    .section-title {
+        font-size: 27px;
+    }
+
+    .info-box {
+        padding: 20px 15px;
+
+        gap: 15px;
+    }
+
+    .info-icon {
+        width: 55px;
+        height: 55px;
+
+        font-size: 25px;
+    }
+
+    .info-value {
+        font-size: 19px;
+    }
+
+    .info-label {
+        font-size: 15px;
+    }
+
+    .education-school {
+        font-size: 23px;
+    }
+
+    .interest-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .university-name {
+        font-size: 24px;
+    }
+
+}
+
+</style>
 </head>
+
 
 <body>
 
-    <!-- ตกแต่งด้านบน -->
 
-    <div class="top-decoration">
-        ༘*.ﾟ🧸🎀𓍢ִ໋🌷͙֒ᰔᩚִִֶֶָ. ..𓂃 ࣪ ִֶָ🪽་༘࿐
+<!-- =========================
+     HEADER
+========================= -->
+
+<header>
+
+<div class="header-inner">
+
+    <div class="brand">
+        NATCHAYAKAN
     </div>
-
-
-    <!-- ชื่อเว็บไซต์ -->
-
-    <div class="logo">
-        ♡ Portfolio
-    </div>
-
-
-    <!-- เมนู -->
 
     <nav>
 
         <a href="index.html">
-            หน้าแรก
+            🏠 หน้าแรก
         </a>
 
         <a href="profile.html" class="active">
-            ประวัติส่วนตัว
+            👤 ข้อมูลส่วนตัว
         </a>
 
         <a href="education.html">
-            การศึกษา
+            📚 การศึกษา
         </a>
 
         <a href="activities.html">
-            กิจกรรม
+            ✨ กิจกรรม
         </a>
 
         <a href="certificates.html">
-            เกียรติบัตร
+            🏆 เกียรติบัตร
         </a>
 
     </nav>
 
+</div>
 
-    <hr>
-
-
-    <!-- เนื้อหาหลัก -->
-
-    <main class="page">
-
-        <h1 class="title">
-            ♡ ประวัติส่วนตัว ♡
-        </h1>
-
-        <p class="subtitle">
-            About Me · Nice to meet you ♡
-        </p>
+</header>
 
 
-        <!-- PROFILE -->
 
-        <section class="profile-box">
+<!-- =========================
+     MAIN
+========================= -->
 
-            <!-- รูปโปรไฟล์ -->
-
-            <div class="heart">
-
-                <img
-                    src="https://raw.githubusercontent.com/s34761-debug/images/main/IMG_20260617_162035_718.jpg"
-                    alt="รูปโปรไฟล์ ณัชชยากานต์"
-                >
-
-            </div>
+<main>
 
 
-            <!-- ข้อมูล -->
+<!-- TITLE -->
 
-            <div class="info">
+<div class="page-label">
+    PERSONAL INFORMATION
+</div>
 
-                <h2>
-                    Hello! I'm NATCHAYAKAN ♡
-                </h2>
+<h1 class="page-title">
+    ข้อมูลส่วนตัว
+</h1>
 
-
-                <div class="info-item">
-                    <b>ชื่อ :</b>
-                    ณัชชยากานต์
-                </div>
-
-
-                <div class="info-item">
-                    <b>ชื่อภาษาอังกฤษ :</b>
-                    Natchayakan
-                </div>
+<p class="page-description">
+    ประวัติส่วนตัว รายละเอียดการศึกษา และช่องทางการติดต่อ
+</p>
 
 
-                <div class="info-item">
-                    <b>ระดับการศึกษา :</b>
-                    มัธยมศึกษาปีที่ 6
-                </div>
+
+<!-- =========================
+     UNIVERSITY
+========================= -->
+
+<section class="section-card">
+
+<h2 class="section-title">
+
+    <span class="section-icon">
+        🎓
+    </span>
+
+    มหาวิทยาลัยที่อยากเข้า
+
+</h2>
 
 
-                <div class="info-item">
-                    <b>โรงเรียน :</b>
-                    โรงเรียนบ้านบึง "อุตสาหกรรมนุเคราะห์"
-                </div>
+<div class="university-card">
+
+    <div class="university-label">
+        🎓 TARGET UNIVERSITY
+    </div>
+
+    <div class="university-icon">
+        🏫
+    </div>
+
+    <div class="university-name">
+        มหาวิทยาลัยบูรพา
+    </div>
+
+    <div class="university-sub">
+        Burapha University
+    </div>
+
+</div>
+
+</section>
 
 
-                <div class="info-item">
-                    <b>แผนการเรียน :</b>
-                    ภาษาจีน
-                </div>
+
+<!-- =========================
+     PERSONAL INFORMATION
+========================= -->
+
+<section class="section-card">
+
+<h2 class="section-title">
+
+    <span class="section-icon">
+        👤
+    </span>
+
+    ข้อมูลส่วนตัว
+
+</h2>
 
 
-                <div class="info-item">
-                    <b>ความสนใจ :</b>
-                    ธุรกิจ · ภาษา · การพัฒนาตัวเอง
-                </div>
-
-            </div>
-
-        </section>
+<div class="info-list">
 
 
-        <!-- ABOUT ME -->
+<!-- ชื่อ -->
 
-        <section class="about">
+<div class="info-box">
 
-            <h2>
-                🌷 About Me
-            </h2>
+    <div class="info-icon">
+        🪪
+    </div>
 
-            <p>
-                สวัสดีค่ะ ฉันชื่อ <b>ณัชชยากานต์</b>
-                ปัจจุบันกำลังศึกษาอยู่ชั้นมัธยมศึกษาปีที่ 6
-                โรงเรียนบ้านบึง "อุตสาหกรรมนุเคราะห์"
-                ในแผนการเรียนภาษาจีน
-            </p>
+    <div class="info-content">
 
-            <p>
-                ฉันเป็นคนที่ตั้งใจเรียน มีความรับผิดชอบ
-                และชอบเรียนรู้สิ่งใหม่ ๆ
-                โดยเฉพาะด้านภาษาและการพัฒนาตัวเอง
-                ฉันต้องการนำความรู้และประสบการณ์ที่ได้รับ
-                ไปใช้ในการศึกษาต่อและสร้างอนาคตของตัวเอง ♡
-            </p>
-
-        </section>
-
-
-        <!-- ตกแต่ง -->
-
-        <div class="decoration">
-            🌷　🎀　🪽
+        <div class="info-label">
+            ชื่อ - นามสกุล
         </div>
 
-
-        <!-- PERSONALITY -->
-
-        <h2 class="section-title">
-            ✿ My Personality ✿
-        </h2>
-
-
-        <div class="cards">
-
-
-            <div class="card">
-
-                <div class="emoji">
-                    📚
-                </div>
-
-                <h3>
-                    ตั้งใจเรียน
-                </h3>
-
-                <p>
-                    มีความตั้งใจในการเรียน
-                    และพยายามทำงานที่ได้รับมอบหมาย
-                    ให้ดีที่สุด
-                </p>
-
-            </div>
-
-
-            <div class="card">
-
-                <div class="emoji">
-                    🧸
-                </div>
-
-                <h3>
-                    รับผิดชอบ
-                </h3>
-
-                <p>
-                    ให้ความสำคัญกับหน้าที่
-                    และพยายามทำงานให้สำเร็จ
-                    ตามเวลาที่กำหนด
-                </p>
-
-            </div>
-
-
-            <div class="card">
-
-                <div class="emoji">
-                    🌷
-                </div>
-
-                <h3>
-                    ชอบเรียนรู้
-                </h3>
-
-                <p>
-                    สนใจเรียนรู้สิ่งใหม่ ๆ
-                    โดยเฉพาะด้านภาษา
-                    และพร้อมพัฒนาตัวเองอยู่เสมอ
-                </p>
-
-            </div>
-
+        <div class="info-value">
+            ณัชชยากานต์
         </div>
 
+    </div>
 
-        <!-- ความสนใจ -->
+</div>
 
-        <section class="about">
 
-            <h2>
-                🎀 My Interests
-            </h2>
+<!-- ชื่อเล่น -->
 
-            <p>
-                🇨🇳 <b>ภาษาจีน</b> — สนใจการเรียนภาษา
-                การสื่อสาร และวัฒนธรรมจีน
-            </p>
+<div class="info-box">
 
-            <p>
-                💼 <b>ธุรกิจ</b> — สนใจการทำ
+    <div class="info-icon">
+        👤
+    </div>
+
+    <div class="info-content">
+
+        <div class="info-label">
+            ชื่อเล่น
+        </div>
+
+        <div class="info-value">
+            ณัช
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- วันเกิด -->
+
+<div class="info-box">
+
+    <div class="info-icon">
+        🎂
+    </div>
+
+    <div class="info-content">
+
+        <div class="info-label">
+            วันเกิด
+        </div>
+
+        <div class="info-value">
+            16 พฤศจิกายน 2551
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- อายุ -->
+
+<div class="info-box">
+
+    <div class="info-icon">
+        ⏳
+    </div>
+
+    <div class="info-content">
+
+        <div class="info-label">
+            อายุ
+        </div>
+
+        <div class="info-value">
+            17 ปี
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- สัญชาติ -->
+
+<div class="info-box">
+
+    <div class="info-icon">
+        🇹🇭
+    </div>
+
+    <div class="info-content">
+
+        <div class="info-label">
+            เชื้อชาติ / สัญชาติ
+        </div>
+
+        <div class="info-value">
+            ไทย
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- ศาสนา -->
+
+<div class="info-box">
+
+    <div class="info-icon">
+        ☸️
+    </div>
+
+    <div class="info-content">
+
+        <div class="info-label">
+            ศาสนา
+        </div>
+
+        <div class="info-value">
+            พุทธ
+        </div>
+
+    </div>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     EDUCATION
+========================= -->
+
+<section class="section-card">
+
+<h2 class="section-title">
+
+    <span class="section-icon">
+        🎓
+    </span>
+
+    ประวัติการศึกษา
+
+</h2>
+
+
+<div class="education-box">
+
+    <div class="education-title">
+        สถานศึกษาปัจจุบัน
+    </div>
+
+    <div class="education-school">
+
+        โรงเรียนบ้านบึง
+        <br>
+        "อุตสาหกรรมนุเคราะห์"
+
+    </div>
+
+
+    <div class="study-badge">
+
+        🎓 ศึกษาอยู่ชั้นมัธยมศึกษาปีที่ 6 (ม.6)
+
+    </div>
+
+
+    <div class="study-plan">
+
+        <div class="study-plan-label">
+            📖 แผนการเรียน
+        </div>
+
+        <div class="study-plan-name">
+            ภาษาจีน 🇨🇳
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     INTEREST
+========================= -->
+
+<section class="section-card">
+
+<h2 class="section-title">
+
+    <span class="section-icon">
+        ✨
+    </span>
+
+    ความสนใจ
+
+</h2>
+
+
+<div class="interest-grid">
+
+
+<div class="interest-card">
+
+    <div class="interest-emoji">
+        🇨🇳
+    </div>
+
+    <h3>
+        ภาษาจีน
+    </h3>
+
+    <p>
+        สนใจภาษาและวัฒนธรรมจีน
+    </p>
+
+</div>
+
+
+<div class="interest-card">
+
+    <div class="interest-emoji">
+        💼
+    </div>
+
+    <h3>
+        ธุรกิจ
+    </h3>
+
+    <p>
+        สนใจด้านธุรกิจและการทำงานในอนาคต
+    </p>
+
+</div>
+
+
+<div class="interest-card">
+
+    <div class="interest-emoji">
+        🌷
+    </div>
+
+    <h3>
+        พัฒนาตัวเอง
+    </h3>
+
+    <p>
+        เรียนรู้สิ่งใหม่และพัฒนาความสามารถ
+    </p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     CONTACT
+========================= -->
+
+<section class="section-card">
+
+<h2 class="section-title">
+
+    <span class="section-icon">
+        📱
+    </span>
+
+    ช่องทางการติดต่อ
+
+</h2>
+
+
+<div class="info-list">
+
+
+<!-- โทรศัพท์ -->
+
+<div class="info-box">
+
+    <div class="info-icon">
+        📞
+    </div>
+
+    <div class="info-content">
+
+        <div class="info-label">
+            เบอร์โทรศัพท์
+        </div>
+
+        <div class="info-value">
+            098-597-2937
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- LINE -->
+
+<div class="info-box">
+
+    <div class="info-icon">
+        💬
+    </div>
+
+    <div class="info-content">
+
+        <div class="info-label">
+            ID Line
+        </div>
+
+        <div class="info-value">
+            0985972937
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- FACEBOOK -->
+
+<div class="info-box">
+
+    <div class="info-icon">
+        f
+    </div>
+
+    <div class="info-content">
+
+        <div class="info-label">
+            Facebook
+        </div>
+
+        <div class="info-value">
+            Nutchayakan Donram
+        </div>
+
+    </div>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<div class="decoration">
+    ༘*.ﾟ🧸🎀𓍢ִ໋🌷͙֒ᰔᩚ🪽
+</div>
+
+
+</main>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    ♡ Thank you for visiting my Portfolio ♡
+
+    <br>
+
+    <strong>NATCHAYAKAN</strong>
+
+</footer>
+
+
+</body>
+</html>

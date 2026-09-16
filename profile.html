@@ -2,24 +2,12 @@
 <html lang="th">
 
 <head>
-
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
-
-    <title>
-        ประวัติส่วนตัว | NATCHAYAKAN
-    </title>
-
+    <title>ประวัติส่วนตัว | NATCHAYAKAN</title>
 
     <style>
-
-        /* =========================================
-           RESET
-        ========================================= */
 
         * {
             margin: 0;
@@ -32,33 +20,16 @@
         }
 
         body {
-            font-family:
-                "Segoe UI",
-                Tahoma,
-                Arial,
-                sans-serif;
-
+            font-family: "Segoe UI", Tahoma, Arial, sans-serif;
             background:
-                radial-gradient(
-                    circle at 5% 10%,
-                    #dcf7ed 0,
-                    transparent 25%
-                ),
-                radial-gradient(
-                    circle at 95% 15%,
-                    #ffe5ef 0,
-                    transparent 25%
-                ),
                 linear-gradient(
                     135deg,
-                    #f8fffc,
-                    #ffffff
+                    #effbf7 0%,
+                    #ffffff 50%,
+                    #fff4f8 100%
                 );
-
-            color: #526b64;
-
+            color: #58766c;
             line-height: 1.7;
-
             min-height: 100vh;
         }
 
@@ -68,1837 +39,968 @@
         }
 
 
-        /* =========================================
+        /* =========================
            DECORATION
-        ========================================= */
+        ========================= */
 
         .top-decoration {
-
             text-align: center;
-
-            padding:
-                22px
-                10px
-                8px;
-
+            padding: 18px 10px 5px;
             font-size: 18px;
-
             letter-spacing: 2px;
         }
 
         .floating {
-
             position: fixed;
-
             pointer-events: none;
-
-            z-index: -1;
-
             opacity: 0.45;
+            z-index: 0;
         }
 
         .flower {
-
-            top: 180px;
-
-            left: 20px;
-
-            font-size: 42px;
-
-            transform:
-                rotate(-12deg);
+            left: 15px;
+            top: 230px;
+            font-size: 38px;
         }
 
         .bow {
-
-            top: 430px;
-
-            right: 20px;
-
-            font-size: 38px;
-
-            transform:
-                rotate(10deg);
+            right: 15px;
+            top: 450px;
+            font-size: 36px;
         }
 
         .wing {
-
-            bottom: 80px;
-
-            left: 25px;
-
+            right: 20px;
+            bottom: 70px;
             font-size: 35px;
         }
 
 
-        /* =========================================
+        /* =========================
            HEADER
-        ========================================= */
+        ========================= */
 
         header {
-
-            width: 92%;
-
-            max-width: 1150px;
-
-            margin:
-                12px auto
-                0;
-
-            padding:
-                18px 25px;
-
-            background:
-                rgba(
-                    255,
-                    255,
-                    255,
-                    0.92
-                );
-
-            border:
-                1px solid #dcefe8;
-
-            border-radius:
-                28px;
-
+            width: 94%;
+            max-width: 1100px;
+            margin: 10px auto;
+            background: rgba(255,255,255,0.96);
+            border: 1px solid #d7eee6;
+            border-radius: 25px;
+            padding: 15px 20px;
             box-shadow:
-                0 12px 35px
-                rgba(
-                    75,
-                    145,
-                    124,
-                    0.12
-                );
-
-            position: sticky;
-
-            top: 12px;
-
-            z-index: 100;
+                0 10px 30px rgba(70,130,110,0.10);
+            position: relative;
+            z-index: 10;
         }
 
-        .header-content {
-
+        .header-inner {
             display: flex;
-
-            justify-content:
-                space-between;
-
+            justify-content: space-between;
             align-items: center;
-
-            gap: 20px;
+            gap: 15px;
         }
 
-        .site-name {
-
-            font-size: 22px;
-
+        .logo {
+            color: #57947f;
+            font-size: 20px;
             font-weight: 800;
-
-            color: #579a84;
-
-            letter-spacing: 1px;
-
             white-space: nowrap;
         }
 
-        .site-name span {
-
-            color: #e5a1bb;
+        .logo span {
+            color: #e5a1bc;
         }
 
 
-        /* =========================================
-           NAVIGATION
-        ========================================= */
+        /* =========================
+           NAV
+        ========================= */
 
         nav {
-
             display: flex;
-
             flex-wrap: wrap;
-
             justify-content: center;
-
-            gap: 6px;
+            gap: 5px;
         }
 
         nav a {
-
-            padding:
-                9px 14px;
-
-            border-radius:
-                20px;
-
-            color: #657b75;
-
-            font-size: 14px;
-
-            font-weight: 600;
-
-            transition:
-                0.3s;
+            color: #6b817b;
+            font-size: 13px;
+            font-weight: 700;
+            padding: 8px 12px;
+            border-radius: 20px;
+            transition: 0.3s;
         }
 
         nav a:hover {
-
-            background:
-                #e2f7ef;
-
-            color:
-                #4c977e;
-
-            transform:
-                translateY(-2px);
+            background: #e1f7ef;
+            color: #4c917c;
         }
 
         nav a.active {
-
-            background:
-                #bdebdc;
-
-            color:
-                #397966;
-
-            box-shadow:
-                0 5px 15px
-                rgba(
-                    80,
-                    155,
-                    130,
-                    0.18
-                );
+            background: #c6eddf;
+            color: #397967;
         }
 
 
-        /* =========================================
+        /* =========================
            MAIN
-        ========================================= */
+        ========================= */
 
         main {
-
             width: 92%;
-
-            max-width: 1100px;
-
-            margin:
-                auto;
+            max-width: 1050px;
+            margin: auto;
+            position: relative;
+            z-index: 2;
         }
 
 
-        /* =========================================
-           HERO
-        ========================================= */
+        /* =========================
+           PAGE TITLE
+        ========================= */
 
-        .hero {
-
+        .page-title {
             text-align: center;
-
-            padding:
-                75px
-                20px
-                45px;
+            padding: 55px 10px 35px;
         }
 
-        .hero-label {
-
-            display: inline-block;
-
-            padding:
-                7px 18px;
-
-            border-radius:
-                30px;
-
-            background:
-                #e2f8ef;
-
-            color:
-                #5b9c87;
-
-            font-size:
-                12px;
-
-            font-weight:
-                800;
-
-            letter-spacing:
-                2px;
+        .page-title .small {
+            color: #75aa99;
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 3px;
         }
 
-        .hero h1 {
-
-            margin-top:
-                15px;
-
-            font-size:
-                clamp(
-                    42px,
-                    7vw,
-                    70px
-                );
-
-            color:
-                #48685f;
-
-            line-height:
-                1.15;
+        .page-title h1 {
+            color: #4d6c63;
+            font-size: clamp(40px, 8vw, 65px);
+            line-height: 1.2;
+            margin-top: 5px;
         }
 
-        .hero h1 span {
-
-            color:
-                #72b59e;
+        .page-title h1 span {
+            color: #6eb099;
         }
 
-        .hero-line {
-
-            width:
-                90px;
-
-            height:
-                4px;
-
-            margin:
-                22px auto;
-
-            border-radius:
-                10px;
-
+        .line {
+            width: 90px;
+            height: 5px;
+            border-radius: 20px;
+            margin: 17px auto;
             background:
                 linear-gradient(
                     90deg,
-                    #b5e7d7,
-                    #f2bfd3
+                    #b9e7d8,
+                    #efbfd2
                 );
         }
 
-        .hero p {
-
-            color:
-                #8c9d98;
-
-            font-size:
-                15px;
+        .page-title p {
+            color: #98aaa5;
+            font-size: 14px;
         }
 
 
-        /* =========================================
-           INTRO
-        ========================================= */
+        /* =========================
+           PROFILE
+        ========================= */
 
-        .intro-card {
-
-            background:
-                rgba(
-                    255,
-                    255,
-                    255,
-                    0.96
-                );
-
-            border:
-                1px solid #dcefe8;
-
-            border-radius:
-                38px;
-
-            padding:
-                40px;
-
+        .profile-card {
+            background: #ffffff;
+            border: 1px solid #dceee8;
+            border-radius: 35px;
+            padding: 42px;
             box-shadow:
-                0 20px 50px
-                rgba(
-                    74,
-                    145,
-                    124,
-                    0.12
-                );
+                0 18px 45px rgba(68,130,113,0.10);
 
-            display:
-                grid;
-
-            grid-template-columns:
-                250px 1fr;
-
-            gap:
-                45px;
-
-            align-items:
-                center;
-
-            position:
-                relative;
-
-            overflow:
-                hidden;
-        }
-
-        .intro-card::before {
-
-            content:
-                "♡";
-
-            position:
-                absolute;
-
-            right:
-                -25px;
-
-            top:
-                -70px;
-
-            font-size:
-                230px;
-
-            color:
-                #edf9f4;
+            display: grid;
+            grid-template-columns: 250px 1fr;
+            gap: 45px;
+            align-items: center;
         }
 
 
-        /* =========================================
+        /* =========================
            PROFILE PHOTO
-        ========================================= */
+        ========================= */
 
-        .photo-area {
-
-            position:
-                relative;
-
-            z-index:
-                2;
-
-            text-align:
-                center;
+        .photo-section {
+            text-align: center;
+            width: 100%;
         }
 
-        .photo-frame {
+        .photo-circle {
+            width: 210px;
+            height: 210px;
+            margin: auto;
+            padding: 7px;
 
-            width:
-                215px;
-
-            height:
-                215px;
-
-            margin:
-                auto;
-
-            padding:
-                8px;
-
-            border-radius:
-                50%;
+            border-radius: 50%;
 
             background:
                 linear-gradient(
                     135deg,
-                    #b5e6d5,
-                    #f3c4d8
+                    #b8e5d6,
+                    #efbfd3
                 );
 
             box-shadow:
-                0 12px 30px
-                rgba(
-                    76,
-                    143,
-                    125,
-                    0.18
-                );
-
-            position:
-                relative;
+                0 12px 30px rgba(73,136,117,0.18);
         }
 
-        .photo-frame::after {
-
-            content:
-                "♡";
-
-            position:
-                absolute;
-
-            right:
-                -5px;
-
-            bottom:
-                8px;
-
-            width:
-                48px;
-
-            height:
-                48px;
-
-            background:
-                white;
-
-            border-radius:
-                50%;
-
-            display:
-                flex;
-
-            align-items:
-                center;
-
-            justify-content:
-                center;
-
-            color:
-                #df9ab7;
-
-            font-size:
-                24px;
-
-            box-shadow:
-                0 5px 15px
-                rgba(
-                    70,
-                    120,
-                    105,
-                    0.12
-                );
+        .photo-circle img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 5px solid white;
         }
 
-        .photo-frame img {
-
-            width:
-                100%;
-
-            height:
-                100%;
-
-            object-fit:
-                cover;
-
-            border-radius:
-                50%;
-
-            border:
-                5px solid white;
-
-            display:
-                block;
-        }
-
-        .photo-caption {
-
-            margin-top:
-                14px;
-
-            color:
-                #91a9a1;
-
-            font-size:
-                12px;
-
-            letter-spacing:
-                1px;
+        .photo-name {
+            margin-top: 14px;
+            color: #91a59e;
+            font-size: 13px;
+            letter-spacing: 1.5px;
         }
 
 
-        /* =========================================
-           INTRO TEXT
-        ========================================= */
+        /* =========================
+           INTRO
+        ========================= */
 
-        .intro-text {
-
-            position:
-                relative;
-
-            z-index:
-                2;
+        .intro {
+            min-width: 0;
         }
 
-        .intro-small {
-
-            color:
-                #df9ab7;
-
-            font-size:
-                13px;
-
-            font-weight:
-                800;
-
-            letter-spacing:
-                2px;
+        .intro-label {
+            color: #d99ab5;
+            font-size: 13px;
+            font-weight: 800;
+            letter-spacing: 2px;
+            margin-bottom: 7px;
         }
 
-        .intro-text h2 {
-
-            color:
-                #49685f;
-
-            font-size:
-                clamp(
-                    28px,
-                    4vw,
-                    39px
-                );
-
-            line-height:
-                1.35;
-
-            margin:
-                6px 0;
+        .intro h2 {
+            color: #4d6b62;
+            font-size: clamp(26px, 4vw, 37px);
+            line-height: 1.5;
         }
 
-        .intro-text h2 span {
-
-            color:
-                #70b29c;
+        .intro h2 span {
+            color: #70b19b;
         }
 
         .english-name {
-
-            color:
-                #99aaa5;
-
-            font-size:
-                16px;
-
-            letter-spacing:
-                1px;
-
-            margin-bottom:
-                17px;
+            color: #9aa9a5;
+            font-size: 16px;
+            letter-spacing: 1px;
+            margin-bottom: 18px;
         }
 
-        .intro-text p {
-
-            color:
-                #71847e;
-
-            font-size:
-                15px;
+        .intro-text {
+            color: #71847e;
+            font-size: 15px;
+            margin-bottom: 10px;
         }
 
 
-        /* =========================================
+        /* =========================
            TAGS
-        ========================================= */
+        ========================= */
 
         .tags {
-
-            display:
-                flex;
-
-            flex-wrap:
-                wrap;
-
-            gap:
-                8px;
-
-            margin-top:
-                20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 9px;
+            margin-top: 18px;
         }
 
         .tag {
-
-            padding:
-                6px 13px;
-
-            border-radius:
-                20px;
-
-            background:
-                #e5f8f1;
-
-            border:
-                1px solid #d1eee3;
-
-            color:
-                #589882;
-
-            font-size:
-                12px;
-
-            font-weight:
-                700;
-
-            transition:
-                0.3s;
-        }
-
-        .tag:hover {
-
-            transform:
-                translateY(-3px);
-
-            background:
-                #d5f2e7;
+            background: #e4f8f0;
+            border: 1px solid #d0eee3;
+            color: #579681;
+            padding: 7px 14px;
+            border-radius: 25px;
+            font-size: 12px;
+            font-weight: 700;
         }
 
 
-        /* =========================================
-           SECTION TITLE
-        ========================================= */
+        /* =========================
+           SECTION
+        ========================= */
 
         .section {
-
-            margin-top:
-                75px;
+            margin-top: 70px;
         }
 
         .section-title {
-
-            text-align:
-                center;
-
-            margin-bottom:
-                35px;
+            text-align: center;
+            margin-bottom: 30px;
         }
 
         .section-title .english {
-
-            color:
-                #7bb8a5;
-
-            font-size:
-                12px;
-
-            font-weight:
-                800;
-
-            letter-spacing:
-                3px;
+            color: #76ad9b;
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 3px;
         }
 
         .section-title h2 {
-
-            color:
-                #4b6960;
-
-            font-size:
-                31px;
-
-            margin-top:
-                5px;
+            color: #4d6d63;
+            font-size: 30px;
+            margin-top: 5px;
         }
 
         .section-title p {
-
-            color:
-                #96a6a1;
-
-            font-size:
-                14px;
+            color: #98aaa5;
+            font-size: 14px;
         }
 
 
-        /* =========================================
+        /* =========================
            UNIVERSITY
-        ========================================= */
+        ========================= */
 
         .university-card {
-
             background:
                 linear-gradient(
                     135deg,
                     #ffffff,
-                    #effbf6
+                    #effaf6
                 );
 
-            border:
-                1px solid #d6eee5;
+            border: 1px solid #d5ede4;
+            border-radius: 35px;
+            padding: 38px;
 
-            border-radius:
-                35px;
+            display: grid;
+            grid-template-columns: 180px 1fr;
+            gap: 35px;
 
-            padding:
-                42px;
-
-            display:
-                grid;
-
-            grid-template-columns:
-                190px 1fr;
-
-            gap:
-                35px;
-
-            align-items:
-                center;
+            align-items: center;
 
             box-shadow:
-                0 15px 40px
-                rgba(
-                    72,
-                    143,
-                    122,
-                    0.10
-                );
-
-            position:
-                relative;
-
-            overflow:
-                hidden;
-        }
-
-        .university-card::after {
-
-            content:
-                "✿";
-
-            position:
-                absolute;
-
-            right:
-                15px;
-
-            bottom:
-                -50px;
-
-            font-size:
-                160px;
-
-            color:
-                #e5f7f0;
+                0 15px 40px rgba(70,135,116,0.09);
         }
 
 
-        /* =========================================
+        /* =========================
            UNIVERSITY LOGO
-        ========================================= */
+        ========================= */
 
         .university-logo {
+            width: 155px;
+            height: 155px;
+            margin: auto;
+            padding: 12px;
 
-            width:
-                160px;
+            background: white;
 
-            height:
-                160px;
+            border: 6px solid #d8f0e7;
+            border-radius: 50%;
 
-            margin:
-                auto;
-
-            padding:
-                13px;
-
-            background:
-                white;
-
-            border-radius:
-                50%;
-
-            border:
-                7px solid #d9f1e8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
 
             box-shadow:
-                0 10px 25px
-                rgba(
-                    70,
-                    140,
-                    120,
-                    0.12
-                );
-
-            display:
-                flex;
-
-            align-items:
-                center;
-
-            justify-content:
-                center;
-
-            position:
-                relative;
-
-            z-index:
-                2;
+                0 8px 25px rgba(68,130,113,0.10);
         }
 
         .university-logo img {
-
-            width:
-                100%;
-
-            height:
-                100%;
-
-            object-fit:
-                contain;
-
-            display:
-                block;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            display: block;
         }
 
 
-        /* =========================================
+        /* =========================
            UNIVERSITY TEXT
-        ========================================= */
-
-        .university-text {
-
-            position:
-                relative;
-
-            z-index:
-                3;
-        }
+        ========================= */
 
         .university-label {
-
-            color:
-                #dc9db7;
-
-            font-size:
-                12px;
-
-            font-weight:
-                800;
-
-            letter-spacing:
-                2px;
+            color: #d89bb5;
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 2px;
         }
 
-        .university-text h3 {
-
-            color:
-                #4d7568;
-
-            font-size:
-                31px;
-
-            margin:
-                4px 0;
+        .university-info h3 {
+            color: #4e7468;
+            font-size: 30px;
+            margin-top: 4px;
         }
 
         .university-eng {
-
-            color:
-                #8da29c;
-
-            font-size:
-                17px;
+            color: #91a49e;
+            font-size: 16px;
         }
 
-        .dream-badge {
-
-            display:
-                inline-block;
-
-            margin-top:
-                14px;
-
-            padding:
-                7px 15px;
-
-            border-radius:
-                20px;
-
-            background:
-                #def6ec;
-
-            color:
-                #589782;
-
-            font-size:
-                12px;
-
-            font-weight:
-                700;
+        .dream {
+            display: inline-block;
+            margin-top: 12px;
+            padding: 7px 15px;
+            border-radius: 20px;
+            background: #ddf6ed;
+            color: #579681;
+            font-size: 12px;
+            font-weight: 700;
         }
 
 
-        /* =========================================
-           FACULTY / PROGRAM
-        ========================================= */
+        /* =========================
+           FACULTY
+        ========================= */
 
-        .study-target {
-
-            margin-top:
-                20px;
-
-            display:
-                grid;
-
-            grid-template-columns:
-                1fr 1fr;
-
-            gap:
-                12px;
+        .study-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-top: 20px;
         }
 
         .study-box {
-
-            background:
-                rgba(
-                    255,
-                    255,
-                    255,
-                    0.88
-                );
-
-            border:
-                1px solid #d7eee5;
-
-            border-radius:
-                19px;
-
-            padding:
-                14px 16px;
-
-            transition:
-                0.3s;
-        }
-
-        .study-box:hover {
-
-            transform:
-                translateY(-3px);
-
-            box-shadow:
-                0 8px 20px
-                rgba(
-                    70,
-                    135,
-                    117,
-                    0.08
-                );
+            background: white;
+            border: 1px solid #d9eee7;
+            border-radius: 18px;
+            padding: 14px 15px;
         }
 
         .study-box.full {
-
-            grid-column:
-                1 / -1;
+            grid-column: 1 / -1;
         }
 
         .study-label {
-
-            display:
-                block;
-
-            color:
-                #d89bb6;
-
-            font-size:
-                11px;
-
-            font-weight:
-                800;
-
-            letter-spacing:
-                1px;
-
-            margin-bottom:
-                4px;
+            display: block;
+            color: #d79ab4;
+            font-size: 10px;
+            font-weight: 800;
+            letter-spacing: 1.5px;
+            margin-bottom: 3px;
         }
 
         .study-value {
-
-            color:
-                #52766a;
-
-            font-size:
-                14px;
-
-            font-weight:
-                700;
+            color: #54766b;
+            font-size: 14px;
+            font-weight: 700;
         }
 
 
-        /* =========================================
-           INFO CARDS
-        ========================================= */
+        /* =========================
+           INFO GRID
+        ========================= */
 
         .info-grid {
-
-            display:
-                grid;
-
-            grid-template-columns:
-                repeat(
-                    2,
-                    1fr
-                );
-
-            gap:
-                20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
         }
 
         .info-card {
-
-            background:
-                white;
-
-            border:
-                1px solid #dfede8;
-
-            border-radius:
-                27px;
-
-            padding:
-                26px;
+            background: white;
+            border: 1px solid #deeee8;
+            border-radius: 27px;
+            padding: 27px;
 
             box-shadow:
-                0 10px 30px
-                rgba(
-                    71,
-                    126,
-                    112,
-                    0.07
-                );
-
-            transition:
-                0.3s;
+                0 10px 30px rgba(70,125,110,0.07);
         }
 
-        .info-card:hover {
+        .info-icon {
+            width: 48px;
+            height: 48px;
 
-            transform:
-                translateY(-5px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
 
-            border-color:
-                #bfe5d9;
+            border-radius: 16px;
+            background: #e5f8f1;
 
-            box-shadow:
-                0 15px 35px
-                rgba(
-                    70,
-                    135,
-                    117,
-                    0.12
-                );
-        }
+            font-size: 22px;
 
-        .card-icon {
-
-            width:
-                47px;
-
-            height:
-                47px;
-
-            border-radius:
-                16px;
-
-            background:
-                #e6f8f1;
-
-            display:
-                flex;
-
-            align-items:
-                center;
-
-            justify-content:
-                center;
-
-            font-size:
-                21px;
-
-            margin-bottom:
-                13px;
+            margin-bottom: 12px;
         }
 
         .info-card h3 {
-
-            color:
-                #55756b;
-
-            font-size:
-                18px;
-
-            margin-bottom:
-                13px;
+            color: #55756b;
+            font-size: 18px;
+            margin-bottom: 10px;
         }
 
         .info-row {
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
 
-            display:
-                flex;
+            padding: 9px 0;
 
-            justify-content:
-                space-between;
+            border-bottom: 1px dashed #dfebe7;
 
-            gap:
-                15px;
-
-            padding:
-                9px 0;
-
-            border-bottom:
-                1px dashed #e0ebe7;
-
-            font-size:
-                14px;
+            font-size: 14px;
         }
 
         .info-row:last-child {
-
-            border-bottom:
-                none;
+            border-bottom: none;
         }
 
-        .info-row .label {
-
-            color:
-                #97a7a2;
+        .info-label {
+            color: #9aaaa5;
         }
 
-        .info-row .value {
-
-            color:
-                #526e65;
-
-            font-weight:
-                600;
-
-            text-align:
-                right;
+        .info-value {
+            color: #57736b;
+            font-weight: 600;
+            text-align: right;
         }
 
 
-        /* =========================================
-           EDUCATION
-        ========================================= */
+        /* =========================
+           EDUCATION TIMELINE
+        ========================= */
 
         .timeline {
-
-            max-width:
-                850px;
-
-            margin:
-                auto;
-
-            position:
-                relative;
+            max-width: 800px;
+            margin: auto;
+            position: relative;
         }
 
         .timeline::before {
+            content: "";
+            position: absolute;
 
-            content:
-                "";
+            left: 17px;
+            top: 10px;
+            bottom: 10px;
 
-            position:
-                absolute;
+            width: 3px;
 
-            left:
-                24px;
-
-            top:
-                10px;
-
-            bottom:
-                10px;
-
-            width:
-                3px;
-
-            border-radius:
-                10px;
+            border-radius: 10px;
 
             background:
                 linear-gradient(
-                    #b9e7d8,
-                    #f0bfd2
+                    #b8e5d7,
+                    #efbfd2
                 );
         }
 
         .timeline-item {
-
-            position:
-                relative;
-
-            padding-left:
-                68px;
-
-            margin-bottom:
-                25px;
+            position: relative;
+            padding-left: 55px;
+            margin-bottom: 22px;
         }
 
         .timeline-dot {
+            position: absolute;
 
-            position:
-                absolute;
+            left: 3px;
+            top: 10px;
 
-            left:
-                9px;
+            width: 30px;
+            height: 30px;
 
-            top:
-                10px;
+            border-radius: 50%;
 
-            width:
-                32px;
+            background: white;
 
-            height:
-                32px;
-
-            border-radius:
-                50%;
-
-            background:
-                white;
-
-            border:
-                7px solid #bde7d9;
-
-            box-shadow:
-                0 4px 12px
-                rgba(
-                    68,
-                    137,
-                    117,
-                    0.12
-                );
+            border: 7px solid #bde6d8;
         }
 
         .timeline-card {
+            background: white;
 
-            background:
-                white;
+            border: 1px solid #deeee8;
 
-            border:
-                1px solid #deece7;
+            border-radius: 23px;
 
-            border-radius:
-                25px;
-
-            padding:
-                23px 27px;
+            padding: 22px;
 
             box-shadow:
-                0 10px 28px
-                rgba(
-                    70,
-                    126,
-                    112,
-                    0.07
-                );
-
-            transition:
-                0.3s;
+                0 8px 25px rgba(70,125,110,0.06);
         }
 
-        .timeline-card:hover {
+        .year {
+            display: inline-block;
 
-            transform:
-                translateX(5px);
+            background: #e3f7ef;
 
-            border-color:
-                #c2e6da;
-        }
+            color: #599781;
 
-        .timeline-year {
+            padding: 4px 12px;
 
-            display:
-                inline-block;
+            border-radius: 15px;
 
-            background:
-                #e2f7ef;
+            font-size: 11px;
 
-            color:
-                #599b85;
+            font-weight: 700;
 
-            border-radius:
-                15px;
-
-            padding:
-                4px 13px;
-
-            font-size:
-                12px;
-
-            font-weight:
-                700;
-
-            margin-bottom:
-                8px;
+            margin-bottom: 7px;
         }
 
         .timeline-card h3 {
-
-            color:
-                #536f66;
-
-            font-size:
-                18px;
+            color: #56756b;
+            font-size: 17px;
         }
 
         .timeline-card p {
-
-            color:
-                #8b9c97;
-
-            font-size:
-                14px;
+            color: #8b9c97;
+            font-size: 14px;
         }
 
 
-        /* =========================================
+        /* =========================
            CONTACT
-        ========================================= */
+        ========================= */
 
         .contact-grid {
-
-            display:
-                grid;
-
-            grid-template-columns:
-                repeat(
-                    3,
-                    1fr
-                );
-
-            gap:
-                18px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
         }
 
         .contact-card {
+            background: white;
 
-            background:
-                white;
+            border: 1px solid #deeee8;
 
-            border:
-                1px solid #dfede8;
+            border-radius: 25px;
 
-            border-radius:
-                25px;
+            padding: 25px 15px;
 
-            padding:
-                25px 15px;
-
-            text-align:
-                center;
-
-            transition:
-                0.3s;
-        }
-
-        .contact-card:hover {
-
-            transform:
-                translateY(-6px);
-
-            background:
-                #f5fcf9;
-
-            border-color:
-                #bde5d9;
+            text-align: center;
         }
 
         .contact-icon {
-
-            font-size:
-                29px;
-
-            margin-bottom:
-                7px;
+            font-size: 28px;
+            margin-bottom: 5px;
         }
 
         .contact-card h3 {
-
-            color:
-                #58756c;
-
-            font-size:
-                15px;
+            color: #58766c;
+            font-size: 15px;
         }
 
         .contact-card p {
-
-            color:
-                #8c9c98;
-
-            font-size:
-                13px;
-
-            margin-top:
-                5px;
-
-            word-break:
-                break-word;
+            color: #91a09c;
+            font-size: 13px;
+            margin-top: 4px;
+            word-break: break-word;
         }
 
 
-        /* =========================================
+        /* =========================
            QUOTE
-        ========================================= */
+        ========================= */
 
         .quote {
+            max-width: 800px;
 
-            max-width:
-                800px;
+            margin: 70px auto 35px;
 
-            margin:
-                75px auto 25px;
+            text-align: center;
 
-            text-align:
-                center;
+            background: #e9f8f2;
 
-            background:
-                #eaf9f3;
+            border: 1px solid #d5eee5;
 
-            border:
-                1px solid #d3eee3;
+            border-radius: 30px;
 
-            border-radius:
-                30px;
-
-            padding:
-                35px 20px;
-
-            color:
-                #69988b;
+            padding: 35px 20px;
         }
 
-        .quote-symbols {
-
-            font-size:
-                22px;
-
-            margin-bottom:
-                8px;
+        .quote-icon {
+            font-size: 22px;
+            margin-bottom: 8px;
         }
 
         .quote p {
-
-            font-size:
-                17px;
-
-            font-weight:
-                700;
+            color: #648d81;
+            font-size: 17px;
+            font-weight: 700;
         }
 
         .quote small {
-
-            display:
-                block;
-
-            margin-top:
-                7px;
-
-            color:
-                #91a8a1;
+            color: #91a59f;
+            font-size: 13px;
         }
 
 
-        /* =========================================
+        /* =========================
            BUTTONS
-        ========================================= */
+        ========================= */
 
-        .page-buttons {
+        .buttons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
 
-            display:
-                flex;
+            gap: 15px;
 
-            justify-content:
-                center;
-
-            flex-wrap:
-                wrap;
-
-            gap:
-                15px;
-
-            margin:
-                50px auto;
+            margin: 40px auto 70px;
         }
 
-        .page-button {
+        .button {
+            display: inline-block;
 
-            display:
-                inline-block;
+            padding: 12px 23px;
 
-            background:
-                white;
+            border-radius: 25px;
 
-            border:
-                1px solid #cfe9df;
+            background: white;
 
-            color:
-                #589580;
+            border: 1px solid #cfe9df;
 
-            padding:
-                13px 25px;
+            color: #599580;
 
-            border-radius:
-                25px;
+            font-size: 13px;
 
-            font-size:
-                14px;
+            font-weight: 700;
 
-            font-weight:
-                700;
-
-            box-shadow:
-                0 8px 20px
-                rgba(
-                    70,
-                    137,
-                    118,
-                    0.08
-                );
-
-            transition:
-                0.3s;
+            transition: 0.3s;
         }
 
-        .page-button:hover {
-
-            background:
-                #e0f6ed;
-
-            transform:
-                translateY(-4px);
+        .button:hover {
+            transform: translateY(-3px);
+            background: #e3f7ef;
         }
 
-        .next-button {
-
-            background:
-                #bdebdc;
-
-            border-color:
-                #bdebdc;
-
-            color:
-                #397b68;
+        .button.next {
+            background: #c4ecdd;
+            border-color: #c4ecdd;
+            color: #397966;
         }
 
 
-        /* =========================================
+        /* =========================
            FOOTER
-        ========================================= */
+        ========================= */
 
         footer {
+            text-align: center;
 
-            margin-top:
-                70px;
+            background: #eaf8f3;
 
-            padding:
-                35px 20px;
+            border-top: 1px solid #d8eee6;
 
-            text-align:
-                center;
-
-            background:
-                #e9f8f2;
-
-            border-top:
-                1px solid #d4eee5;
-
-            color:
-                #78978e;
+            padding: 30px 15px;
         }
 
         .footer-name {
-
-            color:
-                #579982;
-
-            font-size:
-                20px;
-
-            font-weight:
-                800;
+            color: #579680;
+            font-size: 19px;
+            font-weight: 800;
         }
 
         footer p {
-
-            font-size:
-                13px;
-
-            margin-top:
-                4px;
+            color: #8ca29b;
+            font-size: 12px;
+            margin-top: 3px;
         }
 
 
-        /* =========================================
+        /* =========================
            TABLET
-        ========================================= */
+        ========================= */
 
         @media (max-width: 850px) {
 
-            header {
-
-                position:
-                    relative;
-
-                top:
-                    0;
+            .header-inner {
+                flex-direction: column;
             }
 
-            .header-content {
-
-                flex-direction:
-                    column;
-            }
-
-            .intro-card {
-
-                grid-template-columns:
-                    1fr;
-
-                text-align:
-                    center;
-
-                padding:
-                    32px 22px;
-
-                gap:
-                    25px;
+            .profile-card {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 30px;
             }
 
             .tags {
-
-                justify-content:
-                    center;
+                justify-content: center;
             }
 
             .university-card {
-
-                grid-template-columns:
-                    1fr;
-
-                text-align:
-                    center;
-
-                padding:
-                    32px 20px;
+                grid-template-columns: 1fr;
+                text-align: center;
             }
 
             .info-grid {
-
-                grid-template-columns:
-                    1fr;
+                grid-template-columns: 1fr;
             }
 
             .contact-grid {
-
-                grid-template-columns:
-                    1fr;
+                grid-template-columns: 1fr;
             }
 
         }
 
 
-        /* =========================================
+        /* =========================
            MOBILE
-        ========================================= */
+        ========================= */
 
         @media (max-width: 600px) {
 
             .top-decoration {
+                font-size: 13px;
+                letter-spacing: 1px;
+            }
 
-                font-size:
-                    14px;
+            header {
+                width: 94%;
+                padding: 14px 8px;
+                border-radius: 22px;
+            }
 
-                letter-spacing:
-                    1px;
+            .logo {
+                font-size: 18px;
+            }
+
+            nav {
+                width: 100%;
+                gap: 3px;
             }
 
             nav a {
-
-                font-size:
-                    12px;
-
-                padding:
-                    8px 9px;
+                font-size: 11px;
+                padding: 7px 8px;
             }
 
-            .hero {
-
-                padding-top:
-                    50px;
+            .page-title {
+                padding: 45px 5px 30px;
             }
 
-            .hero h1 {
-
-                font-size:
-                    40px;
+            .page-title h1 {
+                font-size: 43px;
             }
 
-            .photo-frame {
+            .page-title p {
+                font-size: 13px;
+            }
 
-                width:
-                    180px;
 
-                height:
-                    180px;
+            /* PROFILE */
+
+            .profile-card {
+                width: 100%;
+                padding: 32px 18px;
+                border-radius: 30px;
+
+                display: block;
+            }
+
+            .photo-section {
+                width: 100%;
+                margin-bottom: 35px;
+            }
+
+            .photo-circle {
+                width: 185px;
+                height: 185px;
+            }
+
+            .intro {
+                width: 100%;
+                text-align: center;
+            }
+
+            .intro h2 {
+                font-size: 27px;
+                line-height: 1.5;
+            }
+
+            .english-name {
+                font-size: 14px;
+            }
+
+            .intro-text {
+                font-size: 14px;
+                line-height: 1.9;
+            }
+
+            .tags {
+                justify-content: center;
+            }
+
+
+            /* UNIVERSITY */
+
+            .university-card {
+                display: block;
+                padding: 30px 17px;
+                border-radius: 30px;
             }
 
             .university-logo {
-
-                width:
-                    140px;
-
-                height:
-                    140px;
+                width: 135px;
+                height: 135px;
+                margin-bottom: 25px;
             }
 
-            .university-text h3 {
-
-                font-size:
-                    26px;
+            .university-info {
+                width: 100%;
+                text-align: center;
             }
 
-            .section-title h2 {
-
-                font-size:
-                    27px;
+            .university-info h3 {
+                font-size: 26px;
             }
 
-            .study-target {
+            .university-eng {
+                font-size: 14px;
+            }
 
-                grid-template-columns:
-                    1fr;
+            .study-grid {
+                grid-template-columns: 1fr;
+                text-align: left;
             }
 
             .study-box.full {
+                grid-column: auto;
+            }
 
-                grid-column:
-                    auto;
+
+            /* INFO */
+
+            .info-card {
+                padding: 22px;
             }
 
             .info-row {
-
-                flex-direction:
-                    column;
-
-                gap:
-                    2px;
+                flex-direction: column;
+                gap: 2px;
             }
 
-            .info-row .value {
+            .info-value {
+                text-align: left;
+            }
 
-                text-align:
-                    left;
+
+            /* TIMELINE */
+
+            .timeline-item {
+                padding-left: 48px;
             }
 
             .timeline::before {
-
-                left:
-                    17px;
-            }
-
-            .timeline-item {
-
-                padding-left:
-                    50px;
+                left: 15px;
             }
 
             .timeline-dot {
-
-                left:
-                    2px;
+                left: 1px;
             }
 
-            .page-buttons {
 
-                flex-direction:
-                    column;
+            /* BUTTONS */
 
-                align-items:
-                    stretch;
-
-                text-align:
-                    center;
+            .buttons {
+                flex-direction: column;
+                align-items: stretch;
+                text-align: center;
             }
 
         }
@@ -1911,37 +1013,32 @@
 <body>
 
 
-    <!-- =========================================
-         DECORATION
-    ========================================= -->
+    <!-- ตกแต่งด้านบน -->
 
     <div class="top-decoration">
         ༘*.ﾟ🧸🎀𓍢ִ໋🌷͙֒ᰔᩚִִֶֶָ. ..𓂃 ࣪ ִֶָ🪽་༘࿐
     </div>
 
-    <div class="floating flower">
-        🌷
-    </div>
 
-    <div class="floating bow">
-        🎀
-    </div>
+    <!-- ดอกไม้ / โบว์ / ปีก -->
 
-    <div class="floating wing">
-        🪽
-    </div>
+    <div class="floating flower">🌷</div>
+
+    <div class="floating bow">🎀</div>
+
+    <div class="floating wing">🪽</div>
 
 
 
-    <!-- =========================================
+    <!-- =========================
          HEADER
-    ========================================= -->
+    ========================= -->
 
     <header>
 
-        <div class="header-content">
+        <div class="header-inner">
 
-            <div class="site-name">
+            <div class="logo">
                 NATCHAYAKAN <span>♡</span>
             </div>
 
@@ -1952,10 +1049,7 @@
                     🏠 หน้าแรก
                 </a>
 
-                <a
-                    href="profile.html"
-                    class="active"
-                >
+                <a href="profile.html" class="active">
                     👤 ประวัติส่วนตัว
                 </a>
 
@@ -1978,55 +1072,54 @@
     <main>
 
 
-        <!-- =========================================
-             HERO
-        ========================================= -->
+        <!-- =========================
+             TITLE
+        ========================= -->
 
-        <section class="hero">
+        <section class="page-title">
 
-            <div class="hero-label">
+            <div class="small">
                 PERSONAL INFORMATION
             </div>
 
             <h1>
-                ข้อมูล<span>ส่วนตัว</span>
+                ประวัติ<span>ส่วนตัว</span>
             </h1>
 
-            <div class="hero-line"></div>
+            <div class="line"></div>
 
             <p>
-                ประวัติส่วนตัว • การศึกษา • ความฝัน • เป้าหมาย
+                รู้จักฉันมากขึ้น • การศึกษา • ความฝัน • เป้าหมาย
             </p>
 
         </section>
 
 
 
-        <!-- =========================================
-             INTRO
-        ========================================= -->
+        <!-- =========================
+             PROFILE
+        ========================= -->
 
         <section>
 
-            <div class="intro-card">
+
+            <div class="profile-card">
 
 
-                <!-- รูปโปรไฟล์ -->
+                <!-- รูป -->
 
-                <div class="photo-area">
+                <div class="photo-section">
 
-                    <div class="photo-frame">
+                    <div class="photo-circle">
 
-                        <div class="photo-frame">
+                        <img
+                            src="https://raw.githubusercontent.com/s34761-debug/images/main/IMG_20260617_162035_718.jpg"
+                            alt="รูปโปรไฟล์ ณัชชยากานต์"
+                        >
 
-    <img
-        src="IMG_20260617_162035_718.jpg"
-        alt="รูปโปรไฟล์ ณัชชยากานต์"
-    >
+                    </div>
 
-                        </div>
-
-                    <div class="photo-caption">
+                    <div class="photo-name">
                         NATCHAYAKAN ♡
                     </div>
 
@@ -2036,9 +1129,9 @@
 
                 <!-- แนะนำตัว -->
 
-                <div class="intro-text">
+                <div class="intro">
 
-                    <div class="intro-small">
+                    <div class="intro-label">
                         NICE TO MEET YOU ♡
                     </div>
 
@@ -2053,20 +1146,25 @@
                         NATCHAYAKAN SEEDASAMA
                     </div>
 
-                    <p>
+
+                    <p class="intro-text">
+
                         สวัสดีค่ะ ♡
                         ฉันชื่อ ณัชชยากานต์ สีดาสมา
                         ชื่อเล่น ณัช
                         ปัจจุบันกำลังศึกษาอยู่ชั้นมัธยมศึกษาปีที่ 6
                         สายการเรียนภาษาจีน
+
                     </p>
 
-                    <p style="margin-top:10px;">
+
+                    <p class="intro-text">
 
                         ฉันเป็นคนที่ตั้งใจเรียน
-                        และกำลังพยายามพัฒนาตัวเอง
-                        เพื่อก้าวไปสู่เป้าหมายในอนาคต
-                        และอยากศึกษาต่อในด้านภาษาจีน
+                        มีความรับผิดชอบ
+                        และพยายามพัฒนาตัวเองอยู่เสมอ
+                        โดยมีเป้าหมายในการศึกษาต่อด้านภาษาจีน
+
                     </p>
 
 
@@ -2098,9 +1196,9 @@
 
 
 
-        <!-- =========================================
+        <!-- =========================
              UNIVERSITY
-        ========================================= -->
+        ========================= -->
 
         <section class="section">
 
@@ -2126,12 +1224,12 @@
             <div class="university-card">
 
 
-                <!-- โลโก้ -->
+                <!-- LOGO -->
 
                 <div class="university-logo">
 
                     <img
-                        src="burapha-logo.png"
+                        src="https://raw.githubusercontent.com/s34761-debug/images/main/burapha-logo.png"
                         alt="ตรามหาวิทยาลัยบูรพา"
                     >
 
@@ -2139,9 +1237,9 @@
 
 
 
-                <!-- ข้อมูล -->
+                <!-- UNIVERSITY INFO -->
 
-                <div class="university-text">
+                <div class="university-info">
 
                     <div class="university-label">
                         TARGET UNIVERSITY
@@ -2155,15 +1253,13 @@
                         Burapha University
                     </div>
 
-                    <div class="dream-badge">
+                    <div class="dream">
                         🏫 มหาวิทยาลัยในฝันของฉัน ♡
                     </div>
 
 
 
-                    <!-- คณะ / สาขา / รูปแบบ -->
-
-                    <div class="study-target">
+                    <div class="study-grid">
 
 
                         <div class="study-box">
@@ -2179,7 +1275,6 @@
                         </div>
 
 
-
                         <div class="study-box">
 
                             <span class="study-label">
@@ -2191,7 +1286,6 @@
                             </span>
 
                         </div>
-
 
 
                         <div class="study-box full">
@@ -2217,9 +1311,9 @@
 
 
 
-        <!-- =========================================
+        <!-- =========================
              ABOUT ME
-        ========================================= -->
+        ========================= -->
 
         <section class="section">
 
@@ -2231,11 +1325,11 @@
                 </div>
 
                 <h2>
-                    รู้จักฉันให้มากขึ้น 🌷
+                    ข้อมูลส่วนตัว 🌷
                 </h2>
 
                 <p>
-                    ข้อมูลส่วนตัวและข้อมูลการเรียน
+                    About me
                 </p>
 
             </div>
@@ -2245,11 +1339,11 @@
             <div class="info-grid">
 
 
-                <!-- ข้อมูลทั่วไป -->
+                <!-- GENERAL -->
 
                 <div class="info-card">
 
-                    <div class="card-icon">
+                    <div class="info-icon">
                         🧸
                     </div>
 
@@ -2260,11 +1354,11 @@
 
                     <div class="info-row">
 
-                        <span class="label">
+                        <span class="info-label">
                             ชื่อ-นามสกุล
                         </span>
 
-                        <span class="value">
+                        <span class="info-value">
                             ณัชชยากานต์ สีดาสมา
                         </span>
 
@@ -2273,11 +1367,11 @@
 
                     <div class="info-row">
 
-                        <span class="label">
+                        <span class="info-label">
                             ชื่อเล่น
                         </span>
 
-                        <span class="value">
+                        <span class="info-value">
                             ณัช
                         </span>
 
@@ -2286,11 +1380,11 @@
 
                     <div class="info-row">
 
-                        <span class="label">
+                        <span class="info-label">
                             วันเกิด
                         </span>
 
-                        <span class="value">
+                        <span class="info-value">
                             16 พฤศจิกายน 2551
                         </span>
 
@@ -2299,11 +1393,11 @@
 
                     <div class="info-row">
 
-                        <span class="label">
+                        <span class="info-label">
                             อายุ
                         </span>
 
-                        <span class="value">
+                        <span class="info-value">
                             17 ปี
                         </span>
 
@@ -2313,11 +1407,11 @@
 
 
 
-                <!-- ข้อมูลส่วนตัว -->
+                <!-- PERSONAL -->
 
                 <div class="info-card">
 
-                    <div class="card-icon">
+                    <div class="info-icon">
                         🌷
                     </div>
 
@@ -2328,11 +1422,11 @@
 
                     <div class="info-row">
 
-                        <span class="label">
+                        <span class="info-label">
                             ศาสนา
                         </span>
 
-                        <span class="value">
+                        <span class="info-value">
                             พุทธ
                         </span>
 
@@ -2341,11 +1435,11 @@
 
                     <div class="info-row">
 
-                        <span class="label">
+                        <span class="info-label">
                             สัญชาติ
                         </span>
 
-                        <span class="value">
+                        <span class="info-value">
                             ไทย
                         </span>
 
@@ -2354,11 +1448,11 @@
 
                     <div class="info-row">
 
-                        <span class="label">
+                        <span class="info-label">
                             น้ำหนัก
                         </span>
 
-                        <span class="value">
+                        <span class="info-value">
                             44 กก.
                         </span>
 
@@ -2367,11 +1461,11 @@
 
                     <div class="info-row">
 
-                        <span class="label">
+                        <span class="info-label">
                             ส่วนสูง
                         </span>
 
-                        <span class="value">
+                        <span class="info-value">
                             160 ซม.
                         </span>
 
@@ -2381,11 +1475,11 @@
 
 
 
-                <!-- การเรียน -->
+                <!-- SCHOOL -->
 
                 <div class="info-card">
 
-                    <div class="card-icon">
+                    <div class="info-icon">
                         📚
                     </div>
 
@@ -2396,11 +1490,11 @@
 
                     <div class="info-row">
 
-                        <span class="label">
+                        <span class="info-label">
                             โรงเรียน
                         </span>
 
-                        <span class="value">
+                        <span class="info-value">
                             โรงเรียนบ้านบึง
                             "อุตสาหกรรมนุเคราะห์"
                         </span>
@@ -2410,11 +1504,11 @@
 
                     <div class="info-row">
 
-                        <span class="label">
+                        <span class="info-label">
                             ระดับชั้น
                         </span>
 
-                        <span class="value">
+                        <span class="info-value">
                             ม.6
                         </span>
 
@@ -2423,11 +1517,11 @@
 
                     <div class="info-row">
 
-                        <span class="label">
+                        <span class="info-label">
                             สายการเรียน
                         </span>
 
-                        <span class="value">
+                        <span class="info-value">
                             ภาษาจีน
                         </span>
 
@@ -2437,11 +1531,11 @@
 
 
 
-                <!-- เป้าหมาย -->
+                <!-- DREAM -->
 
                 <div class="info-card">
 
-                    <div class="card-icon">
+                    <div class="info-icon">
                         🪽
                     </div>
 
@@ -2452,11 +1546,11 @@
 
                     <div class="info-row">
 
-                        <span class="label">
+                        <span class="info-label">
                             มหาวิทยาลัย
                         </span>
 
-                        <span class="value">
+                        <span class="info-value">
                             มหาวิทยาลัยบูรพา
                         </span>
 
@@ -2465,11 +1559,11 @@
 
                     <div class="info-row">
 
-                        <span class="label">
+                        <span class="info-label">
                             คณะ
                         </span>
 
-                        <span class="value">
+                        <span class="info-value">
                             มนุษยศาสตร์และสังคมศาสตร์
                         </span>
 
@@ -2478,11 +1572,11 @@
 
                     <div class="info-row">
 
-                        <span class="label">
+                        <span class="info-label">
                             สาขา
                         </span>
 
-                        <span class="value">
+                        <span class="info-value">
                             ภาษาจีนเพื่อการสื่อสาร
                         </span>
 
@@ -2491,11 +1585,11 @@
 
                     <div class="info-row">
 
-                        <span class="label">
+                        <span class="info-label">
                             รูปแบบ
                         </span>
 
-                        <span class="value">
+                        <span class="info-value">
                             รูปแบบที่ 1
                         </span>
 
@@ -2503,15 +1597,16 @@
 
                 </div>
 
+
             </div>
 
         </section>
 
 
 
-        <!-- =========================================
+        <!-- =========================
              EDUCATION
-        ========================================= -->
+        ========================= -->
 
         <section class="section">
 
@@ -2523,11 +1618,11 @@
                 </div>
 
                 <h2>
-                    ประวัติการศึกษา 📚
+                    เส้นทางการศึกษา 📚
                 </h2>
 
                 <p>
-                    เส้นทางการเรียนของฉัน
+                    Education Timeline
                 </p>
 
             </div>
@@ -2537,7 +1632,7 @@
             <div class="timeline">
 
 
-                <!-- ประถม -->
+                <!-- PRIMARY -->
 
                 <div class="timeline-item">
 
@@ -2545,7 +1640,7 @@
 
                     <div class="timeline-card">
 
-                        <div class="timeline-year">
+                        <div class="year">
                             ระดับประถมศึกษา
                         </div>
 
@@ -2563,7 +1658,7 @@
 
 
 
-                <!-- ม.1-3 -->
+                <!-- M1-M3 -->
 
                 <div class="timeline-item">
 
@@ -2571,7 +1666,7 @@
 
                     <div class="timeline-card">
 
-                        <div class="timeline-year">
+                        <div class="year">
                             มัธยมศึกษาตอนต้น
                         </div>
 
@@ -2581,7 +1676,7 @@
                         </h3>
 
                         <p>
-                            ระดับชั้น ม.1 – ม.3
+                            ม.1 – ม.3
                             <br>
                             แผนการเรียน : การงานอาชีพ
                         </p>
@@ -2592,7 +1687,7 @@
 
 
 
-                <!-- ม.4-6 -->
+                <!-- M4-M6 -->
 
                 <div class="timeline-item">
 
@@ -2600,7 +1695,7 @@
 
                     <div class="timeline-card">
 
-                        <div class="timeline-year">
+                        <div class="year">
                             มัธยมศึกษาตอนปลาย
                         </div>
 
@@ -2610,7 +1705,7 @@
                         </h3>
 
                         <p>
-                            ระดับชั้น ม.4 – ม.6
+                            ม.4 – ม.6
                             <br>
                             แผนการเรียน : ภาษาจีน
                         </p>
@@ -2620,44 +1715,15 @@
                 </div>
 
 
-
-                <!-- ปัจจุบัน -->
-
-                <div class="timeline-item">
-
-                    <div class="timeline-dot"></div>
-
-                    <div class="timeline-card">
-
-                        <div class="timeline-year">
-                            ปัจจุบัน
-                        </div>
-
-                        <h3>
-                            🎓 นักเรียนชั้นมัธยมศึกษาปีที่ 6
-                        </h3>
-
-                        <p>
-                            สายการเรียนภาษาจีน
-                            <br>
-                            กำลังเตรียมตัวเพื่อศึกษาต่อ
-                            คณะมนุษยศาสตร์และสังคมศาสตร์
-                            สาขาวิชาภาษาจีนเพื่อการสื่อสาร
-                        </p>
-
-                    </div>
-
-                </div>
-
             </div>
 
         </section>
 
 
 
-        <!-- =========================================
+        <!-- =========================
              CONTACT
-        ========================================= -->
+        ========================= -->
 
         <section class="section">
 
@@ -2673,7 +1739,7 @@
                 </h2>
 
                 <p>
-                    สามารถติดต่อฉันได้ตามช่องทางด้านล่าง
+                    Contact
                 </p>
 
             </div>
@@ -2735,19 +1801,20 @@
 
                 </div>
 
+
             </div>
 
         </section>
 
 
 
-        <!-- =========================================
+        <!-- =========================
              QUOTE
-        ========================================= -->
+        ========================= -->
 
         <div class="quote">
 
-            <div class="quote-symbols">
+            <div class="quote-icon">
                 ༘*.ﾟ🧸🎀🌷ᰔᩚ🪽
             </div>
 
@@ -2763,15 +1830,15 @@
 
 
 
-        <!-- =========================================
-             PAGE BUTTONS
-        ========================================= -->
+        <!-- =========================
+             BUTTONS
+        ========================= -->
 
-        <div class="page-buttons">
+        <div class="buttons">
 
             <a
                 href="index.html"
-                class="page-button"
+                class="button"
             >
                 🏠 กลับหน้าแรก
             </a>
@@ -2779,7 +1846,7 @@
 
             <a
                 href="activities.html"
-                class="page-button next-button"
+                class="button next"
             >
                 หน้าถัดไป : กิจกรรม ✨ →
             </a>
@@ -2791,9 +1858,9 @@
 
 
 
-    <!-- =========================================
+    <!-- =========================
          FOOTER
-    ========================================= -->
+    ========================= -->
 
     <footer>
 
@@ -2814,4 +1881,4 @@
 
 </body>
 
-    </html>
+</html>

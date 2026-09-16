@@ -1,0 +1,1346 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>เกียรติบัตร | ณัชชยากานต์</title>
+
+    <style>
+
+        /* =========================
+           RESET
+        ========================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+            color: #3f3f46;
+
+            background:
+                radial-gradient(circle at 10% 10%, #ffe3ef 0%, transparent 28%),
+                radial-gradient(circle at 90% 20%, #dff8ef 0%, transparent 30%),
+                radial-gradient(circle at 50% 100%, #ffeaf4 0%, transparent 35%),
+                linear-gradient(135deg, #fff8fc, #f2fff9);
+
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+
+        /* =========================
+           FLOATING DECORATIONS
+        ========================= */
+
+        .decor {
+            position: fixed;
+            z-index: -1;
+            pointer-events: none;
+            opacity: 0.65;
+            animation: float 5s ease-in-out infinite;
+        }
+
+        .decor1 {
+            top: 130px;
+            left: 25px;
+            font-size: 35px;
+        }
+
+        .decor2 {
+            top: 260px;
+            right: 25px;
+            font-size: 30px;
+            animation-delay: 1s;
+        }
+
+        .decor3 {
+            bottom: 100px;
+            left: 35px;
+            font-size: 28px;
+            animation-delay: 2s;
+        }
+
+        .decor4 {
+            bottom: 170px;
+            right: 30px;
+            font-size: 35px;
+            animation-delay: 3s;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0) rotate(0deg);
+            }
+
+            50% {
+                transform: translateY(-15px) rotate(5deg);
+            }
+        }
+
+
+        /* =========================
+           NAVBAR
+        ========================= */
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+
+            width: 100%;
+
+            background: rgba(255, 255, 255, 0.78);
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+
+            border-bottom: 1px solid rgba(255, 255, 255, 0.9);
+
+            box-shadow:
+                0 8px 30px rgba(198, 155, 179, 0.12);
+        }
+
+        .nav-container {
+            max-width: 1150px;
+            margin: auto;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            gap: 8px;
+            padding: 14px 20px;
+
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #555;
+
+            padding: 10px 18px;
+            border-radius: 30px;
+
+            font-size: 15px;
+            font-weight: 600;
+
+            transition: 0.3s ease;
+        }
+
+        nav a:hover {
+            background: #e4f8ef;
+            color: #43866d;
+            transform: translateY(-2px);
+        }
+
+        nav a.active {
+            background: linear-gradient(
+                135deg,
+                #f6c9dc,
+                #ccefe2
+            );
+
+            color: #5c4560;
+
+            box-shadow:
+                0 5px 15px rgba(213, 167, 193, 0.2);
+        }
+
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            max-width: 1100px;
+            margin: 0 auto;
+
+            padding: 75px 20px 35px;
+
+            text-align: center;
+        }
+
+        .hero-decoration {
+            font-size: 25px;
+            margin-bottom: 12px;
+        }
+
+        .hero h1 {
+            font-size: clamp(38px, 6vw, 68px);
+
+            color: #734c68;
+
+            font-weight: 800;
+
+            letter-spacing: 1px;
+
+            margin-bottom: 12px;
+        }
+
+        .hero h1 span {
+            color: #69a88e;
+        }
+
+        .hero-subtitle {
+            font-size: 18px;
+            color: #777;
+
+            margin-bottom: 20px;
+        }
+
+        .hero-line {
+            width: 90px;
+            height: 5px;
+
+            margin: 20px auto;
+
+            border-radius: 20px;
+
+            background: linear-gradient(
+                90deg,
+                #f2b9d1,
+                #a9dfc9
+            );
+        }
+
+        .hero-description {
+            max-width: 650px;
+            margin: auto;
+
+            color: #777;
+            line-height: 1.8;
+            font-size: 16px;
+        }
+
+
+        /* =========================
+           MAIN
+        ========================= */
+
+        main {
+            max-width: 1150px;
+            margin: auto;
+
+            padding: 20px;
+        }
+
+
+        /* =========================
+           INTRO CARD
+        ========================= */
+
+        .intro {
+            background: rgba(255, 255, 255, 0.75);
+
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+
+            border: 1px solid rgba(255, 255, 255, 0.95);
+
+            border-radius: 30px;
+
+            padding: 30px;
+
+            text-align: center;
+
+            box-shadow:
+                0 15px 40px rgba(190, 150, 175, 0.12);
+
+            margin-bottom: 45px;
+        }
+
+        .intro h2 {
+            color: #6f4d66;
+            font-size: 26px;
+            margin-bottom: 10px;
+        }
+
+        .intro p {
+            color: #777;
+            line-height: 1.7;
+        }
+
+
+        /* =========================
+           CERTIFICATE GRID
+        ========================= */
+
+        .certificate-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, minmax(0, 1fr));
+
+            gap: 30px;
+        }
+
+
+        /* =========================
+           CERTIFICATE CARD
+        ========================= */
+
+        .certificate-card {
+
+            background: rgba(255, 255, 255, 0.82);
+
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+
+            border: 1px solid rgba(255, 255, 255, 0.95);
+
+            border-radius: 32px;
+
+            overflow: hidden;
+
+            box-shadow:
+                0 18px 45px rgba(183, 142, 168, 0.13);
+
+            transition:
+                transform 0.35s ease,
+                box-shadow 0.35s ease;
+
+            position: relative;
+        }
+
+        .certificate-card::before {
+            content: "";
+
+            position: absolute;
+
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: 6px;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    #f3bfd6,
+                    #bcebd9
+                );
+        }
+
+        .certificate-card:hover {
+
+            transform: translateY(-8px);
+
+            box-shadow:
+                0 25px 55px rgba(183, 142, 168, 0.22);
+        }
+
+
+        /* =========================
+           CERTIFICATE IMAGE
+        ========================= */
+
+        .certificate-image {
+            padding: 25px 25px 10px;
+        }
+
+        .certificate-image img {
+
+            display: block;
+
+            width: 100%;
+
+            aspect-ratio: 4 / 3;
+
+            object-fit: contain;
+
+            background: #fff;
+
+            border-radius: 20px;
+
+            border: 1px solid #f0e4eb;
+
+            box-shadow:
+                0 8px 25px rgba(0, 0, 0, 0.08);
+
+            transition: transform 0.35s ease;
+        }
+
+        .certificate-card:hover
+        .certificate-image img {
+
+            transform: scale(1.025);
+        }
+
+
+        /* =========================
+           CERTIFICATE CONTENT
+        ========================= */
+
+        .certificate-content {
+
+            padding: 15px 28px 28px;
+
+            position: relative;
+        }
+
+        .certificate-number {
+
+            display: inline-flex;
+
+            align-items: center;
+            justify-content: center;
+
+            width: 43px;
+            height: 43px;
+
+            border-radius: 50%;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #f8cddd,
+                    #d3f2e5
+                );
+
+            color: #684f63;
+
+            font-size: 14px;
+            font-weight: 800;
+
+            margin-bottom: 12px;
+        }
+
+        .certificate-content h2 {
+
+            color: #62465c;
+
+            font-size: 21px;
+
+            line-height: 1.45;
+
+            margin-bottom: 10px;
+        }
+
+        .certificate-content p {
+
+            color: #737373;
+
+            line-height: 1.75;
+
+            font-size: 15px;
+
+            margin-bottom: 15px;
+        }
+
+        .certificate-date {
+
+            display: inline-block;
+
+            padding: 8px 13px;
+
+            border-radius: 20px;
+
+            background: #f7edf3;
+
+            color: #805b73;
+
+            font-size: 13px;
+
+            margin-right: 5px;
+        }
+
+        .certificate-tag {
+
+            display: inline-block;
+
+            padding: 8px 13px;
+
+            border-radius: 20px;
+
+            background: #e8f7f0;
+
+            color: #4c806c;
+
+            font-size: 13px;
+
+            margin-top: 5px;
+        }
+
+
+        /* =========================
+           SKILLS / SUMMARY
+        ========================= */
+
+        .section-title {
+
+            text-align: center;
+
+            margin: 70px 0 25px;
+        }
+
+        .section-title h2 {
+
+            font-size: 30px;
+
+            color: #704e67;
+
+            margin-bottom: 8px;
+        }
+
+        .section-title p {
+
+            color: #888;
+
+            font-size: 15px;
+        }
+
+        .summary {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 20px;
+
+            margin-bottom: 60px;
+        }
+
+        .summary-card {
+
+            background: rgba(255, 255, 255, 0.72);
+
+            backdrop-filter: blur(15px);
+
+            border-radius: 25px;
+
+            padding: 25px;
+
+            text-align: center;
+
+            border: 1px solid rgba(255,255,255,.9);
+
+            box-shadow:
+                0 12px 35px rgba(180,140,165,.1);
+        }
+
+        .summary-card .icon {
+
+            font-size: 35px;
+
+            margin-bottom: 10px;
+        }
+
+        .summary-card h3 {
+
+            color: #664c61;
+
+            margin-bottom: 7px;
+        }
+
+        .summary-card p {
+
+            color: #777;
+
+            font-size: 14px;
+
+            line-height: 1.6;
+        }
+
+
+        /* =========================
+           QUOTE
+        ========================= */
+
+        .quote {
+
+            max-width: 850px;
+
+            margin: 0 auto 60px;
+
+            padding: 35px 30px;
+
+            text-align: center;
+
+            border-radius: 30px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(255,224,238,.75),
+                    rgba(222,248,237,.75)
+                );
+
+            border: 1px solid rgba(255,255,255,.9);
+
+            box-shadow:
+                0 15px 40px rgba(185,145,170,.1);
+        }
+
+        .quote p {
+
+            color: #684f63;
+
+            font-size: 20px;
+
+            font-weight: 600;
+
+            line-height: 1.7;
+        }
+
+        .quote span {
+
+            display: block;
+
+            margin-top: 12px;
+
+            font-size: 14px;
+
+            color: #888;
+        }
+
+
+        /* =========================
+           BUTTONS
+        ========================= */
+
+        .bottom-buttons {
+
+            display: flex;
+
+            justify-content: center;
+
+            flex-wrap: wrap;
+
+            gap: 15px;
+
+            margin-bottom: 60px;
+        }
+
+        .btn {
+
+            text-decoration: none;
+
+            padding: 13px 25px;
+
+            border-radius: 30px;
+
+            font-weight: 700;
+
+            transition: 0.3s ease;
+
+            border: 1px solid rgba(255,255,255,.9);
+
+            box-shadow:
+                0 8px 20px rgba(180,140,165,.12);
+        }
+
+        .btn-home {
+
+            background: #fff;
+
+            color: #685365;
+        }
+
+        .btn-profile {
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #f3c9dc,
+                    #d4f2e5
+                );
+
+            color: #5d4a59;
+        }
+
+        .btn:hover {
+
+            transform: translateY(-3px);
+
+            box-shadow:
+                0 12px 25px rgba(180,140,165,.2);
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+
+            text-align: center;
+
+            padding: 30px 20px 40px;
+
+            color: #888;
+
+            font-size: 14px;
+        }
+
+        footer .footer-decor {
+
+            font-size: 22px;
+
+            margin-bottom: 8px;
+        }
+
+
+        /* =========================
+           TABLET
+        ========================= */
+
+        @media (max-width: 900px) {
+
+            .certificate-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .summary {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 650px) {
+
+            .nav-container {
+                gap: 4px;
+                padding: 10px;
+            }
+
+            nav a {
+                font-size: 12px;
+                padding: 8px 10px;
+            }
+
+            .hero {
+                padding-top: 50px;
+            }
+
+            .hero h1 {
+                font-size: 40px;
+            }
+
+            .hero-subtitle {
+                font-size: 15px;
+            }
+
+            .hero-description {
+                font-size: 14px;
+            }
+
+            main {
+                padding: 12px;
+            }
+
+            .intro {
+                padding: 25px 20px;
+                border-radius: 25px;
+            }
+
+            .intro h2 {
+                font-size: 22px;
+            }
+
+            .certificate-card {
+                border-radius: 25px;
+            }
+
+            .certificate-image {
+                padding: 18px 18px 5px;
+            }
+
+            .certificate-content {
+                padding: 12px 20px 23px;
+            }
+
+            .certificate-content h2 {
+                font-size: 19px;
+            }
+
+            .certificate-content p {
+                font-size: 14px;
+            }
+
+            .certificate-date,
+            .certificate-tag {
+                font-size: 12px;
+            }
+
+            .section-title {
+                margin-top: 50px;
+            }
+
+            .section-title h2 {
+                font-size: 25px;
+            }
+
+            .quote {
+                padding: 28px 20px;
+            }
+
+            .quote p {
+                font-size: 17px;
+            }
+
+        }
+
+
+        /* =========================
+           SMALL MOBILE
+        ========================= */
+
+        @media (max-width: 380px) {
+
+            nav a {
+                font-size: 11px;
+                padding: 7px 8px;
+            }
+
+            .hero h1 {
+                font-size: 34px;
+            }
+
+            .certificate-content h2 {
+                font-size: 18px;
+            }
+
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+    <!-- Floating decorations -->
+
+    <div class="decor decor1">🌷</div>
+    <div class="decor decor2">🎀</div>
+    <div class="decor decor3">🪽</div>
+    <div class="decor decor4">🧸</div>
+
+
+    <!-- =========================
+         NAVBAR
+    ========================== -->
+
+    <nav>
+
+        <div class="nav-container">
+
+            <a href="index.html">
+                🏠 หน้าแรก
+            </a>
+
+            <a href="profile.html">
+                ♡ ประวัติส่วนตัว
+            </a>
+
+            <a href="activity.html">
+                ✨ กิจกรรม
+            </a>
+
+            <a href="certificate.html" class="active">
+                🏆 เกียรติบัตร
+            </a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- =========================
+         HERO
+    ========================== -->
+
+    <header class="hero">
+
+        <div class="hero-decoration">
+            ༘*.ﾟ🧸🎀𓍢ִ໋🌷͙֒ᰔᩚ
+        </div>
+
+        <h1>
+            เกียรติ<span>บัตร</span>ของฉัน
+        </h1>
+
+        <div class="hero-subtitle">
+            Certificates · Achievements · Experiences ♡
+        </div>
+
+        <div class="hero-line"></div>
+
+        <p class="hero-description">
+
+            รวมเกียรติบัตรและผลงานที่ได้รับจากการเข้าร่วม
+            กิจกรรมด้านภาษาจีน การแข่งขัน และกิจกรรมพัฒนาตนเอง
+            ซึ่งเป็นส่วนหนึ่งของเส้นทางการเรียนรู้และการเติบโตของฉัน 🌷
+
+        </p>
+
+    </header>
+
+
+    <!-- =========================
+         MAIN
+    ========================== -->
+
+    <main>
+
+
+        <!-- Intro -->
+
+        <section class="intro">
+
+            <h2>
+                ✨ ทุกใบคือความทรงจำ
+            </h2>
+
+            <p>
+                เกียรติบัตรแต่ละใบสะท้อนถึงประสบการณ์
+                ความพยายาม และโอกาสที่ฉันได้เรียนรู้สิ่งใหม่ ๆ
+                โดยเฉพาะด้านภาษาจีนและการพัฒนาตนเอง
+            </p>
+
+        </section>
+
+
+
+        <!-- =========================
+             CERTIFICATES
+        ========================== -->
+
+        <section class="certificate-grid">
+
+
+            <!-- Certificate 1 -->
+
+            <article class="certificate-card">
+
+                <div class="certificate-image">
+
+                    <img
+                        src="certificate1.jpg"
+                        alt="เกียรติบัตร HSK 3-4 ปีการศึกษา 2567"
+                    >
+
+                </div>
+
+                <div class="certificate-content">
+
+                    <span class="certificate-number">
+                        01
+                    </span>
+
+                    <h2>
+                        การอบรมเชิงปฏิบัติการและทดสอบวัดระดับความรู้ภาษาจีน HSK 3-4
+                    </h2>
+
+                    <p>
+                        ผ่านการอบรมเชิงปฏิบัติการและทดสอบวัดระดับ
+                        ความรู้ภาษาจีน HSK 3-4
+                        ประจำปีการศึกษา 2567
+                    </p>
+
+                    <span class="certificate-date">
+                        📅 15 ธันวาคม 2567
+                    </span>
+
+                    <span class="certificate-tag">
+                        🇨🇳 ภาษาจีน
+                    </span>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- Certificate 2 -->
+
+            <article class="certificate-card">
+
+                <div class="certificate-image">
+
+                    <img
+                        src="certificate2.jpg"
+                        alt="เกียรติบัตร HSK 4 ปีการศึกษา 2568"
+                    >
+
+                </div>
+
+                <div class="certificate-content">
+
+                    <span class="certificate-number">
+                        02
+                    </span>
+
+                    <h2>
+                        การอบรมเชิงปฏิบัติการและทดสอบวัดระดับความรู้ภาษาจีน HSK 4
+                    </h2>
+
+                    <p>
+                        ผ่านการอบรมเชิงปฏิบัติการและทดสอบวัดระดับ
+                        ความรู้ภาษาจีน HSK 4
+                        ประจำปีการศึกษา 2568
+                    </p>
+
+                    <span class="certificate-date">
+                        📅 7 สิงหาคม 2568
+                    </span>
+
+                    <span class="certificate-tag">
+                        🇨🇳 HSK 4
+                    </span>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- Certificate 3 -->
+
+            <article class="certificate-card">
+
+                <div class="certificate-image">
+
+                    <img
+                        src="certificate3.jpg"
+                        alt="เกียรติบัตร Really Cup Chinese Competition 2025"
+                    >
+
+                </div>
+
+                <div class="certificate-content">
+
+                    <span class="certificate-number">
+                        03
+                    </span>
+
+                    <h2>
+                        Really Cup Chinese Competition 2025
+                    </h2>
+
+                    <p>
+                        เข้าร่วมการแข่งขันทักษะภาษาจีน
+                        Really Cup Chinese Competition 2025
+                        ในการทดสอบความรู้ภาษาจีน HSK ระดับเริ่มต้น
+                    </p>
+
+                    <span class="certificate-date">
+                        📅 11 มกราคม 2025
+                    </span>
+
+                    <span class="certificate-tag">
+                        🏆 การแข่งขัน
+                    </span>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- Certificate 4 -->
+
+            <article class="certificate-card">
+
+                <div class="certificate-image">
+
+                    <img
+                        src="certificate4.jpg"
+                        alt="เกียรติบัตร Chinese for fun One-day camp"
+                    >
+
+                </div>
+
+                <div class="certificate-content">
+
+                    <span class="certificate-number">
+                        04
+                    </span>
+
+                    <h2>
+                        Chinese for fun: One-day camp
+                    </h2>
+
+                    <p>
+                        เข้าร่วมกิจกรรมค่ายภาษาจีน
+                        “Chinese for fun: One-day camp”
+                        จัดโดย Business Chinese Program,
+                        International College,
+                        Dhurakij Pundit University
+                    </p>
+
+                    <span class="certificate-date">
+                        📅 1 กุมภาพันธ์ 2025
+                    </span>
+
+                    <span class="certificate-tag">
+                        🌷 Chinese Camp
+                    </span>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- Certificate 5 -->
+
+            <article class="certificate-card">
+
+                <div class="certificate-image">
+
+                    <img
+                        src="certificate5.jpg"
+                        alt="เกียรติบัตร Really Cup Chinese Competition 2026"
+                    >
+
+                </div>
+
+                <div class="certificate-content">
+
+                    <span class="certificate-number">
+                        05
+                    </span>
+
+                    <h2>
+                        Really Cup Chinese Competition 2026
+                    </h2>
+
+                    <p>
+                        เข้าร่วมการแข่งขันรอบชิงชนะเลิศ
+                        รายการ Really Cup Chinese Competition 2026
+                        หรือการแข่งขันทักษะภาษาจีน “รู้ลึเปย์”
+                    </p>
+
+                    <span class="certificate-date">
+                        📅 11 มกราคม 2026
+                    </span>
+
+                    <span class="certificate-tag">
+                        🏆 รอบชิงชนะเลิศ
+                    </span>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- Certificate 6 -->
+
+            <article class="certificate-card">
+
+                <div class="certificate-image">
+
+                    <img
+                        src="certificate6.jpg"
+                        alt="เกียรติบัตรค่ายพัฒนาคุณธรรมจริยธรรมนักเรียน"
+                    >
+
+                </div>
+
+                <div class="certificate-content">
+
+                    <span class="certificate-number">
+                        06
+                    </span>
+
+                    <h2>
+                        ค่ายพัฒนาคุณธรรม จริยธรรมนักเรียน
+                    </h2>
+
+                    <p>
+                        เข้าร่วมกิจกรรมค่ายพัฒนาคุณธรรม
+                        จริยธรรมนักเรียน
+                        ประจำปีการศึกษา 2568
+                        ณ โรงเรียนบ้านบึง “อุตสาหกรรมนุเคราะห์”
+                    </p>
+
+                    <span class="certificate-date">
+                        📅 10 มิถุนายน 2568
+                    </span>
+
+                    <span class="certificate-tag">
+                        🌷 พัฒนาตนเอง
+                    </span>
+
+                </div>
+
+            </article>
+
+
+        </section>
+
+
+
+        <!-- =========================
+             SUMMARY
+        ========================== -->
+
+        <section class="section-title">
+
+            <h2>
+                ♡ สิ่งที่ได้รับจากประสบการณ์
+            </h2>
+
+            <p>
+                ทุกกิจกรรมทำให้ฉันได้เรียนรู้และพัฒนาตัวเอง
+            </p>
+
+        </section>
+
+
+        <section class="summary">
+
+
+            <div class="summary-card">
+
+                <div class="icon">
+                    🇨🇳
+                </div>
+
+                <h3>
+                    ภาษาจีน
+                </h3>
+
+                <p>
+                    ได้พัฒนาความรู้และทักษะ
+                    ด้านภาษาจีนผ่านการอบรม
+                    การทดสอบ และการแข่งขัน
+                </p>
+
+            </div>
+
+
+            <div class="summary-card">
+
+                <div class="icon">
+                    🏆
+                </div>
+
+                <h3>
+                    ความพยายาม
+                </h3>
+
+                <p>
+                    เรียนรู้การตั้งเป้าหมาย
+                    ฝึกฝนอย่างต่อเนื่อง
+                    และกล้าที่จะพัฒนาตัวเอง
+                </p>
+
+            </div>
+
+
+            <div class="summary-card">
+
+                <div class="icon">
+                    🌱
+                </div>
+
+                <h3>
+                    การเติบโต
+                </h3>
+
+                <p>
+                    ทุกประสบการณ์ช่วยให้ฉัน
+                    มีความมั่นใจและพร้อม
+                    สำหรับการเรียนรู้ในอนาคต
+                </p>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =========================
+             QUOTE
+        ========================== -->
+
+        <section class="quote">
+
+            <p>
+                “ความสำเร็จไม่ได้เกิดขึ้นในวันเดียว
+                แต่เกิดจากการเรียนรู้และพยายามในทุก ๆ วัน” 🌷
+            </p>
+
+            <span>
+                — My Portfolio ♡
+            </span>
+
+        </section>
+
+
+
+        <!-- =========================
+             BUTTONS
+        ========================== -->
+
+        <div class="bottom-buttons">
+
+            <a
+                href="index.html"
+                class="btn btn-home"
+            >
+                🏠 กลับหน้าแรก
+            </a>
+
+            <a
+                href="profile.html"
+                class="btn btn-profile"
+            >
+                ♡ ดูประวัติส่วนตัว
+            </a>
+
+            <a
+                href="activity.html"
+                class="btn btn-profile"
+            >
+                ✨ ดูกิจกรรม
+            </a>
+
+        </div>
+
+
+    </main>
+
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        <div class="footer-decor">
+            ༘*.ﾟ🎀🌷🪽🧸
+        </div>
+
+        <p>
+            © 2026 ณัชชยากานต์ สีดาสมา
+        </p>
+
+        <p>
+            My Future Portfolio ♡
+        </p>
+
+    </footer>
+
+
+</body>
+</html>

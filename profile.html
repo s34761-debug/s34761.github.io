@@ -1,0 +1,1779 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ประวัติส่วนตัว | ณัชชยากานต์</title>
+
+<style>
+
+/* =========================
+   BASIC
+========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
+    background:
+        radial-gradient(
+            circle at 10% 10%,
+            rgba(255,255,255,.9) 0 40px,
+            transparent 41px
+        ),
+        radial-gradient(
+            circle at 90% 20%,
+            rgba(255,255,255,.8) 0 30px,
+            transparent 31px
+        ),
+        linear-gradient(
+            135deg,
+            #e8fff7,
+            #f9fffd,
+            #fff1f7
+        );
+
+    color: #4b5552;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+
+/* =========================
+   DECORATION
+========================= */
+
+.decor {
+    position: fixed;
+    z-index: 0;
+    pointer-events: none;
+    user-select: none;
+}
+
+.decor1 {
+    top: 90px;
+    left: 20px;
+    font-size: 28px;
+    animation: float 4s ease-in-out infinite;
+}
+
+.decor2 {
+    top: 180px;
+    right: 25px;
+    font-size: 25px;
+    animation: float 5s ease-in-out infinite;
+}
+
+.decor3 {
+    bottom: 130px;
+    left: 30px;
+    font-size: 26px;
+    animation: float 4.5s ease-in-out infinite;
+}
+
+.decor4 {
+    bottom: 80px;
+    right: 30px;
+    font-size: 30px;
+    animation: float 5.5s ease-in-out infinite;
+}
+
+.decor5 {
+    top: 40%;
+    left: 8%;
+    font-size: 20px;
+    animation: twinkle 2s ease-in-out infinite;
+}
+
+.decor6 {
+    top: 55%;
+    right: 8%;
+    font-size: 22px;
+    animation: twinkle 2.5s ease-in-out infinite;
+}
+
+@keyframes float {
+
+    0%,100% {
+        transform: translateY(0) rotate(-5deg);
+    }
+
+    50% {
+        transform: translateY(-12px) rotate(5deg);
+    }
+}
+
+@keyframes twinkle {
+
+    0%,100% {
+        opacity: .4;
+        transform: scale(.9);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.15);
+    }
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+    position: relative;
+    z-index: 10;
+
+    width: 100%;
+    padding: 18px 20px;
+
+    background: rgba(255,255,255,.85);
+    backdrop-filter: blur(12px);
+
+    border-bottom: 1px solid rgba(150,200,185,.25);
+
+    box-shadow:
+        0 4px 20px rgba(100,150,140,.08);
+}
+
+.nav {
+    max-width: 1100px;
+    margin: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #52746c;
+
+    font-weight: 600;
+
+    padding: 10px 18px;
+    border-radius: 25px;
+
+    transition: .3s;
+    font-size: 15px;
+}
+
+.nav a:hover {
+    background: #dff8ef;
+    transform: translateY(-2px);
+}
+
+.nav a.active {
+    background: #c8f0e2;
+    color: #35645a;
+
+    box-shadow:
+        0 4px 12px rgba(100,170,150,.15);
+}
+
+
+/* =========================
+   MAIN
+========================= */
+
+.container {
+    position: relative;
+    z-index: 2;
+
+    width: 92%;
+    max-width: 900px;
+
+    margin: 0 auto;
+    padding: 45px 0 60px;
+}
+
+
+/* =========================
+   TITLE
+========================= */
+
+.page-title {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.page-title h1 {
+    margin: 0;
+
+    color: #47766c;
+
+    font-size: 42px;
+    font-weight: 700;
+
+    letter-spacing: 1px;
+}
+
+.page-title p {
+    margin: 10px 0 0;
+
+    color: #8caaa3;
+    font-size: 17px;
+}
+
+
+/* =========================
+   PROFILE CARD
+========================= */
+
+.profile-card {
+    background: rgba(255,255,255,.84);
+
+    border: 1px solid rgba(160,210,195,.35);
+
+    border-radius: 35px;
+
+    padding: 35px;
+
+    box-shadow:
+        0 12px 35px rgba(80,130,120,.12);
+
+    margin-bottom: 30px;
+}
+
+
+/* =========================
+   PHOTO
+========================= */
+
+.photo-area {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.photo-heart {
+    width: 210px;
+    height: 210px;
+
+    margin: auto;
+    display: block;
+
+    filter:
+        drop-shadow(
+            0 8px 12px rgba(100,150,140,.18)
+        );
+}
+
+.photo-caption {
+    margin-top: 12px;
+
+    color: #7e9d95;
+    font-size: 15px;
+}
+
+
+/* =========================
+   NAME
+========================= */
+
+.name-area {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.name-area h2 {
+    margin: 0;
+
+    color: #426d64;
+    font-size: 30px;
+}
+
+.name-area .nickname {
+    margin-top: 7px;
+
+    color: #d88eab;
+    font-size: 17px;
+}
+
+
+/* =========================
+   SECTION
+========================= */
+
+.section {
+    margin-top: 35px;
+}
+
+.section-title {
+    text-align: center;
+
+    color: #47766c;
+    font-size: 25px;
+
+    margin: 0;
+}
+
+.section-title span {
+    color: #e49ab5;
+}
+
+.section-subtitle {
+    text-align: center;
+
+    color: #9aafa9;
+    font-size: 14px;
+
+    margin-top: 6px;
+    margin-bottom: 22px;
+}
+
+
+/* =========================
+   INFO GRID
+========================= */
+
+.info-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2,1fr);
+
+    gap: 14px;
+}
+
+.info-box {
+    background: #f5fffb;
+
+    border: 1px solid #d9f2e9;
+
+    border-radius: 20px;
+
+    padding: 16px 18px;
+
+    transition: .3s;
+}
+
+.info-box:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 6px 18px rgba(100,160,145,.10);
+}
+
+.info-label {
+    font-size: 13px;
+    color: #8aa79f;
+
+    margin-bottom: 5px;
+}
+
+.info-value {
+    color: #526f68;
+
+    font-weight: 600;
+    font-size: 16px;
+}
+
+
+/* =========================
+   PERSONAL STATS
+========================= */
+
+.stats {
+    display: grid;
+
+    grid-template-columns: repeat(2,1fr);
+
+    gap: 15px;
+
+    margin-top: 18px;
+}
+
+.stat-box {
+    text-align: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f0fff9,
+            #fff7fa
+        );
+
+    border-radius: 22px;
+
+    padding: 20px;
+
+    border: 1px solid #e1f3ed;
+}
+
+.stat-icon {
+    font-size: 25px;
+}
+
+.stat-number {
+    margin-top: 5px;
+
+    font-size: 24px;
+
+    color: #47766c;
+
+    font-weight: 700;
+}
+
+.stat-label {
+    font-size: 13px;
+    color: #8da7a0;
+}
+
+
+/* =========================
+   EDUCATION
+========================= */
+
+.education-list {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 15px;
+}
+
+.education-box {
+    background: #f8fffc;
+
+    border-left: 5px solid #9bd8c5;
+
+    border-radius: 18px;
+
+    padding: 18px 20px;
+}
+
+.education-year {
+    color: #d58da9;
+
+    font-size: 14px;
+
+    font-weight: 700;
+}
+
+.education-school {
+    color: #52736b;
+
+    font-size: 17px;
+
+    font-weight: 700;
+
+    margin-top: 4px;
+}
+
+.education-detail {
+    color: #829b95;
+
+    font-size: 14px;
+
+    margin-top: 4px;
+}
+
+
+/* =========================
+   UNIVERSITY
+========================= */
+
+.university-card {
+
+    background:
+        linear-gradient(
+            135deg,
+            #f3fffa,
+            #fff8fb
+        );
+
+    border: 1px solid #d9eee7;
+
+    border-radius: 28px;
+
+    padding: 28px;
+
+    text-align: center;
+
+    box-shadow:
+        0 8px 25px rgba(100,150,140,.08);
+}
+
+
+/* ตรามหาวิทยาลัย */
+
+.university-logo {
+
+    width: 145px;
+    height: 145px;
+
+    object-fit: contain;
+
+    display: block;
+
+    margin: 0 auto 18px;
+
+    filter:
+        drop-shadow(
+            0 5px 8px rgba(80,120,110,.12)
+        );
+}
+
+
+.university-card h3 {
+
+    color: #426d64;
+
+    font-size: 24px;
+
+    margin: 5px 0 10px;
+}
+
+
+.university-card p {
+
+    color: #7c9891;
+
+    line-height: 1.8;
+
+    margin: 0 auto 18px;
+
+    max-width: 650px;
+}
+
+
+/* เป้าหมายการเรียน */
+
+.target-info {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+
+    margin-top: 18px;
+}
+
+.target-box {
+
+    background: white;
+
+    border-radius: 18px;
+
+    padding: 15px;
+
+    border: 1px solid #e0f1eb;
+
+    color: #58756e;
+
+    font-weight: 600;
+}
+
+.target-box span {
+
+    display: block;
+
+    color: #9aafa9;
+
+    font-size: 13px;
+
+    margin-bottom: 4px;
+
+    font-weight: 400;
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(2,1fr);
+
+    gap: 15px;
+}
+
+.contact-card {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    text-decoration: none;
+
+    background: #f8fffc;
+
+    border: 1px solid #dcefe9;
+
+    border-radius: 20px;
+
+    padding: 17px;
+
+    transition: .3s;
+}
+
+.contact-card:hover {
+
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 8px 20px rgba(100,150,140,.12);
+
+    background: white;
+}
+
+.contact-icon {
+
+    width: 48px;
+    height: 48px;
+
+    min-width: 48px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 15px;
+
+    background: #dff7ee;
+
+    font-size: 23px;
+}
+
+.contact-info {
+    min-width: 0;
+}
+
+.contact-label {
+
+    font-size: 12px;
+
+    color: #91aaa4;
+
+    margin-bottom: 3px;
+}
+
+.contact-value {
+
+    color: #52736b;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    overflow-wrap: anywhere;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+.button-area {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+
+    margin-top: 35px;
+}
+
+.main-button {
+
+    text-decoration: none;
+
+    padding: 13px 24px;
+
+    border-radius: 30px;
+
+    background: #c9f0e2;
+
+    color: #416d63;
+
+    font-weight: 700;
+
+    transition: .3s;
+
+    box-shadow:
+        0 5px 15px rgba(100,160,145,.12);
+}
+
+.main-button:hover {
+
+    transform: translateY(-3px);
+
+    background: #b9e9d9;
+}
+
+.home-button {
+
+    background: #ffe1ec;
+
+    color: #9d6078;
+}
+
+.home-button:hover {
+
+    background: #ffd2e2;
+}
+
+
+/* =========================
+   BOTTOM CARD
+========================= */
+
+.bottom-card {
+
+    text-align: center;
+
+    background: rgba(255,255,255,.75);
+
+    border-radius: 25px;
+
+    padding: 22px;
+
+    margin-top: 35px;
+
+    border: 1px solid rgba(160,210,195,.3);
+}
+
+.bottom-card p {
+
+    margin: 5px 0;
+
+    color: #79958e;
+
+    font-size: 14px;
+}
+
+.bottom-card .quote {
+
+    color: #d18aa6;
+
+    font-weight: 600;
+
+    font-size: 15px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+
+    text-align: center;
+
+    padding: 25px 15px 35px;
+
+    color: #8ba49e;
+
+    font-size: 13px;
+}
+
+
+/* =========================
+   TABLET / MOBILE
+========================= */
+
+@media(max-width:700px) {
+
+    .container {
+
+        width: 94%;
+
+        padding-top: 30px;
+    }
+
+    .page-title h1 {
+
+        font-size: 32px;
+    }
+
+    .profile-card {
+
+        padding: 23px 18px;
+
+        border-radius: 28px;
+    }
+
+    .info-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+    .contact-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+    .photo-heart {
+
+        width: 185px;
+        height: 185px;
+    }
+
+    .name-area h2 {
+
+        font-size: 26px;
+    }
+
+    .nav {
+
+        gap: 5px;
+    }
+
+    .nav a {
+
+        font-size: 13px;
+
+        padding: 8px 12px;
+    }
+}
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media(max-width:500px) {
+
+    header {
+
+        padding: 12px 10px;
+    }
+
+    .nav a {
+
+        font-size: 12px;
+
+        padding: 7px 9px;
+    }
+
+    .page-title h1 {
+
+        font-size: 27px;
+    }
+
+    .page-title p {
+
+        font-size: 14px;
+    }
+
+    .photo-heart {
+
+        width: 165px;
+        height: 165px;
+    }
+
+    .profile-card {
+
+        padding: 20px 14px;
+    }
+
+    .section-title {
+
+        font-size: 21px;
+    }
+
+    .university-logo {
+
+        width: 120px;
+        height: 120px;
+    }
+
+    .university-card {
+
+        padding: 20px 15px;
+    }
+
+    .university-card h3 {
+
+        font-size: 20px;
+    }
+
+    .contact-card {
+
+        padding: 14px;
+    }
+
+    .contact-icon {
+
+        width: 43px;
+        height: 43px;
+
+        min-width: 43px;
+
+        font-size: 20px;
+    }
+
+    .contact-value {
+
+        font-size: 13px;
+    }
+
+    .main-button {
+
+        width: 100%;
+
+        text-align: center;
+    }
+}
+
+
+/* =========================
+   EXTRA SMALL
+========================= */
+
+@media(max-width:360px) {
+
+    .nav a {
+
+        font-size: 11px;
+
+        padding: 6px 7px;
+    }
+
+    .page-title h1 {
+
+        font-size: 24px;
+    }
+
+    .profile-card {
+
+        padding: 17px 11px;
+    }
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     DECORATION
+========================= -->
+
+<div class="decor decor1">༘*.ﾟ🎀</div>
+
+<div class="decor decor2">𓍢ִ໋🌷͙֒</div>
+
+<div class="decor decor3">ᰔᩚ</div>
+
+<div class="decor decor4">🪽</div>
+
+<div class="decor decor5">✦</div>
+
+<div class="decor decor6">♡</div>
+
+
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header>
+
+<nav class="nav">
+
+<a href="index.html">
+🏠 หน้าแรก
+</a>
+
+<a href="profile.html" class="active">
+♡ ประวัติส่วนตัว
+</a>
+
+<a href="activities.html">
+✨ กิจกรรม
+</a>
+
+<a href="certificates.html">
+🏆 เกียรติบัตร
+</a>
+
+</nav>
+
+</header>
+
+
+
+<!-- =========================
+     MAIN
+========================= -->
+
+<main class="container">
+
+
+<!-- TITLE -->
+
+<div class="page-title">
+
+<h1>
+♡ ประวัติส่วนตัว ♡
+</h1>
+
+<p>
+༘*.ﾟ🧸🎀 My Profile 𓍢ִ໋🌷͙֒
+</p>
+
+</div>
+
+
+
+<!-- =========================
+     PROFILE
+========================= -->
+
+<div class="profile-card">
+
+
+<!-- PHOTO -->
+
+<div class="photo-area">
+
+<svg
+class="photo-heart"
+viewBox="0 0 200 200"
+xmlns="http://www.w3.org/2000/svg">
+
+<defs>
+
+<clipPath id="heartClip">
+
+<path d="
+M100 175
+C88 163 25 126 25 72
+C25 39 49 22 73 22
+C87 22 96 29 100 40
+C104 29 113 22 127 22
+C151 22 175 39 175 72
+C175 126 112 163 100 175
+Z
+"/>
+
+</clipPath>
+
+</defs>
+
+
+<image
+
+href="https://raw.githubusercontent.com/s34761-debug/images/main/IMG_20260617_162035_718.jpg"
+
+x="10"
+y="10"
+
+width="180"
+height="180"
+
+preserveAspectRatio="xMidYMid slice"
+
+clip-path="url(#heartClip)"
+/>
+
+
+<path
+
+d="
+M100 175
+C88 163 25 126 25 72
+C25 39 49 22 73 22
+C87 22 96 29 100 40
+C104 29 113 22 127 22
+C151 22 175 39 175 72
+C175 126 112 163 100 175
+Z
+"
+
+fill="none"
+
+stroke="#b9dfd2"
+
+stroke-width="4"
+
+/>
+
+</svg>
+
+
+<div class="photo-caption">
+
+🌷 Nice to meet you ♡
+
+</div>
+
+</div>
+
+
+
+<!-- NAME -->
+
+<div class="name-area">
+
+<h2>
+ณัชชยากานต์ สีดาสมา
+</h2>
+
+<div class="nickname">
+
+NATCHAYAKAN • “ณัช” 🎀
+
+</div>
+
+</div>
+
+
+
+<!-- =========================
+     PERSONAL INFORMATION
+========================= -->
+
+<section class="section">
+
+<h2 class="section-title">
+
+🌷 ข้อมูลส่วนตัว <span>♡</span>
+
+</h2>
+
+<p class="section-subtitle">
+
+About Me ✨
+
+</p>
+
+
+<div class="info-grid">
+
+
+<div class="info-box">
+
+<div class="info-label">
+ชื่อ-นามสกุล
+</div>
+
+<div class="info-value">
+ณัชชยากานต์ สีดาสมา
+</div>
+
+</div>
+
+
+<div class="info-box">
+
+<div class="info-label">
+ชื่อเล่น
+</div>
+
+<div class="info-value">
+ณัช 🎀
+</div>
+
+</div>
+
+
+<div class="info-box">
+
+<div class="info-label">
+วันเกิด
+</div>
+
+<div class="info-value">
+16 พฤศจิกายน 2551
+</div>
+
+</div>
+
+
+<div class="info-box">
+
+<div class="info-label">
+อายุ
+</div>
+
+<div class="info-value">
+17 ปี
+</div>
+
+</div>
+
+
+<div class="info-box">
+
+<div class="info-label">
+สัญชาติ
+</div>
+
+<div class="info-value">
+ไทย 🇹🇭
+</div>
+
+</div>
+
+
+<div class="info-box">
+
+<div class="info-label">
+ศาสนา
+</div>
+
+<div class="info-value">
+พุทธ
+</div>
+
+</div>
+
+
+<div class="info-box">
+
+<div class="info-label">
+โรงเรียน
+</div>
+
+<div class="info-value">
+โรงเรียนบ้านบึง "อุตสาหกรรมนุเคราะห์"
+</div>
+
+</div>
+
+
+<div class="info-box">
+
+<div class="info-label">
+ระดับชั้น
+</div>
+
+<div class="info-value">
+มัธยมศึกษาปีที่ 6
+</div>
+
+</div>
+
+
+<div class="info-box">
+
+<div class="info-label">
+แผนการเรียน
+</div>
+
+<div class="info-value">
+ภาษาจีน 🇨🇳
+</div>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     PERSONAL STATS
+========================= -->
+
+<section class="section">
+
+<h2 class="section-title">
+
+🧸 ข้อมูลเพิ่มเติม <span>♡</span>
+
+</h2>
+
+<p class="section-subtitle">
+
+A little more about me 🌷
+
+</p>
+
+
+<div class="stats">
+
+
+<div class="stat-box">
+
+<div class="stat-icon">
+⚖️
+</div>
+
+<div class="stat-number">
+44
+</div>
+
+<div class="stat-label">
+น้ำหนัก (กก.)
+</div>
+
+</div>
+
+
+<div class="stat-box">
+
+<div class="stat-icon">
+📏
+</div>
+
+<div class="stat-number">
+160
+</div>
+
+<div class="stat-label">
+ส่วนสูง (ซม.)
+</div>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     EDUCATION
+========================= -->
+
+<section class="section">
+
+<h2 class="section-title">
+
+📚 ประวัติการศึกษา <span>♡</span>
+
+</h2>
+
+<p class="section-subtitle">
+
+My Education 🎓
+
+</p>
+
+
+<div class="education-list">
+
+
+<div class="education-box">
+
+<div class="education-year">
+ระดับประถมศึกษา
+</div>
+
+<div class="education-school">
+โรงเรียนจิ้นฮั้ว
+</div>
+
+<div class="education-detail">
+ระดับประถมศึกษา
+</div>
+
+</div>
+
+
+<div class="education-box">
+
+<div class="education-year">
+มัธยมศึกษาตอนต้น • ม.1 – ม.3
+</div>
+
+<div class="education-school">
+โรงเรียนบ้านบึง "อุตสาหกรรมนุเคราะห์"
+</div>
+
+<div class="education-detail">
+แผนการเรียน : การงานอาชีพ
+</div>
+
+</div>
+
+
+<div class="education-box">
+
+<div class="education-year">
+มัธยมศึกษาตอนปลาย • ม.4 – ม.6
+</div>
+
+<div class="education-school">
+โรงเรียนบ้านบึง "อุตสาหกรรมนุเคราะห์"
+</div>
+
+<div class="education-detail">
+แผนการเรียน : ภาษาจีน 🇨🇳
+</div>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     FUTURE / UNIVERSITY
+========================= -->
+
+<section class="section">
+
+<h2 class="section-title">
+
+🎯 เป้าหมายในอนาคต <span>♡</span>
+
+</h2>
+
+<p class="section-subtitle">
+
+My Future Dream ✨
+
+</p>
+
+
+<div class="university-card">
+
+
+<!--
+    สำคัญ:
+    burapha-logo.png ต้องอยู่ใน
+    Repository เดียวกับ profile.html
+-->
+
+<img
+
+class="university-logo"
+
+src="burapha-logo.png"
+
+alt="ตรามหาวิทยาลัยบูรพา"
+
+>
+
+
+<h3>
+
+มหาวิทยาลัยบูรพา
+
+</h3>
+
+
+<p>
+
+ฉันมีความตั้งใจที่จะศึกษาต่อในระดับมหาวิทยาลัย
+เพื่อพัฒนาความรู้ ความสามารถ และทักษะทางด้านภาษาจีน
+รวมถึงนำความรู้ไปใช้ในการเรียนและการทำงานในอนาคต
+
+</p>
+
+
+<div class="target-info">
+
+
+<div class="target-box">
+
+<span>
+คณะที่ต้องการเข้าศึกษา
+</span>
+
+💚 คณะมนุษยศาสตร์และสังคมศาสตร์
+
+</div>
+
+
+<div class="target-box">
+
+<span>
+สาขาวิชา
+</span>
+
+🌷 สาขาวิชาภาษาจีนเพื่อการสื่อสาร
+
+</div>
+
+
+<div class="target-box">
+
+<span>
+รูปแบบการสมัคร
+</span>
+
+🎀 รูปแบบที่ 1
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     CONTACT
+========================= -->
+
+<section class="section">
+
+<h2 class="section-title">
+
+📱 ช่องทางการติดต่อ <span>♡</span>
+
+</h2>
+
+<p class="section-subtitle">
+
+Let's keep in touch 🌷
+
+</p>
+
+
+<div class="contact-grid">
+
+
+<!-- PHONE -->
+
+<a
+
+class="contact-card"
+
+href="tel:0985972937"
+
+>
+
+<div class="contact-icon">
+📞
+</div>
+
+<div class="contact-info">
+
+<div class="contact-label">
+โทรศัพท์
+</div>
+
+<div class="contact-value">
+098-597-2937
+</div>
+
+</div>
+
+</a>
+
+
+
+<!-- LINE -->
+
+<a
+
+class="contact-card"
+
+href="https://line.me/ti/p/~0985972937"
+
+target="_blank"
+
+>
+
+<div class="contact-icon">
+💚
+</div>
+
+<div class="contact-info">
+
+<div class="contact-label">
+LINE ID
+</div>
+
+<div class="contact-value">
+0985972937
+</div>
+
+</div>
+
+</a>
+
+
+
+<!-- FACEBOOK -->
+
+<a
+
+class="contact-card"
+
+href="https://www.facebook.com/"
+
+target="_blank"
+
+>
+
+<div class="contact-icon">
+💙
+</div>
+
+<div class="contact-info">
+
+<div class="contact-label">
+Facebook
+</div>
+
+<div class="contact-value">
+Nutchayakan Donram
+</div>
+
+</div>
+
+</a>
+
+
+
+<!-- OTHER CONTACT -->
+
+<div class="contact-card">
+
+<div class="contact-icon">
+🎀
+</div>
+
+<div class="contact-info">
+
+<div class="contact-label">
+ช่องทางติดต่อเพิ่มเติม
+</div>
+
+<div class="contact-value">
+ติดต่อผ่านโทรศัพท์หรือ LINE
+</div>
+
+</div>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     BUTTONS
+========================= -->
+
+<div class="button-area">
+
+
+<a
+
+href="index.html"
+
+class="main-button home-button"
+
+>
+
+🏠 กลับหน้าแรก ♡
+
+</a>
+
+
+<a
+
+href="activities.html"
+
+class="main-button"
+
+>
+
+✨ ดูกิจกรรมของฉัน ♡
+
+</a>
+
+
+<a
+
+href="certificates.html"
+
+class="main-button"
+
+>
+
+🏆 ดูเกียรติบัตร ♡
+
+</a>
+
+
+</div>
+
+
+
+<!-- =========================
+     BOTTOM CARD
+========================= -->
+
+<div class="bottom-card">
+
+
+<p class="quote">
+
+“Believe in yourself and your dreams.” ♡
+
+</p>
+
+
+<p>
+
+༘*.ﾟ🧸🎀𓍢ִ໋🌷͙֒ᰔᩚִִֶֶָ. ..𓂃 ࣪ ִֶָ🪽་༘࿐
+
+</p>
+
+
+<p>
+
+ขอบคุณที่เข้ามาเยี่ยมชม Portfolio ของณัชนะคะ 🌷
+
+</p>
+
+
+</div>
+
+
+</div>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+© 2026 Natchayakan Portfolio ♡
+
+<br>
+
+Made with love 🎀🌷
+
+</footer>
+
+
+</body>
+</html>

@@ -1,0 +1,1951 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>♡ NATCHAYAKAN | Portfolio ♡</title>
+
+
+    <style>
+
+        /* =====================================================
+           🌷 RESET
+        ===================================================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+
+            font-family:
+                "Segoe UI",
+                Tahoma,
+                Geneva,
+                Verdana,
+                sans-serif;
+
+            color: #57998c;
+
+            min-height: 100vh;
+
+            overflow-x: hidden;
+
+            background:
+
+                radial-gradient(
+                    circle at 15% 10%,
+                    rgba(185, 239, 226, 0.65),
+                    transparent 25%
+                ),
+
+                radial-gradient(
+                    circle at 85% 35%,
+                    rgba(211, 246, 237, 0.8),
+                    transparent 30%
+                ),
+
+                radial-gradient(
+                    circle at 50% 90%,
+                    rgba(203, 242, 232, 0.65),
+                    transparent 35%
+                ),
+
+                linear-gradient(
+                    135deg,
+                    #f6fffc,
+                    #ffffff,
+                    #eefbf7
+                );
+        }
+
+
+        /* =====================================================
+           ✨ BACKGROUND
+        ===================================================== */
+
+        .background-decoration {
+
+            position: fixed;
+
+            inset: 0;
+
+            pointer-events: none;
+
+            z-index: 0;
+
+            overflow: hidden;
+        }
+
+
+        .petal {
+
+            position: absolute;
+
+            color: #d8f4ec;
+
+            opacity: 0.75;
+
+            font-size: 35px;
+
+            animation:
+                floatPetal 8s ease-in-out infinite;
+        }
+
+
+        .petal:nth-child(1) {
+            left: 5%;
+            top: 20%;
+        }
+
+
+        .petal:nth-child(2) {
+            right: 7%;
+            top: 35%;
+
+            animation-delay: 2s;
+        }
+
+
+        .petal:nth-child(3) {
+            left: 10%;
+            top: 65%;
+
+            animation-delay: 1s;
+        }
+
+
+        .petal:nth-child(4) {
+            right: 12%;
+            top: 75%;
+
+            animation-delay: 3s;
+        }
+
+
+        @keyframes floatPetal {
+
+            0%,100% {
+                transform:
+                    translateY(0)
+                    rotate(0deg);
+            }
+
+            50% {
+                transform:
+                    translateY(-15px)
+                    rotate(10deg);
+            }
+        }
+
+
+        /* =====================================================
+           🎀 HEADER
+        ===================================================== */
+
+        header {
+
+            position: sticky;
+
+            top: 12px;
+
+            z-index: 1000;
+
+            width:
+                min(1180px, 94%);
+
+            margin:
+                15px auto 0;
+
+            padding:
+                13px 22px;
+
+            background:
+                rgba(255,255,255,0.88);
+
+            backdrop-filter:
+                blur(15px);
+
+            border:
+                2px solid #d5eee7;
+
+            border-radius:
+                45px;
+
+            box-shadow:
+
+                0 10px 30px
+                rgba(81,153,140,0.12);
+        }
+
+
+        header::before {
+
+            content: "🎀";
+
+            position: absolute;
+
+            left: 4%;
+
+            top: -29px;
+
+            font-size: 43px;
+
+            transform:
+                rotate(-15deg);
+        }
+
+
+        header::after {
+
+            content: "🎀";
+
+            position: absolute;
+
+            right: 4%;
+
+            top: -29px;
+
+            font-size: 43px;
+
+            transform:
+                rotate(15deg);
+        }
+
+
+        /* =====================================================
+           🌿 NAVBAR
+        ===================================================== */
+
+        .navbar {
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            gap: 20px;
+
+            max-width: 1100px;
+
+            margin: auto;
+        }
+
+
+        .logo {
+
+            text-decoration: none;
+
+            color: #5c9e91;
+
+            font-size: 31px;
+
+            font-weight: 800;
+
+            white-space: nowrap;
+
+            margin-right: 10px;
+        }
+
+
+        .logo-heart {
+
+            font-size: 42px;
+
+            font-weight: 400;
+
+            margin-right: 5px;
+        }
+
+
+        nav {
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            gap: 4px;
+
+            overflow-x: auto;
+
+            scrollbar-width: none;
+        }
+
+
+        nav::-webkit-scrollbar {
+            display: none;
+        }
+
+
+        nav a {
+
+            display: flex;
+
+            flex-direction: column;
+
+            align-items: center;
+
+            justify-content: center;
+
+            min-width: 100px;
+
+            padding:
+                8px 13px;
+
+            border-radius: 35px;
+
+            text-decoration: none;
+
+            color: #679087;
+
+            font-size: 15px;
+
+            font-weight: 700;
+
+            line-height: 1.35;
+
+            transition:
+                0.3s ease;
+
+            white-space: nowrap;
+        }
+
+
+        nav a span {
+
+            font-size: 25px;
+
+            line-height: 1;
+
+            margin-bottom: 3px;
+        }
+
+
+        nav a:hover {
+
+            background:
+                #e0f7f0;
+
+            transform:
+                translateY(-2px);
+        }
+
+
+        nav a.active {
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #c9f2e7,
+                    #dff8f2
+                );
+
+            color: #438c7b;
+
+            box-shadow:
+                0 6px 15px
+                rgba(91,169,150,0.12);
+        }
+
+
+        /* =====================================================
+           🌷 MAIN
+        ===================================================== */
+
+        main {
+
+            position: relative;
+
+            z-index: 2;
+
+            width: 100%;
+
+            padding:
+                55px 20px 80px;
+
+            text-align: center;
+        }
+
+
+        .container {
+
+            width:
+                min(1050px, 100%);
+
+            margin: auto;
+        }
+
+
+        /* =====================================================
+           ✨ TOP DECORATION
+        ===================================================== */
+
+        .top-decoration {
+
+            color: #76b8aa;
+
+            font-size: 28px;
+
+            letter-spacing: 7px;
+
+            margin-bottom: 18px;
+
+            animation:
+                floating 4s ease-in-out infinite;
+        }
+
+
+        @keyframes floating {
+
+            0%,100% {
+                transform:
+                    translateY(0);
+            }
+
+            50% {
+                transform:
+                    translateY(-7px);
+            }
+        }
+
+
+        /* =====================================================
+           🦋 SIDE DECORATIONS
+        ===================================================== */
+
+        .side {
+
+            position: absolute;
+
+            pointer-events: none;
+
+            user-select: none;
+
+            z-index: 1;
+        }
+
+
+        .butterfly1 {
+
+            left: 5%;
+
+            top: 100px;
+
+            font-size: 62px;
+
+            opacity: 0.7;
+
+            transform:
+                rotate(-12deg);
+        }
+
+
+        .butterfly2 {
+
+            right: 5%;
+
+            top: 210px;
+
+            font-size: 57px;
+
+            opacity: 0.7;
+
+            transform:
+                rotate(12deg);
+        }
+
+
+        .tulip1 {
+
+            left: 7%;
+
+            top: 490px;
+
+            font-size: 50px;
+        }
+
+
+        .tulip2 {
+
+            right: 7%;
+
+            top: 475px;
+
+            font-size: 50px;
+        }
+
+
+        .sparkle1 {
+
+            left: 20%;
+
+            top: 120px;
+
+            font-size: 35px;
+
+            color: #80c5b5;
+        }
+
+
+        .sparkle2 {
+
+            right: 20%;
+
+            top: 160px;
+
+            font-size: 32px;
+
+            color: #80c5b5;
+        }
+
+
+        /* =====================================================
+           💚 PROFILE AREA
+        ===================================================== */
+
+        .profile-area {
+
+            position: relative;
+
+            width:
+                500px;
+
+            max-width: 90vw;
+
+            height:
+                450px;
+
+            margin:
+                0 auto 5px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+        }
+
+
+        .profile-glow {
+
+            position: absolute;
+
+            width: 400px;
+
+            height: 400px;
+
+            border-radius: 50%;
+
+            background:
+                radial-gradient(
+                    circle,
+                    #d8f7ef,
+                    transparent 68%
+                );
+
+            filter:
+                blur(5px);
+        }
+
+
+        /* =====================================================
+           💗 HEART
+        ===================================================== */
+
+        .heart {
+
+            position: relative;
+
+            width: 370px;
+
+            height: 330px;
+
+            z-index: 3;
+
+            transform:
+                rotate(-45deg);
+
+            border-radius:
+                35px 0 35px 0;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #c8eee4,
+                    #aee1d5
+                );
+
+            box-shadow:
+                0 15px 35px
+                rgba(78,145,132,0.20);
+        }
+
+
+        .heart::before {
+
+            content: "";
+
+            position: absolute;
+
+            width: 370px;
+
+            height: 370px;
+
+            top: -185px;
+
+            left: 0;
+
+            border-radius: 50%;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #c8eee4,
+                    #aee1d5
+                );
+        }
+
+
+        .heart::after {
+
+            content: "";
+
+            position: absolute;
+
+            width: 370px;
+
+            height: 370px;
+
+            left: 185px;
+
+            top: 0;
+
+            border-radius: 50%;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #c8eee4,
+                    #aee1d5
+                );
+        }
+
+
+        /* =====================================================
+           📸 PHOTO
+        ===================================================== */
+
+        .photo-frame {
+
+            position: absolute;
+
+            width: 305px;
+
+            height: 285px;
+
+            left: 50%;
+
+            top: 50%;
+
+            transform:
+                translate(-50%, -50%)
+                rotate(-45deg);
+
+            z-index: 10;
+
+            overflow: hidden;
+
+            border:
+                9px solid #ffffff;
+
+            box-shadow:
+                0 0 0 6px #b9e7dc;
+        }
+
+
+        .photo-frame::before {
+
+            content: "";
+
+            position: absolute;
+
+            inset: 0;
+
+            z-index: 2;
+
+            pointer-events: none;
+
+            box-shadow:
+                inset 0 0 0 7px
+                rgba(255,255,255,0.9);
+        }
+
+
+        .profile-photo {
+
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: cover;
+
+            transform:
+                rotate(45deg)
+                scale(1.42);
+
+            display: block;
+        }
+
+
+        /* =====================================================
+           🎀 BIG BOW
+        ===================================================== */
+
+        .big-bow {
+
+            position: absolute;
+
+            z-index: 20;
+
+            top: -30px;
+
+            left: 50%;
+
+            transform:
+                translateX(-50%);
+
+            font-size: 78px;
+
+            filter:
+                drop-shadow(
+                    0 5px 8px
+                    rgba(60,130,115,0.18)
+                );
+        }
+
+
+        /* =====================================================
+           🌷 FLOWERS
+        ===================================================== */
+
+        .flower-left {
+
+            position: absolute;
+
+            z-index: 25;
+
+            left: 42px;
+
+            top: 42%;
+
+            font-size: 49px;
+        }
+
+
+        .flower-right {
+
+            position: absolute;
+
+            z-index: 25;
+
+            right: 42px;
+
+            top: 42%;
+
+            font-size: 49px;
+        }
+
+
+        .mini-bow-left {
+
+            position: absolute;
+
+            z-index: 25;
+
+            left: 90px;
+
+            bottom: 12%;
+
+            font-size: 55px;
+        }
+
+
+        .mini-bow-right {
+
+            position: absolute;
+
+            z-index: 25;
+
+            right: 90px;
+
+            bottom: 12%;
+
+            font-size: 55px;
+        }
+
+
+        .teddy {
+
+            position: absolute;
+
+            z-index: 30;
+
+            right: 19%;
+
+            bottom: 7%;
+
+            font-size: 66px;
+
+            filter:
+                drop-shadow(
+                    0 7px 7px
+                    rgba(70,130,120,0.15)
+                );
+        }
+
+
+        /* =====================================================
+           💚 WELCOME
+        ===================================================== */
+
+        .welcome {
+
+            position: relative;
+
+            z-index: 20;
+
+            margin-top: 0;
+        }
+
+
+        .welcome-en {
+
+            color: #579b8c;
+
+            font-size:
+                clamp(24px, 3vw, 32px);
+
+            font-weight: 800;
+
+            letter-spacing: 5px;
+
+            line-height: 1.55;
+        }
+
+
+        .welcome-en span {
+
+            color: #6caf9f;
+        }
+
+
+        /* =====================================================
+           🌷 HELLO
+        ===================================================== */
+
+        .hello {
+
+            margin-top: 13px;
+
+            color: #4e9685;
+
+            font-size:
+                clamp(48px, 7vw, 72px);
+
+            font-weight: 900;
+
+            line-height: 1.2;
+
+            text-shadow:
+                2px 3px 0 #d7f2eb;
+        }
+
+
+        /* =====================================================
+           💚 NAME CARD
+        ===================================================== */
+
+        .intro-card {
+
+            position: relative;
+
+            width:
+                min(650px, 94%);
+
+            margin:
+                18px auto 0;
+
+            padding:
+                17px 28px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #d8f5ed,
+                    #e9faf6
+                );
+
+            border-radius:
+                50%;
+
+            border:
+                2px solid #c9ebe2;
+
+            box-shadow:
+                0 8px 25px
+                rgba(78,145,130,0.09);
+        }
+
+
+        .intro-name {
+
+            color: #4e9585;
+
+            font-size:
+                clamp(23px, 3vw, 31px);
+
+            font-weight: 800;
+
+            line-height: 1.5;
+        }
+
+
+        .intro-text {
+
+            color: #669087;
+
+            margin-top: 5px;
+
+            font-size:
+                clamp(16px, 2vw, 20px);
+
+            line-height: 1.6;
+
+            font-weight: 600;
+        }
+
+
+        /* =====================================================
+           👤 BUTTON
+        ===================================================== */
+
+        .profile-button {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            gap: 10px;
+
+            margin-top: 27px;
+
+            padding:
+                13px 33px;
+
+            text-decoration: none;
+
+            color: #4f9283;
+
+            background:
+                rgba(255,255,255,0.92);
+
+            border:
+                3px double #b9e4da;
+
+            border-radius:
+                50px;
+
+            font-size: 19px;
+
+            font-weight: 800;
+
+            box-shadow:
+
+                0 8px 20px
+                rgba(78,145,130,0.12);
+
+            transition:
+                0.3s ease;
+        }
+
+
+        .profile-button:hover {
+
+            transform:
+                translateY(-4px)
+                scale(1.03);
+
+            background:
+                #e9faf5;
+        }
+
+
+        /* =====================================================
+           ✨ DIVIDER
+        ===================================================== */
+
+        .divider {
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            gap: 15px;
+
+            width:
+                min(750px, 90%);
+
+            margin:
+                50px auto 25px;
+        }
+
+
+        .divider-line {
+
+            flex: 1;
+
+            height: 2px;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    transparent,
+                    #a9ddd2
+                );
+        }
+
+
+        .divider-line:last-child {
+
+            background:
+                linear-gradient(
+                    90deg,
+                    #a9ddd2,
+                    transparent
+                );
+        }
+
+
+        .divider-heart {
+
+            color: #6db2a2;
+
+            font-size: 34px;
+        }
+
+
+        /* =====================================================
+           💚 FOOTER
+        ===================================================== */
+
+        footer {
+
+            position: relative;
+
+            z-index: 5;
+
+            text-align: center;
+
+            padding:
+                40px 20px 50px;
+
+            background:
+                rgba(255,255,255,0.65);
+
+            border-top:
+                1px solid #dcefe9;
+        }
+
+
+        footer h3 {
+
+            color: #579a89;
+
+            font-size: 24px;
+
+            letter-spacing: 4px;
+        }
+
+
+        footer p {
+
+            color: #829a94;
+
+            font-size: 16px;
+
+            margin-top: 10px;
+        }
+
+
+        .footer-decoration {
+
+            margin-top: 13px;
+
+            font-size: 25px;
+
+            letter-spacing: 5px;
+        }
+
+
+        /* =====================================================
+           📱 TABLET
+        ===================================================== */
+
+        @media (max-width: 850px) {
+
+            header {
+
+                width: 95%;
+
+                padding:
+                    12px 10px;
+            }
+
+
+            .navbar {
+
+                flex-direction: column;
+
+                gap: 5px;
+            }
+
+
+            .logo {
+
+                font-size: 27px;
+            }
+
+
+            .logo-heart {
+
+                font-size: 35px;
+            }
+
+
+            nav {
+
+                width: 100%;
+
+                justify-content:
+                    flex-start;
+            }
+
+
+            nav a {
+
+                min-width: 85px;
+
+                font-size: 13px;
+
+                padding:
+                    7px 10px;
+            }
+
+
+            nav a span {
+
+                font-size: 22px;
+            }
+
+
+            main {
+
+                padding-top: 35px;
+            }
+
+
+            .side {
+
+                opacity: 0.45;
+            }
+
+        }
+
+
+        /* =====================================================
+           📱 MOBILE
+        ===================================================== */
+
+        @media (max-width: 500px) {
+
+            header {
+
+                position: sticky;
+
+                top: 5px;
+
+                width: 96%;
+
+                margin-top: 8px;
+
+                padding:
+                    9px 7px;
+
+                border-radius:
+                    30px;
+            }
+
+
+            header::before,
+            header::after {
+
+                font-size: 28px;
+
+                top: -20px;
+            }
+
+
+            .navbar {
+
+                gap: 4px;
+            }
+
+
+            .logo {
+
+                font-size: 25px;
+            }
+
+
+            .logo-heart {
+
+                font-size: 31px;
+            }
+
+
+            nav {
+
+                gap: 2px;
+
+                width: 100%;
+
+                overflow-x: auto;
+            }
+
+
+            nav a {
+
+                min-width: 76px;
+
+                font-size: 11px;
+
+                padding:
+                    7px 8px;
+
+                border-radius:
+                    22px;
+            }
+
+
+            nav a span {
+
+                font-size: 19px;
+
+                margin-bottom: 2px;
+            }
+
+
+            /* MAIN */
+
+            main {
+
+                padding:
+                    25px 8px 50px;
+            }
+
+
+            .top-decoration {
+
+                font-size: 15px;
+
+                letter-spacing: 1px;
+
+                margin-bottom: 5px;
+            }
+
+
+            /* PROFILE */
+
+            .profile-area {
+
+                width: 100%;
+
+                max-width: 350px;
+
+                height: 320px;
+            }
+
+
+            .profile-glow {
+
+                width: 280px;
+
+                height: 280px;
+            }
+
+
+            .heart {
+
+                width: 245px;
+
+                height: 220px;
+
+                border-radius:
+                    25px 0 25px 0;
+            }
+
+
+            .heart::before {
+
+                width: 245px;
+
+                height: 245px;
+
+                top: -122px;
+            }
+
+
+            .heart::after {
+
+                width: 245px;
+
+                height: 245px;
+
+                left: 122px;
+            }
+
+
+            .photo-frame {
+
+                width: 205px;
+
+                height: 200px;
+
+                border-width: 6px;
+            }
+
+
+            .big-bow {
+
+                font-size: 49px;
+
+                top: -22px;
+            }
+
+
+            .flower-left,
+            .flower-right {
+
+                font-size: 31px;
+            }
+
+
+            .flower-left {
+
+                left: 20px;
+            }
+
+
+            .flower-right {
+
+                right: 20px;
+            }
+
+
+            .mini-bow-left,
+            .mini-bow-right {
+
+                font-size: 34px;
+
+                bottom: 8%;
+            }
+
+
+            .mini-bow-left {
+
+                left: 35px;
+            }
+
+
+            .mini-bow-right {
+
+                right: 35px;
+            }
+
+
+            .teddy {
+
+                font-size: 42px;
+
+                right: 8%;
+
+                bottom: 5%;
+            }
+
+
+            /* SIDE */
+
+            .butterfly1 {
+
+                left: 0;
+
+                top: 180px;
+
+                font-size: 30px;
+            }
+
+
+            .butterfly2 {
+
+                right: 0;
+
+                top: 300px;
+
+                font-size: 28px;
+            }
+
+
+            .tulip1 {
+
+                left: 1%;
+
+                top: 430px;
+
+                font-size: 30px;
+            }
+
+
+            .tulip2 {
+
+                right: 1%;
+
+                top: 425px;
+
+                font-size: 30px;
+            }
+
+
+            .sparkle1 {
+
+                left: 8%;
+
+                top: 140px;
+
+                font-size: 20px;
+            }
+
+
+            .sparkle2 {
+
+                right: 8%;
+
+                top: 170px;
+
+                font-size: 20px;
+            }
+
+
+            /* WELCOME */
+
+            .welcome-en {
+
+                font-size: 17px;
+
+                letter-spacing: 2.5px;
+
+                line-height: 1.5;
+            }
+
+
+            .hello {
+
+                font-size: 44px;
+
+                margin-top: 9px;
+            }
+
+
+            /* NAME */
+
+            .intro-card {
+
+                width: 94%;
+
+                padding:
+                    13px 13px;
+
+                border-radius:
+                    35px;
+
+                margin-top: 13px;
+            }
+
+
+            .intro-name {
+
+                font-size: 20px;
+
+                line-height: 1.55;
+            }
+
+
+            .intro-text {
+
+                font-size: 15px;
+
+                line-height: 1.6;
+            }
+
+
+            /* BUTTON */
+
+            .profile-button {
+
+                margin-top: 20px;
+
+                padding:
+                    11px 23px;
+
+                font-size: 16px;
+            }
+
+
+            /* DIVIDER */
+
+            .divider {
+
+                margin:
+                    35px auto 20px;
+            }
+
+
+            .divider-heart {
+
+                font-size: 25px;
+            }
+
+
+            /* FOOTER */
+
+            footer {
+
+                padding:
+                    30px 15px 40px;
+            }
+
+
+            footer h3 {
+
+                font-size: 20px;
+            }
+
+
+            footer p {
+
+                font-size: 14px;
+            }
+
+
+            .footer-decoration {
+
+                font-size: 20px;
+
+                letter-spacing: 2px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         ✨ BACKGROUND DECORATION
+    ====================================================== -->
+
+    <div class="background-decoration">
+
+        <div class="petal">✦</div>
+
+        <div class="petal">♡</div>
+
+        <div class="petal">✧</div>
+
+        <div class="petal">♡</div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         🎀 HEADER
+    ====================================================== -->
+
+    <header>
+
+        <div class="navbar">
+
+
+            <!-- LOGO -->
+
+            <a href="index.html"
+               class="logo">
+
+                <span class="logo-heart">
+                    ♡
+                </span>
+
+                Portfolio
+
+            </a>
+
+
+
+            <!-- =================================================
+                 🌷 MENU
+                 มีแค่ 4 เมนู
+            ================================================== -->
+
+            <nav>
+
+
+                <!-- หน้าแรก -->
+
+                <a href="index.html"
+                   class="active">
+
+                    <span>⌂</span>
+
+                    หน้าแรก
+
+                </a>
+
+
+
+                <!-- ประวัติส่วนตัว -->
+
+                <a href="profile.html">
+
+                    <span>♙</span>
+
+                    ประวัติ<br>ส่วนตัว
+
+                </a>
+
+
+
+                <!-- กิจกรรม -->
+
+                <a href="activities.html">
+
+                    <span>✧</span>
+
+                    กิจกรรม
+
+                </a>
+
+
+
+                <!-- เกียรติบัตร -->
+
+                <a href="certificates.html">
+
+                    <span>🏆</span>
+
+                    เกียรติบัตร
+
+                </a>
+
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         🌷 MAIN
+    ====================================================== -->
+
+    <main>
+
+
+        <!-- 🦋 ของตกแต่งด้านข้าง -->
+
+        <div class="side butterfly1">
+            🦋
+        </div>
+
+
+        <div class="side butterfly2">
+            🦋
+        </div>
+
+
+        <div class="side tulip1">
+            🌷
+        </div>
+
+
+        <div class="side tulip2">
+            🌷
+        </div>
+
+
+        <div class="side sparkle1">
+            ✦
+        </div>
+
+
+        <div class="side sparkle2">
+            ✧
+        </div>
+
+
+
+        <div class="container">
+
+
+            <!-- =================================================
+                 ✨ TOP DECORATION
+            ================================================== -->
+
+            <div class="top-decoration">
+
+                ༘*.ﾟ 🧸 🎀 🌷 ᰔᩚ 🪽 ✧
+
+            </div>
+
+
+
+            <!-- =================================================
+                 💗 PROFILE PHOTO
+            ================================================== -->
+
+            <section class="profile-area">
+
+
+                <div class="profile-glow"></div>
+
+
+
+                <!-- 🎀 โบว์ด้านบน -->
+
+                <div class="big-bow">
+                    🎀
+                </div>
+
+
+
+                <!-- 🌷 ดอกไม้ -->
+
+                <div class="flower-left">
+                    🌷
+                </div>
+
+
+                <div class="flower-right">
+                    🌷
+                </div>
+
+
+
+                <!-- 🎀 โบว์ด้านล่าง -->
+
+                <div class="mini-bow-left">
+                    🎀
+                </div>
+
+
+                <div class="mini-bow-right">
+                    🎀
+                </div>
+
+
+
+                <!-- 🧸 หมี -->
+
+                <div class="teddy">
+                    🧸
+                </div>
+
+
+
+                <!-- 💚 หัวใจ -->
+
+                <div class="heart"></div>
+
+
+
+                <!-- 📸 รูปตัวเอง -->
+
+                <div class="photo-frame">
+
+                    <img
+                        class="profile-photo"
+                        src="https://raw.githubusercontent.com/s34761-debug/images/main/IMG_20260617_162035_718.jpg"
+                        alt="ณัชชยากานต์ สีดาสมา"
+                    >
+
+                </div>
+
+
+            </section>
+
+
+
+            <!-- =================================================
+                 💚 WELCOME
+            ================================================== -->
+
+            <section class="welcome">
+
+
+                <div class="welcome-en">
+
+                    WELCOME TO MY<br>
+
+                    <span>
+                        PORTFOLIO ♡
+                    </span>
+
+                </div>
+
+
+
+                <!-- 🌷 สวัสดี -->
+
+                <div class="hello">
+
+                    🌷สวัสดีค่ะ ♡🌷
+
+                </div>
+
+
+
+                <!-- =================================================
+                     📝 NAME
+                ================================================== -->
+
+                <div class="intro-card">
+
+
+                    <div class="intro-name">
+
+                        ฉันชื่อ ณัชชยากานต์ สีดาสมา
+
+                    </div>
+
+
+                    <div class="intro-text">
+
+                        เรามาทำความรู้จักกันให้มากขึ้นกันเถอะ ♡
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- =================================================
+                     👤 PROFILE BUTTON
+                ================================================== -->
+
+                <a
+                    href="profile.html"
+                    class="profile-button">
+
+                    👤
+                    ทำความรู้จักฉัน
+                    ♡
+                    ›
+
+                </a>
+
+
+
+                <!-- =================================================
+                     ✨ DIVIDER
+                ================================================== -->
+
+                <div class="divider">
+
+                    <div class="divider-line"></div>
+
+                    <div class="divider-heart">
+                        ♡
+                    </div>
+
+                    <div class="divider-line"></div>
+
+                </div>
+
+
+            </section>
+
+
+        </div>
+
+    </main>
+
+
+
+    <!-- =====================================================
+         💚 FOOTER
+    ====================================================== -->
+
+    <footer>
+
+
+        <h3>
+
+            ♡ NATCHAYAKAN ♡
+
+        </h3>
+
+
+        <div class="footer-decoration">
+
+            ✧ 🧸 🎀 🌷 🪽 ✧
+
+        </div>
+
+
+        <p>
+
+            ♡ Made with love & mint green ♡
+
+        </p>
+
+
+    </footer>
+
+
+</body>
+
+</html>

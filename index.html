@@ -1,0 +1,1875 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>♡ NATCHAYAKAN | Portfolio ♡</title>
+
+
+<style>
+
+/* =====================================================
+   🌿 BASIC
+===================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:
+    "Segoe UI",
+    Tahoma,
+    Geneva,
+    Verdana,
+    sans-serif;
+
+    color:#4f9183;
+
+    min-height:100vh;
+
+    overflow-x:hidden;
+
+    background:
+
+    radial-gradient(
+        circle at 10% 15%,
+        #d4f7ee 0%,
+        transparent 25%
+    ),
+
+    radial-gradient(
+        circle at 90% 30%,
+        #dffaf4 0%,
+        transparent 28%
+    ),
+
+    radial-gradient(
+        circle at 50% 90%,
+        #e7faf5 0%,
+        transparent 35%
+    ),
+
+    linear-gradient(
+        135deg,
+        #f8fffd,
+        #ffffff 45%,
+        #effbf7
+    );
+}
+
+
+/* =====================================================
+   🎀 HEADER
+===================================================== */
+
+header{
+
+    position:sticky;
+
+    top:0;
+
+    z-index:9999;
+
+    padding:15px 20px;
+
+    background:
+    rgba(255,255,255,0.90);
+
+    backdrop-filter:blur(20px);
+
+    border-bottom:
+    1px solid #d7eee7;
+
+    box-shadow:
+    0 8px 30px
+    rgba(71,145,130,0.10);
+}
+
+
+.navbar{
+
+    max-width:1250px;
+
+    margin:auto;
+
+    min-height:70px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:20px;
+}
+
+
+/* =====================================================
+   ♡ LOGO
+===================================================== */
+
+.logo{
+
+    display:flex;
+
+    align-items:center;
+
+    text-decoration:none;
+
+    color:#4c9786;
+
+    font-size:34px;
+
+    font-weight:900;
+
+    letter-spacing:1px;
+
+    white-space:nowrap;
+}
+
+.logo-heart{
+
+    font-size:48px;
+
+    font-weight:400;
+
+    margin-right:8px;
+}
+
+
+/* =====================================================
+   🌷 NAVIGATION
+===================================================== */
+
+nav{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:6px;
+
+    overflow-x:auto;
+
+    scrollbar-width:none;
+}
+
+nav::-webkit-scrollbar{
+    display:none;
+}
+
+nav a{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-decoration:none;
+
+    color:#64847d;
+
+    font-size:17px;
+
+    font-weight:700;
+
+    padding:13px 18px;
+
+    border-radius:40px;
+
+    white-space:nowrap;
+
+    transition:
+    all 0.3s ease;
+}
+
+nav a:hover{
+
+    background:#e2f8f1;
+
+    color:#438b79;
+
+    transform:
+    translateY(-3px);
+}
+
+nav a.active{
+
+    background:
+    linear-gradient(
+        135deg,
+        #c8f2e6,
+        #dff9f3
+    );
+
+    color:#3f8d79;
+
+    box-shadow:
+    0 8px 20px
+    rgba(82,165,145,0.15);
+}
+
+
+/* =====================================================
+   🌿 MAIN
+===================================================== */
+
+main{
+
+    position:relative;
+
+    min-height:calc(100vh - 90px);
+
+    padding:
+    35px 20px 100px;
+
+    overflow:hidden;
+}
+
+
+.container{
+
+    width:min(1150px,100%);
+
+    margin:auto;
+
+    text-align:center;
+
+    position:relative;
+
+    z-index:10;
+}
+
+
+/* =====================================================
+   ✨ DECORATION
+===================================================== */
+
+.decor{
+
+    position:absolute;
+
+    z-index:2;
+
+    pointer-events:none;
+
+    user-select:none;
+
+    animation:
+    floatDecor 5s ease-in-out infinite;
+}
+
+@keyframes floatDecor{
+
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-10px);
+    }
+}
+
+
+/* ด้านซ้าย */
+
+.decor-bow-left{
+
+    left:2%;
+
+    top:130px;
+
+    font-size:65px;
+}
+
+
+/* ด้านขวา */
+
+.decor-bow-right{
+
+    right:2%;
+
+    top:420px;
+
+    font-size:60px;
+}
+
+
+/* ผีเสื้อ */
+
+.decor-butterfly-left{
+
+    left:5%;
+
+    top:300px;
+
+    font-size:48px;
+
+    animation-delay:1s;
+}
+
+.decor-butterfly-right{
+
+    right:5%;
+
+    top:230px;
+
+    font-size:45px;
+
+    animation-delay:2s;
+}
+
+
+/* ดอกไม้ */
+
+.decor-flower-left{
+
+    left:8%;
+
+    top:650px;
+
+    font-size:42px;
+}
+
+.decor-flower-right{
+
+    right:8%;
+
+    top:700px;
+
+    font-size:42px;
+
+    animation-delay:1.5s;
+}
+
+
+/* ประกาย */
+
+.decor-star-one{
+
+    left:18%;
+
+    top:210px;
+
+    font-size:30px;
+
+    color:#66b4a4;
+}
+
+.decor-star-two{
+
+    right:20%;
+
+    top:330px;
+
+    font-size:32px;
+
+    color:#66b4a4;
+}
+
+.decor-star-three{
+
+    left:12%;
+
+    top:520px;
+
+    font-size:25px;
+
+    color:#72b8aa;
+}
+
+.decor-star-four{
+
+    right:13%;
+
+    top:560px;
+
+    font-size:25px;
+
+    color:#72b8aa;
+}
+
+
+/* หัวใจ */
+
+.decor-heart-left{
+
+    left:7%;
+
+    top:450px;
+
+    font-size:45px;
+
+    color:#8bcabc;
+}
+
+.decor-heart-right{
+
+    right:7%;
+
+    top:500px;
+
+    font-size:45px;
+
+    color:#8bcabc;
+}
+
+
+/* =====================================================
+   🌷 TOP DECORATION
+===================================================== */
+
+.top-decoration{
+
+    margin-top:10px;
+
+    margin-bottom:10px;
+
+    font-size:28px;
+
+    letter-spacing:7px;
+
+    animation:
+    floating 4s ease-in-out infinite;
+}
+
+@keyframes floating{
+
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-7px);
+    }
+}
+
+
+/* =====================================================
+   💚 PHOTO AREA
+===================================================== */
+
+.photo-area{
+
+    position:relative;
+
+    width:520px;
+
+    max-width:95vw;
+
+    margin:
+    0 auto 15px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+}
+
+
+/* แสงด้านหลัง */
+
+.photo-glow{
+
+    position:absolute;
+
+    width:500px;
+
+    height:500px;
+
+    max-width:95vw;
+
+    border-radius:50%;
+
+    background:
+    radial-gradient(
+        circle,
+        rgba(183,239,226,0.85),
+        rgba(183,239,226,0.35) 45%,
+        transparent 70%
+    );
+
+    filter:blur(10px);
+
+    z-index:0;
+}
+
+
+/* =====================================================
+   💗 HEART FRAME
+===================================================== */
+
+.heart-frame{
+
+    position:relative;
+
+    width:450px;
+
+    max-width:88vw;
+
+    z-index:5;
+
+    filter:
+    drop-shadow(
+        0 20px 25px
+        rgba(65,145,125,0.16)
+    );
+
+    animation:
+    heartFloat 5s ease-in-out infinite;
+}
+
+@keyframes heartFloat{
+
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-7px);
+    }
+}
+
+
+.heart-svg{
+
+    display:block;
+
+    width:100%;
+
+    height:auto;
+
+    overflow:visible;
+}
+
+
+/* =====================================================
+   🎀 TOP BOW
+===================================================== */
+
+.big-bow{
+
+    position:absolute;
+
+    top:-25px;
+
+    left:50%;
+
+    transform:
+    translateX(-50%);
+
+    z-index:20;
+
+    font-size:75px;
+
+    filter:
+    drop-shadow(
+        0 6px 7px
+        rgba(70,130,120,0.18)
+    );
+}
+
+
+/* =====================================================
+   🌷 FLOWERS AROUND HEART
+===================================================== */
+
+.heart-flower{
+
+    position:absolute;
+
+    z-index:25;
+
+    font-size:48px;
+
+    filter:
+    drop-shadow(
+        0 4px 5px
+        rgba(70,130,120,0.15)
+    );
+}
+
+.heart-flower.left{
+
+    left:18px;
+
+    top:43%;
+}
+
+.heart-flower.right{
+
+    right:18px;
+
+    top:43%;
+}
+
+.heart-flower.bottom-left{
+
+    left:22%;
+
+    bottom:5%;
+
+    font-size:38px;
+}
+
+.heart-flower.bottom-right{
+
+    right:22%;
+
+    bottom:7%;
+
+    font-size:38px;
+}
+
+
+/* =====================================================
+   🧸 TEDDY
+===================================================== */
+
+.teddy{
+
+    position:absolute;
+
+    right:12%;
+
+    bottom:5%;
+
+    z-index:30;
+
+    font-size:62px;
+
+    filter:
+    drop-shadow(
+        0 6px 6px
+        rgba(60,120,110,0.16)
+    );
+}
+
+
+/* =====================================================
+   🌿 WELCOME
+===================================================== */
+
+.welcome{
+
+    position:relative;
+
+    z-index:50;
+
+    margin-top:0;
+}
+
+
+.welcome-en{
+
+    color:#559b8b;
+
+    font-size:
+    clamp(22px,3vw,34px);
+
+    font-weight:900;
+
+    letter-spacing:6px;
+
+    line-height:1.6;
+
+    text-shadow:
+    0 3px 8px
+    rgba(74,150,133,0.10);
+}
+
+.welcome-en span{
+
+    color:#75b8a8;
+}
+
+
+/* =====================================================
+   🌷 HELLO
+===================================================== */
+
+.hello{
+
+    margin-top:12px;
+
+    color:#42927d;
+
+    font-size:
+    clamp(48px,8vw,78px);
+
+    font-weight:900;
+
+    line-height:1.25;
+
+    text-shadow:
+    3px 4px 0 #d8f3eb;
+
+    letter-spacing:1px;
+}
+
+
+/* =====================================================
+   🌸 SMALL FLOWERS AROUND HELLO
+===================================================== */
+
+.hello-decoration{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:25px;
+
+    margin-top:-5px;
+
+    font-size:38px;
+}
+
+
+/* =====================================================
+   📝 INTRO CARD
+===================================================== */
+
+.intro-card{
+
+    position:relative;
+
+    width:min(820px,94%);
+
+    margin:
+    25px auto 0;
+
+    padding:
+    28px 30px 30px;
+
+    background:
+    linear-gradient(
+        135deg,
+        rgba(231,250,245,0.94),
+        rgba(255,255,255,0.95)
+    );
+
+    border:
+    3px solid #c8ebe2;
+
+    border-radius:45px;
+
+    box-shadow:
+    0 15px 35px
+    rgba(73,145,130,0.10);
+
+    overflow:hidden;
+}
+
+
+/* เส้นประด้านบน */
+
+.intro-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:13px;
+
+    left:25px;
+
+    right:25px;
+
+    height:1px;
+
+    border-top:
+    2px dashed #a9dcd1;
+}
+
+
+/* ลายหัวใจมุม */
+
+.intro-card::after{
+
+    content:"♡";
+
+    position:absolute;
+
+    right:22px;
+
+    bottom:8px;
+
+    font-size:70px;
+
+    color:
+    rgba(117,190,174,0.15);
+}
+
+
+.intro-name{
+
+    color:#4c9482;
+
+    font-size:
+    clamp(24px,4vw,38px);
+
+    font-weight:900;
+
+    line-height:1.6;
+}
+
+
+.intro-text{
+
+    margin-top:5px;
+
+    color:#668b83;
+
+    font-size:
+    clamp(17px,2.5vw,23px);
+
+    font-weight:600;
+
+    line-height:1.8;
+}
+
+
+/* =====================================================
+   ✨ DIVIDER
+===================================================== */
+
+.divider{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:15px;
+
+    margin:
+    28px auto 22px;
+}
+
+.divider-line{
+
+    width:130px;
+
+    border-top:
+    2px dashed #9ed6ca;
+}
+
+.divider-heart{
+
+    color:#69b19f;
+
+    font-size:30px;
+}
+
+
+/* =====================================================
+   👤 BUTTON
+===================================================== */
+
+.profile-button{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:10px;
+
+    text-decoration:none;
+
+    color:white;
+
+    background:
+    linear-gradient(
+        135deg,
+        #78c9b6,
+        #55a995
+    );
+
+    padding:
+    16px 38px;
+
+    border-radius:60px;
+
+    font-size:20px;
+
+    font-weight:900;
+
+    border:
+    4px solid
+    rgba(255,255,255,0.8);
+
+    box-shadow:
+    0 12px 25px
+    rgba(73,157,137,0.22);
+
+    transition:
+    all 0.3s ease;
+}
+
+.profile-button:hover{
+
+    transform:
+    translateY(-5px)
+    scale(1.03);
+
+    box-shadow:
+    0 17px 32px
+    rgba(73,157,137,0.30);
+}
+
+
+/* =====================================================
+   🫧 NICE CARD
+===================================================== */
+
+.nice-card{
+
+    width:min(650px,92%);
+
+    margin:
+    35px auto 0;
+
+    padding:
+    23px 25px;
+
+    background:
+    rgba(240,252,248,0.90);
+
+    border:
+    2px dashed #a9ddd2;
+
+    border-radius:35px;
+
+    box-shadow:
+    0 10px 25px
+    rgba(72,145,130,0.08);
+}
+
+.nice-title{
+
+    color:#579b8b;
+
+    font-size:29px;
+
+    font-weight:900;
+
+    margin-bottom:10px;
+}
+
+.nice-decoration{
+
+    font-size:27px;
+
+    letter-spacing:5px;
+}
+
+
+/* =====================================================
+   🌷 BOTTOM DECORATION
+===================================================== */
+
+.bottom-decoration{
+
+    margin-top:45px;
+
+    font-size:32px;
+
+    letter-spacing:8px;
+
+    opacity:0.9;
+}
+
+
+/* =====================================================
+   💚 FOOTER
+===================================================== */
+
+footer{
+
+    position:relative;
+
+    z-index:20;
+
+    text-align:center;
+
+    padding:
+    50px 20px;
+
+    background:
+    rgba(255,255,255,0.88);
+
+    border-top:
+    1px solid #dceee9;
+
+    box-shadow:
+    0 -5px 25px
+    rgba(75,145,130,0.05);
+}
+
+footer p{
+
+    color:#819b95;
+
+    font-size:18px;
+
+    margin-bottom:15px;
+}
+
+footer h3{
+
+    color:#579a89;
+
+    font-size:28px;
+
+    letter-spacing:5px;
+}
+
+.footer-decoration{
+
+    margin-top:15px;
+
+    font-size:27px;
+
+    letter-spacing:5px;
+}
+
+
+/* =====================================================
+   📱 TABLET
+===================================================== */
+
+@media(max-width:850px){
+
+    header{
+        padding:12px 10px;
+    }
+
+    .navbar{
+        flex-direction:column;
+        gap:8px;
+    }
+
+    .logo{
+        font-size:29px;
+    }
+
+    .logo-heart{
+        font-size:40px;
+    }
+
+    nav{
+        width:100%;
+        justify-content:flex-start;
+    }
+
+    nav a{
+        font-size:15px;
+        padding:10px 13px;
+    }
+
+    main{
+        padding-top:25px;
+    }
+
+    .photo-area{
+        width:480px;
+    }
+
+    .heart-frame{
+        width:420px;
+    }
+
+    .decor{
+        opacity:0.65;
+    }
+}
+
+
+/* =====================================================
+   📱 MOBILE
+===================================================== */
+
+@media(max-width:500px){
+
+    .top-decoration{
+
+        font-size:18px;
+
+        letter-spacing:3px;
+
+        margin-bottom:15px;
+    }
+
+    .photo-area{
+        width:350px;
+    }
+
+    .photo-glow{
+        width:340px;
+        height:340px;
+    }
+
+    .heart-frame{
+        width:330px;
+    }
+
+    .big-bow{
+
+        font-size:55px;
+
+        top:-17px;
+    }
+
+    .heart-flower{
+
+        font-size:34px;
+    }
+
+    .heart-flower.left{
+        left:0;
+    }
+
+    .heart-flower.right{
+        right:0;
+    }
+
+    .heart-flower.bottom-left{
+        font-size:28px;
+    }
+
+    .heart-flower.bottom-right{
+        font-size:28px;
+    }
+
+    .teddy{
+
+        font-size:45px;
+
+        right:7%;
+
+        bottom:5%;
+    }
+
+    .hello{
+
+        font-size:48px;
+    }
+
+    .hello-decoration{
+
+        gap:10px;
+
+        font-size:27px;
+    }
+
+    .welcome-en{
+
+        font-size:19px;
+
+        letter-spacing:3px;
+    }
+
+    .intro-card{
+
+        padding:
+        25px 17px;
+
+        border-radius:30px;
+    }
+
+    .intro-name{
+
+        font-size:23px;
+    }
+
+    .intro-text{
+
+        font-size:17px;
+    }
+
+    .divider-line{
+
+        width:65px;
+    }
+
+    .profile-button{
+
+        font-size:17px;
+
+        padding:
+        14px 27px;
+    }
+
+    .nice-card{
+
+        padding:
+        20px 15px;
+
+        border-radius:28px;
+    }
+
+    .nice-title{
+
+        font-size:22px;
+    }
+
+    .nice-decoration{
+
+        font-size:20px;
+
+        letter-spacing:3px;
+    }
+
+    .decor-bow-left{
+
+        left:-15px;
+
+        top:170px;
+
+        font-size:40px;
+    }
+
+    .decor-bow-right{
+
+        right:-15px;
+
+        top:500px;
+
+        font-size:40px;
+    }
+
+    .decor-butterfly-left{
+
+        left:-5px;
+
+        top:320px;
+
+        font-size:28px;
+    }
+
+    .decor-butterfly-right{
+
+        right:-5px;
+
+        top:300px;
+
+        font-size:30px;
+    }
+
+    .decor-flower-left{
+
+        left:0;
+
+        top:650px;
+
+        font-size:30px;
+    }
+
+    .decor-flower-right{
+
+        right:0;
+
+        top:700px;
+
+        font-size:30px;
+    }
+
+    .decor-heart-left{
+
+        left:2%;
+
+        top:480px;
+
+        font-size:30px;
+    }
+
+    .decor-heart-right{
+
+        right:2%;
+
+        top:550px;
+
+        font-size:30px;
+    }
+
+    .bottom-decoration{
+
+        font-size:22px;
+
+        letter-spacing:4px;
+    }
+
+    footer h3{
+
+        font-size:23px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     🎀 HEADER
+===================================================== -->
+
+<header>
+
+<div class="navbar">
+
+
+<a href="index.html" class="logo">
+
+<span class="logo-heart">♡</span>
+
+Portfolio
+
+</a>
+
+
+<nav>
+
+<a href="index.html" class="active">
+🏠 หน้าแรก
+</a>
+
+<a href="profile.html">
+♡ ประวัติส่วนตัว
+</a>
+
+<a href="activities.html">
+✨ กิจกรรม
+</a>
+
+<a href="certificates.html">
+🏆 เกียรติบัตร
+</a>
+
+</nav>
+
+</div>
+
+</header>
+
+
+
+<!-- =====================================================
+     🌷 MAIN
+===================================================== -->
+
+<main>
+
+
+<!-- ของตกแต่งด้านข้าง -->
+
+<div class="decor decor-bow-left">
+🎀
+</div>
+
+<div class="decor decor-bow-right">
+🎀
+</div>
+
+<div class="decor decor-butterfly-left">
+🦋
+</div>
+
+<div class="decor decor-butterfly-right">
+🦋
+</div>
+
+<div class="decor decor-flower-left">
+🌷
+</div>
+
+<div class="decor decor-flower-right">
+🌷
+</div>
+
+<div class="decor decor-star-one">
+✦
+</div>
+
+<div class="decor decor-star-two">
+✧
+</div>
+
+<div class="decor decor-star-three">
+✦
+</div>
+
+<div class="decor decor-star-four">
+✧
+</div>
+
+<div class="decor decor-heart-left">
+♡
+</div>
+
+<div class="decor decor-heart-right">
+♡
+</div>
+
+
+
+<div class="container">
+
+
+<!-- =====================================================
+     ✨ TOP
+===================================================== -->
+
+<div class="top-decoration">
+
+༘*.ﾟ 🧸 🎀 🌷 ᰔᩚ 🪽 ✧ ♡ ✧
+
+</div>
+
+
+
+<!-- =====================================================
+     💗 PHOTO
+===================================================== -->
+
+<section class="photo-area">
+
+
+<div class="photo-glow"></div>
+
+
+<div class="heart-frame">
+
+
+<!-- โบว์ -->
+
+<div class="big-bow">
+🎀
+</div>
+
+
+<!-- ดอกไม้ -->
+
+<div class="heart-flower left">
+🌷
+</div>
+
+<div class="heart-flower right">
+🌷
+</div>
+
+<div class="heart-flower bottom-left">
+🌸
+</div>
+
+<div class="heart-flower bottom-right">
+🌸
+</div>
+
+
+<!-- หมี -->
+
+<div class="teddy">
+🧸
+</div>
+
+
+
+<!-- =================================================
+     💚 HEART SVG
+================================================== -->
+
+<svg
+class="heart-svg"
+viewBox="0 0 500 520"
+xmlns="http://www.w3.org/2000/svg">
+
+
+<defs>
+
+
+<!-- รูปหัวใจ -->
+
+<clipPath id="heartClip">
+
+<path
+d="
+M250 475
+C220 445 55 325 55 165
+C55 75 120 35 185 35
+C220 35 242 55 250 82
+C258 55 280 35 315 35
+C380 35 445 75 445 165
+C445 325 280 445 250 475
+Z
+"
+/>
+
+</clipPath>
+
+
+<!-- แสงนุ่ม -->
+
+<filter id="softShadow">
+
+<feDropShadow
+dx="0"
+dy="12"
+stdDeviation="12"
+flood-opacity="0.18"/>
+
+</filter>
+
+</defs>
+
+
+
+<!-- =================================================
+     ชั้นหลัง
+================================================== -->
+
+<path
+
+d="
+M250 475
+C220 445 55 325 55 165
+C55 75 120 35 185 35
+C220 35 242 55 250 82
+C258 55 280 35 315 35
+C380 35 445 75 445 165
+C445 325 280 445 250 475
+Z
+"
+
+fill="#bfeee3"
+
+stroke="#a5ded3"
+
+stroke-width="18"
+
+filter="url(#softShadow)"
+/>
+
+
+
+<!-- =================================================
+     ขอบสีขาว
+================================================== -->
+
+<path
+
+d="
+M250 465
+C220 435 68 320 68 165
+C68 82 125 48 185 48
+C220 48 242 68 250 93
+C258 68 280 48 315 48
+C375 48 432 82 432 165
+C432 320 280 435 250 465
+Z
+"
+
+fill="white"
+
+stroke="white"
+
+stroke-width="18"
+/>
+
+
+
+<!-- =================================================
+     💗 รูปโปรไฟล์
+================================================== -->
+
+<image
+
+href="https://raw.githubusercontent.com/s34761-debug/images/main/IMG_20260617_162035_718.jpg"
+
+x="72"
+
+y="58"
+
+width="356"
+
+height="400"
+
+preserveAspectRatio="xMidYMid slice"
+
+clip-path="url(#heartClip)"
+/>
+
+
+
+<!-- =================================================
+     ขอบสีเขียวด้านใน
+================================================== -->
+
+<path
+
+d="
+M250 465
+C220 435 68 320 68 165
+C68 82 125 48 185 48
+C220 48 242 68 250 93
+C258 68 280 48 315 48
+C375 48 432 82 432 165
+C432 320 280 435 250 465
+Z
+"
+
+fill="none"
+
+stroke="#8ed4c5"
+
+stroke-width="9"
+/>
+
+
+
+<!-- =================================================
+     ขอบสีขาวด้านใน
+================================================== -->
+
+<path
+
+d="
+M250 455
+C220 425 80 315 80 170
+C80 92 130 60 185 60
+C218 60 241 78 250 102
+C259 78 282 60 315 60
+C370 60 420 92 420 170
+C420 315 280 425 250 455
+Z
+"
+
+fill="none"
+
+stroke="white"
+
+stroke-width="5"
+/>
+
+
+
+<!-- =================================================
+     ♡ หัวใจเล็ก
+================================================== -->
+
+<text
+
+x="250"
+
+y="440"
+
+text-anchor="middle"
+
+font-size="35"
+
+fill="#6eb5a5">
+
+♡
+
+</text>
+
+
+</svg>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     💚 WELCOME
+===================================================== -->
+
+<section class="welcome">
+
+
+<div class="welcome-en">
+
+WELCOME TO MY<br>
+
+<span>
+PORTFOLIO ♡
+</span>
+
+</div>
+
+
+
+<div class="hello">
+
+🌷 สวัสดีค่ะ ♡ 🌷
+
+</div>
+
+
+<div class="hello-decoration">
+
+🌷　🎀　🌷
+
+</div>
+
+
+
+<!-- =================================================
+     📝 INTRO
+================================================== -->
+
+<div class="intro-card">
+
+
+<div class="intro-name">
+
+ฉันชื่อ ณัชชยากานต์ สีดาสมา 🌷
+
+</div>
+
+
+<div class="intro-text">
+
+เรามาทำความรู้จักกันให้มากขึ้นกันเถอะ ♡
+
+</div>
+
+
+</div>
+
+
+
+<!-- =================================================
+     ✨ DIVIDER
+================================================== -->
+
+<div class="divider">
+
+<div class="divider-line"></div>
+
+<div class="divider-heart">
+♡
+</div>
+
+<div class="divider-line"></div>
+
+</div>
+
+
+
+<!-- =================================================
+     👤 PROFILE BUTTON
+================================================== -->
+
+<a
+href="profile.html"
+class="profile-button">
+
+👤 ทำความรู้จักฉัน ♡ ›
+
+</a>
+
+
+
+<!-- =================================================
+     🫧 NICE
+================================================== -->
+
+<div class="nice-card">
+
+
+<div class="nice-title">
+
+nice to meet you ♡
+
+</div>
+
+
+<div class="nice-decoration">
+
+༘*.ﾟ 🧸 🎀 🌷 ᰔᩚ 🪽 ✧
+
+</div>
+
+
+</div>
+
+
+
+<div class="bottom-decoration">
+
+🌷　🎀　🧸　♡　🪽　🎀　🌷
+
+</div>
+
+
+</section>
+
+
+</div>
+
+</main>
+
+
+
+<!-- =====================================================
+     💚 FOOTER
+===================================================== -->
+
+<footer>
+
+<p>
+♡ thank you for visiting my portfolio ♡
+</p>
+
+<h3>
+♡ NATCHAYAKAN ♡
+</h3>
+
+<div class="footer-decoration">
+
+✧ 🧸 🎀 🌷 🪽 ✧
+
+</div>
+
+<p style="margin-top:25px;">
+
+♡ Made with love & mint green ♡
+
+</p>
+
+</footer>
+
+
+</body>
+
+</html>

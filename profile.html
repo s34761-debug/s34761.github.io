@@ -1,21 +1,40 @@
 <!DOCTYPE html>
 <html lang="th">
-
 <head>
-
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
-
-    <title>♡ NATCHAYAKAN | ประวัติส่วนตัว ♡</title>
-
+    <title>ข้อมูลส่วนตัว | NATCHAYAKAN</title>
 
     <style>
 
-        /* =====================================================
-           💚 BASIC
-        ===================================================== */
+        /* =========================================
+           🌷 COLOR THEME
+        ========================================= */
+
+        :root {
+            --mint-dark: #4f8f7b;
+            --mint: #8fcfc0;
+            --mint-soft: #cdeee5;
+            --mint-light: #e9f8f4;
+            --mint-pale: #f5fcfa;
+
+            --white: #ffffff;
+
+            --text-dark: #31443e;
+            --text: #53645f;
+            --text-light: #7c8d87;
+
+            --border: #d8eee7;
+
+            --shadow: 0 12px 35px rgba(70, 130, 112, 0.10);
+            --shadow-hover: 0 18px 40px rgba(70, 130, 112, 0.17);
+        }
+
+
+        /* =========================================
+           RESET
+        ========================================= */
 
         * {
             margin: 0;
@@ -28,7 +47,6 @@
         }
 
         body {
-
             font-family:
                 "Segoe UI",
                 Tahoma,
@@ -36,71 +54,87 @@
                 Verdana,
                 sans-serif;
 
-            color: #536f68;
-
-            background:
-                radial-gradient(
-                    circle at 10% 15%,
-                    #dcf8f0 0%,
-                    transparent 30%
-                ),
-
-                radial-gradient(
-                    circle at 90% 60%,
-                    #e5faf5 0%,
-                    transparent 30%
-                ),
-
-                linear-gradient(
-                    135deg,
-                    #f8fffd,
-                    #ffffff,
-                    #effbf7
-                );
+            color: var(--text-dark);
 
             min-height: 100vh;
 
             overflow-x: hidden;
-        }
-
-
-        /* =====================================================
-           🌷 HEADER
-        ===================================================== */
-
-        header {
-
-            position: sticky;
-
-            top: 0;
-
-            z-index: 999;
 
             background:
-                rgba(255,255,255,0.94);
-
-            backdrop-filter:
-                blur(18px);
-
-            border-bottom:
-                1px solid #dcefe9;
-
-            box-shadow:
-                0 5px 25px
-                rgba(76,145,130,0.08);
+                radial-gradient(
+                    circle at 10% 15%,
+                    rgba(143, 207, 192, 0.25),
+                    transparent 28%
+                ),
+                radial-gradient(
+                    circle at 90% 35%,
+                    rgba(205, 238, 229, 0.35),
+                    transparent 30%
+                ),
+                linear-gradient(
+                    135deg,
+                    #f3fcf9,
+                    #ffffff,
+                    #eefaf7
+                );
         }
 
 
-        .navbar {
+        /* =========================================
+           🌷 BACKGROUND DECORATION
+        ========================================= */
 
-            max-width: 1250px;
+        body::before {
+            content: "🌷";
+            position: fixed;
+            left: -15px;
+            top: 150px;
+            font-size: 75px;
+            opacity: 0.12;
+            transform: rotate(-15deg);
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        body::after {
+            content: "🪽";
+            position: fixed;
+            right: -10px;
+            bottom: 100px;
+            font-size: 80px;
+            opacity: 0.12;
+            transform: rotate(12deg);
+            pointer-events: none;
+            z-index: -1;
+        }
+
+
+        /* =========================================
+           🎀 HEADER
+        ========================================= */
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+
+            background: rgba(255,255,255,0.94);
+
+            border-bottom: 1px solid var(--border);
+
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+
+            box-shadow:
+                0 5px 20px rgba(70,130,112,0.06);
+        }
+
+        .header-inner {
+            max-width: 1200px;
 
             margin: auto;
 
-            min-height: 82px;
-
-            padding:
-                12px 25px;
+            padding: 18px 25px;
 
             display: flex;
 
@@ -108,691 +142,279 @@
 
             justify-content: space-between;
 
-            gap: 20px;
+            gap: 25px;
         }
 
 
-        /* =====================================================
-           ♡ LOGO
-        ===================================================== */
+        /* =========================================
+           💚 BRAND
+        ========================================= */
 
-        .logo {
+        .brand {
+            color: var(--mint-dark);
 
-            color: #4d9482;
+            font-size: 24px;
 
-            text-decoration: none;
+            font-weight: 900;
 
-            font-size: 30px;
-
-            font-weight: 800;
+            letter-spacing: 2px;
 
             white-space: nowrap;
         }
 
-
-        .logo span {
-
-            font-size: 40px;
-
-            font-weight: 400;
+        .brand::before {
+            content: "♡ ";
+            color: var(--mint);
         }
 
 
-        /* =====================================================
-           🌿 NAV
-        ===================================================== */
+        /* =========================================
+           🧭 NAVIGATION
+        ========================================= */
 
         nav {
-
             display: flex;
 
-            gap: 5px;
-
             align-items: center;
+
+            gap: 7px;
 
             overflow-x: auto;
 
             scrollbar-width: none;
         }
 
-
         nav::-webkit-scrollbar {
             display: none;
         }
 
-
         nav a {
-
             text-decoration: none;
 
-            color: #617973;
+            color: var(--text);
 
             font-size: 16px;
 
             font-weight: 700;
 
-            padding:
-                12px 18px;
+            padding: 13px 17px;
 
-            border-radius: 35px;
+            border-radius: 25px;
 
             white-space: nowrap;
 
-            transition:
-                0.3s ease;
+            transition: 0.3s ease;
         }
-
 
         nav a:hover {
+            background: var(--mint-light);
 
-            color: #438d7b;
+            color: var(--mint-dark);
 
-            background:
-                #e2f7f0;
-
-            transform:
-                translateY(-2px);
+            transform: translateY(-2px);
         }
-
 
         nav a.active {
+            background: var(--mint-soft);
 
-            background:
-                #c9efe4;
-
-            color:
-                #438c79;
+            color: var(--mint-dark);
 
             box-shadow:
-                0 8px 20px
-                rgba(83,166,145,0.12);
+                0 6px 18px rgba(79,143,123,0.10);
         }
 
 
-        /* =====================================================
-           💚 MAIN
-        ===================================================== */
+        /* =========================================
+           🌿 MAIN
+        ========================================= */
 
         main {
-
-            position: relative;
-
-            padding:
-                65px 20px 90px;
-
-            overflow: hidden;
-        }
-
-
-        .container {
-
-            position: relative;
-
-            z-index: 5;
-
-            width:
-                min(1100px, 100%);
+            width: min(1050px, 92%);
 
             margin: auto;
+
+            padding: 65px 0 90px;
         }
 
 
-        /* =====================================================
-           ✨ DECORATION
-        ===================================================== */
+        /* =========================================
+           🌷 PAGE HEADING
+        ========================================= */
 
-        .decoration {
-
-            position: absolute;
-
-            pointer-events: none;
-
-            user-select: none;
-
-            opacity: 0.75;
-
-            z-index: 1;
-        }
-
-
-        .deco1 {
-
-            top: 130px;
-
-            left: 3%;
-
-            font-size: 50px;
-        }
-
-
-        .deco2 {
-
-            top: 260px;
-
-            right: 4%;
-
-            font-size: 42px;
-        }
-
-
-        .deco3 {
-
-            top: 700px;
-
-            left: 4%;
-
-            font-size: 40px;
-        }
-
-
-        .deco4 {
-
-            top: 850px;
-
-            right: 5%;
-
-            font-size: 45px;
-        }
-
-
-        .deco5 {
-
-            top: 1150px;
-
-            left: 8%;
-
-            font-size: 35px;
-        }
-
-
-        .deco6 {
-
-            top: 1300px;
-
-            right: 8%;
-
-            font-size: 40px;
-        }
-
-
-        /* =====================================================
-           ✨ PAGE TITLE
-        ===================================================== */
-
-        .page-title {
-
+        .page-heading {
             text-align: center;
 
-            margin-bottom: 45px;
+            margin-bottom: 50px;
         }
 
+        .page-label {
+            display: inline-block;
 
-        .small-title {
+            padding: 10px 28px;
 
-            color: #75a99d;
+            border-radius: 50px;
 
-            font-size: 15px;
+            background: var(--mint-light);
 
-            font-weight: 800;
+            border: 1px solid var(--mint-soft);
 
-            letter-spacing: 5px;
+            color: var(--mint-dark);
 
-            margin-bottom: 10px;
-        }
-
-
-        .page-title h1 {
-
-            color: #438d7b;
-
-            font-size:
-                clamp(38px, 6vw, 58px);
+            font-size: 14px;
 
             font-weight: 900;
 
-            text-shadow:
-                2px 3px 0 #d8f3ec;
+            letter-spacing: 2px;
+
+            margin-bottom: 20px;
         }
 
+        .page-title {
+            font-size: clamp(40px, 7vw, 65px);
 
-        .page-title p {
+            font-weight: 900;
 
-            color: #78918b;
+            line-height: 1.2;
+
+            color: var(--text-dark);
+
+            margin-bottom: 15px;
+        }
+
+        .page-title::before {
+            content: "♡ ";
+            color: var(--mint);
+        }
+
+        .page-title::after {
+            content: " ♡";
+            color: var(--mint);
+        }
+
+        .page-description {
+            max-width: 700px;
+
+            margin: auto;
+
+            color: var(--text-light);
 
             font-size: 18px;
-
-            margin-top: 10px;
 
             line-height: 1.8;
         }
 
 
-        /* =====================================================
-           🎀 DECORATIVE TOP
-        ===================================================== */
+        /* =========================================
+           🌿 SECTION CARD
+        ========================================= */
 
-        .top-decoration {
+        .section-card {
+            background: rgba(255,255,255,0.96);
 
-            text-align: center;
+            border: 1.5px solid var(--border);
 
-            font-size: 27px;
+            border-radius: 38px;
 
-            letter-spacing: 5px;
+            padding: 42px;
 
-            margin-bottom: 20px;
+            margin-bottom: 32px;
 
-            animation:
-                float 4s ease-in-out infinite;
-        }
-
-
-        @keyframes float {
-
-            0%, 100% {
-                transform:
-                    translateY(0);
-            }
-
-            50% {
-                transform:
-                    translateY(-6px);
-            }
-        }
-
-
-        /* =====================================================
-           💚 TARGET UNIVERSITY
-        ===================================================== */
-
-        .university-card {
+            box-shadow: var(--shadow);
 
             position: relative;
-
-            background:
-                rgba(255,255,255,0.92);
-
-            border:
-                2px solid #ccebe3;
-
-            border-radius: 40px;
-
-            padding:
-                38px 30px;
-
-            text-align: center;
-
-            box-shadow:
-                0 18px 40px
-                rgba(75,145,130,0.10);
 
             overflow: hidden;
 
-            margin-bottom: 35px;
+            transition: 0.35s ease;
         }
 
+        .section-card:hover {
+            box-shadow: var(--shadow-hover);
 
-        .university-card::before {
+            transform: translateY(-2px);
+        }
 
-            content: "";
+        .section-card::before {
+            content: "✦";
 
             position: absolute;
 
-            top: 0;
+            top: 20px;
 
-            left: 0;
+            right: 30px;
 
-            right: 0;
+            color: var(--mint);
 
-            height: 8px;
+            font-size: 25px;
+
+            opacity: 0.55;
+        }
+
+
+        /* =========================================
+           SECTION TITLE
+        ========================================= */
+
+        .section-title {
+            display: flex;
+
+            align-items: center;
+
+            gap: 15px;
+
+            color: var(--text-dark);
+
+            font-size: 30px;
+
+            font-weight: 900;
+
+            margin-bottom: 30px;
+        }
+
+        .section-icon {
+            width: 58px;
+            height: 58px;
+
+            min-width: 58px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            background: var(--mint-light);
+
+            border-radius: 20px;
+
+            font-size: 28px;
+        }
+
+
+        /* =========================================
+           🎓 UNIVERSITY
+        ========================================= */
+
+        .university-card {
+            text-align: center;
+
+            padding: 45px 25px;
 
             background:
                 linear-gradient(
-                    90deg,
-                    #bde9de,
+                    145deg,
                     #ffffff,
-                    #bde9de
+                    #f1faf7
                 );
-        }
 
-
-        .university-label {
-
-            color: #83aaa1;
-
-            font-size: 14px;
-
-            font-weight: 800;
-
-            letter-spacing: 4px;
-
-            margin-bottom: 20px;
-        }
-
-
-        .university-logo {
-
-            width: 145px;
-
-            height: 145px;
-
-            object-fit: contain;
-
-            display: block;
-
-            margin:
-                0 auto 20px;
-
-            border-radius: 50%;
-
-            background: white;
-
-            padding: 8px;
-
-            border:
-                4px solid #d0eee7;
-
-            box-shadow:
-                0 10px 25px
-                rgba(74,145,130,0.12);
-        }
-
-
-        .university-card h2 {
-
-            color: #438d7b;
-
-            font-size: 29px;
-
-            margin-bottom: 5px;
-        }
-
-
-        .university-card p {
-
-            color: #78918b;
-
-            font-size: 18px;
-        }
-
-
-        .dream {
-
-            display: inline-block;
-
-            margin-top: 18px;
-
-            padding:
-                9px 20px;
-
-            border-radius: 30px;
-
-            background:
-                #e5f8f3;
-
-            color:
-                #57988a;
-
-            font-weight: 700;
-        }
-
-
-        /* =====================================================
-           📝 SECTION CARD
-        ===================================================== */
-
-        .section {
-
-            margin-bottom: 35px;
-        }
-
-
-        .section-title {
-
-            text-align: center;
-
-            margin-bottom: 20px;
-        }
-
-
-        .section-title h2 {
-
-            color: #4a907f;
-
-            font-size: 31px;
-
-            font-weight: 850;
-        }
-
-
-        .section-title p {
-
-            color: #8a9e99;
-
-            margin-top: 5px;
-
-            font-size: 16px;
-        }
-
-
-        /* =====================================================
-           👤 PERSONAL INFORMATION
-        ===================================================== */
-
-        .info-card {
-
-            background:
-                rgba(255,255,255,0.93);
-
-            border:
-                2px solid #d5eee8;
+            border: 1.5px solid var(--border);
 
             border-radius: 35px;
 
-            padding: 30px;
-
-            box-shadow:
-                0 15px 35px
-                rgba(75,145,130,0.08);
-        }
-
-
-        .info-grid {
-
-            display: grid;
-
-            grid-template-columns:
-                repeat(2, 1fr);
-
-            gap: 16px;
-        }
-
-
-        .info-item {
-
-            display: flex;
-
-            align-items: center;
-
-            gap: 16px;
-
-            padding:
-                18px;
-
-            border-radius: 23px;
-
-            background:
-                #f3fcf9;
-
-            border:
-                1px solid #e0f2ed;
-
-            transition:
-                0.3s ease;
-        }
-
-
-        .info-item:hover {
-
-            transform:
-                translateY(-3px);
-
-            box-shadow:
-                0 8px 20px
-                rgba(75,145,130,0.08);
-        }
-
-
-        .info-icon {
-
-            width: 55px;
-
-            height: 55px;
-
-            min-width: 55px;
-
-            display: flex;
-
-            align-items: center;
-
-            justify-content: center;
-
-            border-radius: 18px;
-
-            background:
-                #ddf5ee;
-
-            font-size: 27px;
-        }
-
-
-        .info-text small {
-
-            display: block;
-
-            color: #91a49f;
-
-            font-size: 14px;
-
-            margin-bottom: 4px;
-        }
-
-
-        .info-text strong {
-
-            color: #425e57;
-
-            font-size: 18px;
-
-            line-height: 1.5;
-        }
-
-
-        /* =====================================================
-           📚 EDUCATION
-        ===================================================== */
-
-        #education {
-
-            scroll-margin-top: 110px;
-        }
-
-
-        .education-list {
-
-            display: flex;
-
-            flex-direction: column;
-
-            gap: 20px;
-
-            position: relative;
-        }
-
-
-        .education-list::before {
-
-            content: "";
-
-            position: absolute;
-
-            left: 31px;
-
-            top: 35px;
-
-            bottom: 35px;
-
-            width: 3px;
-
-            background:
-                #c7e9e0;
-
-            border-radius: 10px;
-        }
-
-
-        .education-card {
-
             position: relative;
 
-            display: flex;
-
-            gap: 22px;
-
-            align-items: flex-start;
-
-            background:
-                rgba(255,255,255,0.95);
-
-            border:
-                2px solid #d4eee8;
-
-            border-radius: 30px;
-
-            padding:
-                25px;
-
-            margin-left: 0;
-
-            box-shadow:
-                0 12px 30px
-                rgba(76,145,130,0.07);
-
-            transition:
-                0.3s ease;
+            overflow: hidden;
         }
 
-
-        .education-card:hover {
-
-            transform:
-                translateY(-4px);
-
-            box-shadow:
-                0 18px 35px
-                rgba(76,145,130,0.11);
-        }
-
-
-        .education-icon {
-
-            position: relative;
-
-            z-index: 2;
-
-            width: 65px;
-
-            height: 65px;
-
-            min-width: 65px;
-
-            display: flex;
-
-            align-items: center;
-
-            justify-content: center;
-
-            background:
-                #dff6ef;
-
-            border:
-                5px solid
+        .university-card::before {
+            content: "༘*.ﾟ🌷🧸";
